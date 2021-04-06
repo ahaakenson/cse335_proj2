@@ -108,6 +108,9 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="MachineActual.cpp" />
+    <ClCompile Include="MachineInterpreter.cpp" />
     <ClCompile Include="WavChannel.cpp" />
     <ClCompile Include="WAVFileReader.cpp" />
     <ClCompile Include="WavPlayer.cpp" />
@@ -123,6 +126,9 @@
     <ClCompile Include="MachineStandin.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="MachineActual.h" />
+    <ClInclude Include="MachineInterpreter.h" />
     <ClInclude Include="WavChannel.h" />
     <ClInclude Include="WAVFileReader.h" />
     <ClInclude Include="WavPlayer.h" />
