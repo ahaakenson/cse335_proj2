@@ -1,14 +1,14 @@
 /**
  * \file MachineFactory.cpp
  *
- * \author Charles Owen
+ * \author Andrew Haakenson
  *
  * You are allowed to change this file.
  */
 
 #include "pch.h"
 #include "MachineFactory.h"
-#include "Machine.h"
+#include "MachineInterpreter.h"
 
 
 using namespace std;
@@ -20,7 +20,6 @@ using namespace std;
  */
 std::shared_ptr<CMachine> CMachineFactory::CreateMachine()
 {
-    //return make_shared<CMachine>();
-    return make_shared<CMachine>();
+    return make_shared<CMachineInterpreter>();
 }
 
