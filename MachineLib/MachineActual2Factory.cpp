@@ -36,7 +36,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
 
     // The machine itself. The value passed to the 
     // constructor is the machine number.
-    auto machine = make_shared<CMachineActual>(2);
+    auto machine = make_shared<CMachineActual>();
 
     /*
     // The base, just a flat to sit things on

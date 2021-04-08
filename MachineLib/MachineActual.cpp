@@ -11,11 +11,9 @@ using namespace Gdiplus;
 
 /**
  * Constructor
- * \param machineNumber number of this machine
  */
-CMachineActual::CMachineActual(int machineNumber)
+CMachineActual::CMachineActual()
 {
-	mMachineNumber = machineNumber;
 }
 
 /** 

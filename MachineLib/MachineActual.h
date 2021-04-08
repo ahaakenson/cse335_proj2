@@ -11,15 +11,24 @@
 #include <vector>
 #include <memory>
 
+class CMachineInterpreter;
+
  /**
   * Class that represents the machine.
   */
 class CMachineActual
 {
 public:
-	CMachineActual(int machineNumber);
+	CMachineActual();
 	void DrawMachineActual(Gdiplus::Graphics* graphics, int x, int y);
 	void SetMachineActualLocation(int x, int y);
+
+	/**
+	 * Setter for interpreter pointer
+	 * \param interpreter pointer to associated interpreter
+	 */
+	void SetInterpreter(CMachineInterpreter* interpreter) { mInterpreter = interpreter; }
+
 private:
 	/// X coordinate of machine
 	int mXPos = 0;
@@ -31,6 +40,6 @@ private:
 	double mTime = 0;
 	/// Components in this machine
 	std::vector<std::shared_ptr<CComponent> > mComponents;
-	int mMachineNumber;
+	CMachineInterpreter* mInterpreter = nullptr;
 };
 

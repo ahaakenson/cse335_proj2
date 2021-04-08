@@ -16,8 +16,7 @@ using namespace Gdiplus;
  */
 CMachineInterpreter::CMachineInterpreter()
 {
-	CMachineActual1Factory factory;
-	mMachineActual = factory.CreateMachine();
+	SetMachineNumber(1);
 }
 
 /**
@@ -66,5 +65,7 @@ void CMachineInterpreter::SetMachineNumber(int machineNumber)
 				break;
 			}
 		}
+
+		mMachineActual->SetInterpreter(this);
 	}
 }
