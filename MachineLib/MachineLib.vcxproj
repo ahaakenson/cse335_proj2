@@ -111,6 +111,7 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="MachineActual.cpp" />
     <ClCompile Include="MachineActual1Factory.cpp" />
+    <ClCompile Include="MachineActual2Factory.cpp" />
     <ClCompile Include="MachineInterpreter.cpp" />
     <ClCompile Include="WavChannel.cpp" />
     <ClCompile Include="WAVFileReader.cpp" />
@@ -130,6 +131,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="MachineActual.h" />
     <ClInclude Include="MachineActual1Factory.h" />
+    <ClInclude Include="MachineActual2Factory.h" />
     <ClInclude Include="MachineInterpreter.h" />
     <ClInclude Include="WavChannel.h" />
     <ClInclude Include="WAVFileReader.h" />

@@ -1,11 +1,11 @@
 /**
- * \file MachineActual1Factory.cpp
+ * \file MachineActual2Factory.cpp
  *
  * \author Andrew Haakenson
  */
 
 #include "pch.h"
-#include "MachineActual1Factory.h"
+#include "MachineActual2Factory.h"
 #include "MachineActual.h"
 #include <memory>
 
@@ -15,7 +15,7 @@ using namespace std;
 /**
  * Creates a MachineActual object.
  */
-shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
+shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
 {
     // Locations of stuff
     const int BaseWidth = 650;
@@ -36,7 +36,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
 
     // The machine itself. The value passed to the 
     // constructor is the machine number.
-    auto machine = make_shared<CMachineActual>(1);
+    auto machine = make_shared<CMachineActual>(2);
 
     /*
     // The base, just a flat to sit things on

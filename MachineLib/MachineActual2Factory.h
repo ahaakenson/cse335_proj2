@@ -1,5 +1,5 @@
 /**
- * \file MachineActual1Factory.h
+ * \file MachineActual2Factory.h
  *
  * \author Andrew Haakenson
  *
@@ -7,22 +7,20 @@
  */
 
 #pragma once
-
 #include "MachineFactory.h"
-#include <memory>
 
 class CMachineActual;
 
-/**
- * Factory which produces a MachineActual with components
- */
-class CMachineActual1Factory : public CMachineFactory
+ /**
+  * Factory which produces a MachineActual with components
+  */
+class CMachineActual2Factory : public CMachineFactory
 {
 public:
 	/**
 	* Constructor
 	*/
-	CMachineActual1Factory() {}
+	CMachineActual2Factory() {}
 
 	std::shared_ptr<CMachineActual> CreateMachine();
 };
