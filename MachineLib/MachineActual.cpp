@@ -9,6 +9,14 @@
 
 using namespace Gdiplus;
 
+/**
+ * Constructor
+ * \param machineNumber number of this machine
+ */
+CMachineActual::CMachineActual(int machineNumber)
+{
+	mMachineNumber = machineNumber;
+}
 
 /** 
  * Draws the machine by drawing all of its components

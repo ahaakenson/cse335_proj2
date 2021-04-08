@@ -6,8 +6,18 @@
 
 #include "pch.h"
 #include "MachineInterpreter.h"
+#include "MachineActual1Factory.h"
 
 using namespace Gdiplus;
+
+/**
+ * Constructor
+ */
+CMachineInterpreter::CMachineInterpreter()
+{
+	CMachineActual1Factory factory;
+	mMachineActual = factory.CreateMachine();
+}
 
 /**
 * Draw the machine at the currently specified location
@@ -16,7 +26,7 @@ using namespace Gdiplus;
 void CMachineInterpreter::DrawMachine(Graphics* graphics)
 {
 	// TODO: CHANGE PARAMETERS OF DRAW COORDINATES
-	mMachineActual.DrawMachineActual(graphics, 0, 0);
+	mMachineActual->DrawMachineActual(graphics, 0, 0);
 }
 
 /**
@@ -26,5 +36,5 @@ void CMachineInterpreter::DrawMachine(Graphics* graphics)
 */
 void CMachineInterpreter::SetLocation(int x, int y)
 {
-	mMachineActual.SetMachineActualLocation(x, y);
+	mMachineActual->SetMachineActualLocation(x, y);
 }

@@ -21,5 +21,6 @@ using namespace std;
 std::shared_ptr<CMachine> CMachineFactory::CreateMachine()
 {
     return make_shared<CMachineInterpreter>();
+    //return make_shared<CMachine>();
 }
 

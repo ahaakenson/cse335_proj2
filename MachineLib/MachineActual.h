@@ -17,6 +17,7 @@
 class CMachineActual
 {
 public:
+	CMachineActual(int machineNumber);
 	void DrawMachineActual(Gdiplus::Graphics* graphics, int x, int y);
 	void SetMachineActualLocation(int x, int y);
 private:
@@ -30,5 +31,6 @@ private:
 	double mTime = 0;
 	/// Components in this machine
 	std::vector<std::shared_ptr<CComponent> > mComponents;
+	int mMachineNumber;
 };
 
