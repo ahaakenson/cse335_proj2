@@ -7,9 +7,11 @@
 #include "pch.h"
 #include "MachineActual1Factory.h"
 #include "MachineActual.h"
+#include "Shape.h"
 #include <memory>
 
 using namespace std;
+using namespace Gdiplus;
 
 
 /**
@@ -38,13 +40,14 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     // constructor is the machine number.
     auto machine = make_shared<CMachineActual>();
 
-    /*
+    
     // The base, just a flat to sit things on
     auto base = make_shared<CShape>();
     base->Rectangle(-BaseWidth / 2, BaseHeight, BaseWidth, BaseHeight);
     base->SetColor(Color::DarkGray);
     machine->AddComponent(base);
 
+    
     //
     // The framework that holds the cylinders and chimes
     //
@@ -54,6 +57,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     framework->SetPosition(FrameworkCenter, 0);
     machine->AddComponent(framework);
 
+    /*
     //
     // The card reader
     //

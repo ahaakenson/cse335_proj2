@@ -28,6 +28,8 @@ public:
 	 * \param interpreter pointer to associated interpreter
 	 */
 	void SetInterpreter(CMachineInterpreter* interpreter) { mInterpreter = interpreter; }
+	double ComputeTime(int frame);
+	void AddComponent(std::shared_ptr<CComponent> component);
 
 private:
 	/// X coordinate of machine
@@ -40,6 +42,7 @@ private:
 	double mTime = 0;
 	/// Components in this machine
 	std::vector<std::shared_ptr<CComponent> > mComponents;
+	/// Interpreter which this machine is a part of
 	CMachineInterpreter* mInterpreter = nullptr;
 };
 

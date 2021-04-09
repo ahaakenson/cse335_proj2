@@ -66,6 +66,7 @@ void CMachineInterpreter::SetMachineNumber(int machineNumber)
 			}
 		}
 
+		// Set other end of composition
 		mMachineActual->SetInterpreter(this);
 	}
 }
