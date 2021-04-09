@@ -17,6 +17,7 @@ using namespace Gdiplus;
 
 /**
  * Creates a MachineActual object.
+ * \return instantiated MachineActual object
  */
 shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
 {

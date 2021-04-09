@@ -23,7 +23,7 @@ CMachineActual::CMachineActual()
  * Draws the machine by drawing all of its components
  * \param graphics graphics context to draw machine in
  */
-void CMachineActual::DrawMachineActual(Graphics* graphics, int x, int y)
+void CMachineActual::DrawMachineActual(Graphics* graphics)
 {
 
 	for (auto& component : mComponents)
@@ -36,7 +36,7 @@ void CMachineActual::DrawMachineActual(Graphics* graphics, int x, int y)
 /**
  * Setter for position of the machine
  * \param x x coordinate
- * /param y y coordinate
+ * \param y y coordinate
  */
 void CMachineActual::SetMachineActualLocation(int x, int y)
 {

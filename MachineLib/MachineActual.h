@@ -20,7 +20,7 @@ class CMachineActual
 {
 public:
 	CMachineActual();
-	void DrawMachineActual(Gdiplus::Graphics* graphics, int x, int y);
+	void DrawMachineActual(Gdiplus::Graphics* graphics);
 	void SetMachineActualLocation(int x, int y);
 
 	/**

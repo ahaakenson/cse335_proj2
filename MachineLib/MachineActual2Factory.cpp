@@ -14,6 +14,7 @@ using namespace std;
 
 /**
  * Creates a MachineActual object.
+ * \return instantiated MachineActual object
  */
 shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
 {

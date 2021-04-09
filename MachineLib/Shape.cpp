@@ -9,6 +9,7 @@
 
 /**
  * Draw this shape.
+ * \param graphics graphics context
  * \param machineX x coordinate of machine
  * \param machineY y coordinate of machine
  */

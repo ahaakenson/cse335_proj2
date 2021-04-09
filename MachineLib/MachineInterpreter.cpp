@@ -25,8 +25,7 @@ CMachineInterpreter::CMachineInterpreter()
 */
 void CMachineInterpreter::DrawMachine(Graphics* graphics)
 {
-	// TODO: CHANGE PARAMETERS OF DRAW COORDINATES
-	mMachineActual->DrawMachineActual(graphics, 0, 0);
+	mMachineActual->DrawMachineActual(graphics);
 }
 
 /**

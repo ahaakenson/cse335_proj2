@@ -48,6 +48,7 @@ public:
 	void Draw(Gdiplus::Graphics* graphics, long machineX, long machineY) override;
 
 private:
+	/// Polygon this shape holds
 	CPolygon mPolygon;
 };
 
