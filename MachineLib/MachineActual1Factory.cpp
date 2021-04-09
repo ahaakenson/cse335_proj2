@@ -8,6 +8,7 @@
 #include "MachineActual1Factory.h"
 #include "MachineActual.h"
 #include "Shape.h"
+#include "CardReader.h"
 #include <memory>
 
 using namespace std;
@@ -57,7 +58,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     framework->SetPosition(FrameworkCenter, 0);
     machine->AddComponent(framework);
 
-    /*
+    
     //
     // The card reader
     //
@@ -66,6 +67,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     reader->SetPosition(CardReaderCenter, 0);
     machine->AddComponent(reader);
 
+    /*
     //
     // Cylinders and chimes
     //

@@ -42,13 +42,13 @@ public:
 	 * Getter for x position of component
 	 * \return x position
 	 */
-	int GetX() { return mXPos; }
+	long GetX() { return mXPos; }
 
 	/**
 	 * Getter for y position of component
 	 * \return y position
 	 */
-	int GetY() { return mYPos; }
+	long GetY() { return mYPos; }
 
 private:
 	/// X coordinate of component
