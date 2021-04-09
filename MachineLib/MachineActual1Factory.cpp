@@ -9,6 +9,7 @@
 #include "MachineActual.h"
 #include "Shape.h"
 #include "CardReader.h"
+#include "Cylinder.h"
 #include <memory>
 
 using namespace std;
@@ -68,7 +69,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     reader->SetPosition(CardReaderCenter, 0);
     machine->AddComponent(reader);
 
-    /*
+    
     //
     // Cylinders and chimes
     //
@@ -89,13 +90,14 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     int cylinderX = -CylinderAndChimesSpacing * NumChimes / 2 + CylinderCenter;
     int chimeX = -CylinderAndChimesSpacing * NumChimes / 2 + ChimesCenter;
     for (int i = 0; i < NumChimes; i++) {
+        /*
         //
         // The chime
         //
         auto chime = make_shared<CChime>(ChimeLength[i]);
         chime->SetPosition(chimeX, ChimeTop);
         machine->AddComponent(chime);
-
+        */
         //
         // The cylinder that hits the chime
         //
@@ -105,17 +107,18 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         cylinders.push_back(cylinder);
 
         // Connect the motion
-        cylinder->SetMotionSink(chime);
+        //cylinder->SetMotionSink(chime);
 
         // Add sound to the chime
-        auto channel = machine->GetWavPlayer()->CreateChannel(sounds[i]);
-        chime->SetAudioChannel(channel);
+        //auto channel = machine->GetWavPlayer()->CreateChannel(sounds[i]);
+        //chime->SetAudioChannel(channel);
 
         // Move to the next x locations
         cylinderX += CylinderAndChimesSpacing;
         chimeX += CylinderAndChimesSpacing;
     }
 
+    /*
     //
     // The cymbal
     //

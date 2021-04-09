@@ -123,8 +123,9 @@ void CCardReader::SetTime(double time)
 void CCardReader::UpdateColumn(double time)
 {
     const double SecondsPerMinute = 60;
-    // Convert time to beat number aka column number
-    mColumn = time * (double)mBeatsPerMinute / SecondsPerMinute;
+    double beat = time * mBeatsPerMinute / SecondsPerMinute;
+    double remainder = fmod(beat, 1);
+    mColumn = (int)beat;
 }
 
 /**

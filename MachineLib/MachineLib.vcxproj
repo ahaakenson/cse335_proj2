@@ -110,6 +110,7 @@
   <ItemGroup>
     <ClCompile Include="CardReader.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Cylinder.cpp" />
     <ClCompile Include="MachineActual.cpp" />
     <ClCompile Include="MachineActual1Factory.cpp" />
     <ClCompile Include="MachineActual2Factory.cpp" />
@@ -132,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="CardReader.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="Cylinder.h" />
     <ClInclude Include="MachineActual.h" />
     <ClInclude Include="MachineActual1Factory.h" />
     <ClInclude Include="MachineActual2Factory.h" />
