@@ -26,6 +26,10 @@ public:
 	 */
 	void SetCard(std::wstring filename) { mCard.SetImage(filename); }
 
+	void SetTime(double time) override;
+	void UpdateColumn(double time);
+	bool CCardReader::IsPunched(int column, int row);
+
 private:
 	/// Polygon representing the back of the card reader
 	CPolygon mBack;
@@ -34,7 +38,9 @@ private:
 	/// Polygon representing the card
 	CPolygon mCard;
 	/// Beats per minute of the song
-	long mBeatsPerMinute = 1;
+	long mBeatsPerMinute = 180;
+	/// Current card column
+	long mColumn = 0;
 
 };
 

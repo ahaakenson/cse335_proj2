@@ -98,6 +98,44 @@ CCardReader::CCardReader()
 void CCardReader::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 {
     mBack.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY()));
-    mCard.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY()));
+
+    auto cardScale = (double)CardLength / mCard.GetImageWidth();
+    // Draw the card and move its position based on current column
+    mCard.DrawPolygon(graphics, machineX + GetX(), machineY + GetY() + mColumn * cardScale * CardColumnWidth);
+    
     mFront.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY()));
+}
+
+/**
+ * Setter for time. Updates card location as well
+ * \param time current time
+ */
+void CCardReader::SetTime(double time)
+{
+    CComponent::SetTime(time);
+    UpdateColumn(time);
+}
+
+/**
+ * Updates the location of the card based on current time
+ * \param time current time
+ */
+void CCardReader::UpdateColumn(double time)
+{
+    const double SecondsPerMinute = 60;
+    // Convert time to beat number aka column number
+    mColumn = time * (double)mBeatsPerMinute / SecondsPerMinute;
+}
+
+/**
+ * Determine if a hole is punched in the card.
+ * @param column Column on the card, from 0 (left of first column) to 80 (last column)
+ * @param row Row on the card, -2 to 9.
+ * @return True if hole is punched at column, row
+ */
+bool CCardReader::IsPunched(int column, int row)
+{
+    auto luminance = mCard.AverageLuminance(CardColumn0X + (column - 1) * CardColumnWidth,
+        CardRow0Y + CardRowHeight * row, CardPunchWidth, CardPunchHit);
+    return luminance < CardPunchLuminance;
 }

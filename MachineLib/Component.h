@@ -20,7 +20,7 @@ public:
 	 * Setter for current time
 	 * \param time Current time
 	 */
-	void SetTime(double time) { mTime = time; }
+	virtual void SetTime(double time) { mTime = time; }
 
 	/**
 	 * Draw function for component.  Pure virtual

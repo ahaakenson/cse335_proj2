@@ -22,6 +22,7 @@ public:
     virtual void DrawMachine(Gdiplus::Graphics* graphics) override;
     virtual void SetLocation(int x, int y) override;
     virtual void SetMachineNumber(int machineNumber) override;
+    virtual void SetMachineFrame(int frame) override;
 private:
     /// Actual machine with components
     std::shared_ptr<CMachineActual> mMachineActual;

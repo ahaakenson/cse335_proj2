@@ -22,6 +22,7 @@ public:
 	CMachineActual();
 	void DrawMachineActual(Gdiplus::Graphics* graphics);
 	void SetMachineActualLocation(int x, int y);
+	void SetMachineActualFrame(int frame);
 
 	/**
 	 * Setter for interpreter pointer

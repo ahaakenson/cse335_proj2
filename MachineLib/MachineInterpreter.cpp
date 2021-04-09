@@ -69,3 +69,12 @@ void CMachineInterpreter::SetMachineNumber(int machineNumber)
 		mMachineActual->SetInterpreter(this);
 	}
 }
+
+/**
+ * Setter for current frame
+ * \param frame current frame
+ */
+void CMachineInterpreter::SetMachineFrame(int frame)
+{
+	mMachineActual->SetMachineActualFrame(frame);
+}

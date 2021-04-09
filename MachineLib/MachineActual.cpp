@@ -47,7 +47,7 @@ void CMachineActual::SetMachineActualLocation(int x, int y)
 /**
  * Computes the time for a frame
  * \param frame frame to compute the current time for
- * \return current time at that frame
+ * \return current time at that frame in seconds
  */
 double CMachineActual::ComputeTime(int frame)
 {
@@ -63,4 +63,19 @@ void CMachineActual::AddComponent(std::shared_ptr<CComponent> component)
 	// Set both ends of the composition
 	component->SetMachine(this);
 	mComponents.push_back(component);
+}
+
+/**
+ * Setter for current frame
+ * \param frame current frame
+ */
+void CMachineActual::SetMachineActualFrame(int frame)
+{
+	mCurrFrame = frame;
+	mTime = ComputeTime(frame);
+	// Update the time for all of the components
+	for (auto& component : mComponents)
+	{
+		component->SetTime(mTime);
+	}
 }
