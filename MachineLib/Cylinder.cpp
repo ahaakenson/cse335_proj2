@@ -54,9 +54,9 @@ void CCylinder::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 
     double theta = 2 * M_PI * (mRotation); // rotation in radians
     // How extended ram is in x direction
-    double xOffset = sin(theta) * (double)CylinderMaxExtent * mRamPosition;
+    double xOffset = sin(theta) * (double)CylinderMaxExtent * mMaxExtension *  mRamPosition;
     // How extended ram is in y direction
-    double yOffset = cos(theta) * (double)CylinderMaxExtent * mRamPosition;
+    double yOffset = cos(theta) * (double)CylinderMaxExtent * mMaxExtension * mRamPosition;
     // Switch signs since lower pixel number mean higher on screen
     yOffset = yOffset * -1;
     mRam.DrawPolygon(graphics, double(machineX + GetX()) + xOffset, double(machineY + GetY()) + yOffset);

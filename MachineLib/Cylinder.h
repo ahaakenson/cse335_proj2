@@ -32,5 +32,10 @@ private:
 	double mRamPosition = 0.0;
 	/// Rotation of cylinder
 	double mRotation = 0.0;
+	/// Maximum extension compared to cylinder's max
+	double mMaxExtension = 1.0;
+
+	/// Whether cylinder is vertical
+	bool mVertical = true;
 };
 
