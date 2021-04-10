@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rotationscaling_908',['RotationScaling',['../_view_edit_8cpp.html#a5aad50df163545659b29dc0f88c8a2d4',1,'ViewEdit.cpp']]],
-  ['rtod_909',['RtoD',['../_image_drawable_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;ImageDrawable.cpp'],['../_rotated_bitmap_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;RotatedBitmap.cpp']]]
+  ['outputoffsetx_966',['OutputOffsetX',['../_card_reader_8cpp.html#a8523b55083848bb4cc18fe33fa31e3e3',1,'CardReader.cpp']]],
+  ['outputoffsety_967',['OutputOffsetY',['../_card_reader_8cpp.html#ab35ee054696f418619b084ce242db1aa',1,'CardReader.cpp']]],
+  ['outputspacingx_968',['OutputSpacingX',['../_card_reader_8cpp.html#a823c38e2c416981a198ba285b0cb3330',1,'CardReader.cpp']]]
 ];

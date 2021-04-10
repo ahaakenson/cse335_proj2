@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['theapp_910',['theApp',['../_canadian_experience_8cpp.html#a67124bfb0809a8ff695444fd678f7a94',1,'theApp():&#160;CanadianExperience.cpp'],['../_canadian_experience_8h.html#a67124bfb0809a8ff695444fd678f7a94',1,'theApp():&#160;CanadianExperience.cpp'],['../_machine_lib_8cpp.html#a200e1bf35af4e3b4ae1732007a3dd01c',1,'theApp():&#160;MachineLib.cpp']]],
-  ['ticklong_911',['TickLong',['../_view_timeline_8cpp.html#a897dba2e625242609ec8ab570c0a35e7',1,'ViewTimeline.cpp']]],
-  ['tickshort_912',['TickShort',['../_view_timeline_8cpp.html#a07b719855173cf38db9f73c533533324',1,'ViewTimeline.cpp']]],
-  ['tickspacing_913',['TickSpacing',['../_view_timeline_8cpp.html#a74f095c6b0b9640491938519705f01d3',1,'ViewTimeline.cpp']]],
-  ['tickunder_914',['TickUnder',['../_view_timeline_8cpp.html#ad34b37c256a63d8acb434f87af3cf735',1,'ViewTimeline.cpp']]]
+  ['rotationscaling_969',['RotationScaling',['../_view_edit_8cpp.html#a5aad50df163545659b29dc0f88c8a2d4',1,'ViewEdit.cpp']]],
+  ['rtod_970',['RtoD',['../_image_drawable_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;ImageDrawable.cpp'],['../_rotated_bitmap_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;RotatedBitmap.cpp']]]
 ];

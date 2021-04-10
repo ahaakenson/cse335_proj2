@@ -29,6 +29,7 @@ public:
 	void SetPressure(int pressure);
 
 private:
+    /// Component to which this belongs
     CAirSinkDestination* mComponent = nullptr;
 };
 

@@ -1,5 +1,17 @@
 var dir_41f419bcf8176071d39c277ee76622df =
 [
+    [ "AirSink.cpp", "_air_sink_8cpp.html", null ],
+    [ "AirSink.h", "_air_sink_8h.html", [
+      [ "CAirSink", "class_c_air_sink.html", "class_c_air_sink" ]
+    ] ],
+    [ "AirSinkDestination.cpp", "_air_sink_destination_8cpp.html", null ],
+    [ "AirSinkDestination.h", "_air_sink_destination_8h.html", [
+      [ "CAirSinkDestination", "class_c_air_sink_destination.html", "class_c_air_sink_destination" ]
+    ] ],
+    [ "AirSource.cpp", "_air_source_8cpp.html", null ],
+    [ "AirSource.h", "_air_source_8h.html", [
+      [ "CAirSource", "class_c_air_source.html", "class_c_air_source" ]
+    ] ],
     [ "CardReader.cpp", "_card_reader_8cpp.html", "_card_reader_8cpp" ],
     [ "CardReader.h", "_card_reader_8h_source.html", null ],
     [ "Component.cpp", "_component_8cpp.html", null ],
@@ -46,6 +58,14 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "MachineStandin.h", "_machine_standin_8h.html", [
       [ "CMachineStandin", "class_c_machine_standin.html", "class_c_machine_standin" ]
     ] ],
+    [ "MotionSink.cpp", "_motion_sink_8cpp.html", null ],
+    [ "MotionSink.h", "_motion_sink_8h.html", [
+      [ "CMotionSink", "class_c_motion_sink.html", null ]
+    ] ],
+    [ "MotionSource.cpp", "_motion_source_8cpp.html", null ],
+    [ "MotionSource.h", "_motion_source_8h.html", [
+      [ "CMotionSource", "class_c_motion_source.html", "class_c_motion_source" ]
+    ] ],
     [ "pch.h", "_machine_lib_2pch_8h_source.html", null ],
     [ "Polygon.cpp", "_polygon_8cpp.html", "_polygon_8cpp" ],
     [ "Polygon.h", "_polygon_8h.html", [
@@ -57,7 +77,7 @@ var dir_41f419bcf8176071d39c277ee76622df =
     ] ],
     [ "TubingPoint.cpp", "_tubing_point_8cpp.html", null ],
     [ "TubingPoint.h", "_tubing_point_8h.html", [
-      [ "CTubingPoint", "class_c_tubing_point.html", null ]
+      [ "CTubingPoint", "class_c_tubing_point.html", "class_c_tubing_point" ]
     ] ],
     [ "WavChannel.cpp", "_wav_channel_8cpp.html", null ],
     [ "WavChannel.h", "_wav_channel_8h.html", [

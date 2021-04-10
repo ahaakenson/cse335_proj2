@@ -6,6 +6,9 @@ var hierarchy =
       [ "CHaroldFactory", "class_c_harold_factory.html", null ],
       [ "CSpartyFactory", "class_c_sparty_factory.html", null ]
     ] ],
+    [ "CAirSinkDestination", "class_c_air_sink_destination.html", [
+      [ "CCylinder", "class_c_cylinder.html", null ]
+    ] ],
     [ "CAnimChannel", "class_c_anim_channel.html", [
       [ "CAnimChannelAngle", "class_c_anim_channel_angle.html", null ],
       [ "CAnimChannelPoint", "class_c_anim_channel_point.html", null ]
@@ -38,6 +41,8 @@ var hierarchy =
       [ "CMachineActual2Factory", "class_c_machine_actual2_factory.html", null ]
     ] ],
     [ "CMachineStandin", "class_c_machine_standin.html", null ],
+    [ "CMotionSink", "class_c_motion_sink.html", null ],
+    [ "CMotionSource", "class_c_motion_source.html", null ],
     [ "CPicture", "class_c_picture.html", null ],
     [ "CPictureFactory", "class_c_picture_factory.html", null ],
     [ "CPictureObserver", "class_c_picture_observer.html", [
@@ -53,7 +58,10 @@ var hierarchy =
       [ "CViewTimeline", "class_c_view_timeline.html", null ]
     ] ],
     [ "CTimeline", "class_c_timeline.html", null ],
-    [ "CTubingPoint", "class_c_tubing_point.html", null ],
+    [ "CTubingPoint", "class_c_tubing_point.html", [
+      [ "CAirSink", "class_c_air_sink.html", null ],
+      [ "CAirSource", "class_c_air_source.html", null ]
+    ] ],
     [ "CWavChannel", "class_c_wav_channel.html", null ],
     [ "CWavPlayer", "class_c_wav_player.html", null ],
     [ "CWinApp", null, [
@@ -63,10 +71,10 @@ var hierarchy =
     [ "CWnd", null, [
       [ "CMachineDemoView", "class_c_machine_demo_view.html", null ]
     ] ],
-    [ "Keyframe", null, [
-      [ "CAnimChannelAngle::KeyframeAngle", "class_c_anim_channel_angle_1_1_keyframe_angle.html", null ]
-    ] ],
     [ "CAnimChannel::Keyframe", "class_c_anim_channel_1_1_keyframe.html", [
       [ "CAnimChannelPoint::KeyframePoint", "class_c_anim_channel_point_1_1_keyframe_point.html", null ]
+    ] ],
+    [ "Keyframe", null, [
+      [ "CAnimChannelAngle::KeyframeAngle", "class_c_anim_channel_angle_1_1_keyframe_angle.html", null ]
     ] ]
 ];

@@ -12,6 +12,9 @@
 class CComponent;
 class CAirSink;
 
+/**
+ * Class that represents an air source
+ */
 class CAirSource : public CTubingPoint
 {
 public:
@@ -28,6 +31,7 @@ public:
 private:
     /// The component which this belongs to
     CComponent* mComponent = nullptr;
+    /// Associated air sink
     CAirSink* mAirSink = nullptr;
 };
 

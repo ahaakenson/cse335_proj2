@@ -98,6 +98,10 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mActors
 : <a class="el" href="class_c_picture.html#ae5c8fda7af8aebc8a454a79c29392a87">CPicture</a>
 </li>
+<li>mAirSink
+: <a class="el" href="class_c_air_source.html#a2ac718b5a48bc037a8dba8ebb8862abc">CAirSource</a>
+, <a class="el" href="class_c_cylinder.html#a1ea3928144f3663c432d4764818cffee">CCylinder</a>
+</li>
 <li>mAngle
 : <a class="el" href="class_c_anim_channel_angle_1_1_keyframe_angle.html#aae7a4b23a3114e121de64edfbde6ed52">CAnimChannelAngle::KeyframeAngle</a>
 , <a class="el" href="class_c_anim_channel_angle.html#af71d123d0d6d5e4106b326b5c824e635">CAnimChannelAngle</a>
@@ -143,6 +147,10 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mColumn
 : <a class="el" href="class_c_card_reader.html#ab4b2e81c72cb91f2f121976c82362526">CCardReader</a>
 </li>
+<li>mComponent
+: <a class="el" href="class_c_air_sink.html#a814275c316b55067ade48ebda9b33b2d">CAirSink</a>
+, <a class="el" href="class_c_air_source.html#ae9e591950e4f366265bdd155d0ee5c26">CAirSource</a>
+</li>
 <li>mComponents
 : <a class="el" href="class_c_machine_actual.html#a232d45778fce02e7c793b7bf3934ac3b">CMachineActual</a>
 </li>
@@ -154,6 +162,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>mCylinder
 : <a class="el" href="class_c_cylinder.html#a18f98df37eb55839b83630237613261c">CCylinder</a>
+, <a class="el" href="class_c_motion_source.html#a96eabd7c00b87e0332985043a53a3939">CMotionSource</a>
 </li>
 <li>mDie
 : <a class="el" href="class_c_machine_demo_view.html#a37cb3218ea891ea0925ca68af0cc633d">CMachineDemoView</a>
@@ -250,6 +259,12 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mMaxExtension
 : <a class="el" href="class_c_cylinder.html#aef7cdf71c2a7a36b3b105b0c6dd86740">CCylinder</a>
 </li>
+<li>mMotionSink
+: <a class="el" href="class_c_motion_source.html#a781c13edb7e9ba65605d085e578fa9bf">CMotionSource</a>
+</li>
+<li>mMotionSource
+: <a class="el" href="class_c_cylinder.html#a2c47ccb095dcf7e7a1ba67e2b765dbf6">CCylinder</a>
+</li>
 <li>mMount
 : <a class="el" href="class_c_cylinder.html#a4d52771fdee688cbe164734f04da8ca3">CCylinder</a>
 </li>
@@ -315,6 +330,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mPosition
 : <a class="el" href="class_c_actor.html#a65807448542244bc04e24dee98d17c4f">CActor</a>
 , <a class="el" href="class_c_drawable.html#a06b832652ace0c349a26bc98fac2b327">CDrawable</a>
+, <a class="el" href="class_c_tubing_point.html#a765b7c797f93e969d823b1f160ff1252">CTubingPoint</a>
 </li>
 <li>mPositionChannel
 : <a class="el" href="class_c_head_top.html#a5ea7bc4e8f223dfc95edecccbad4a467">CHeadTop</a>
@@ -335,6 +351,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_c_cylinder.html#abb587a5c8db0904b7ee2a984a01ea0a9">CCylinder</a>
 , <a class="el" href="class_c_drawable.html#ac9d931eb93a9f977af8575845a9ab55a">CDrawable</a>
 , <a class="el" href="class_c_polygon.html#a3a1bbe85e4268c4e38ba690103a7bf92">CPolygon</a>
+, <a class="el" href="class_c_tubing_point.html#a5c5c5acc94b149a818b95f1737766a5d">CTubingPoint</a>
 </li>
 <li>mRwButton
 : <a class="el" href="class_c_machine_demo_dlg.html#a06bea6c8708adeb055bc037273bca6e3">CMachineDemoDlg</a>
@@ -355,8 +372,14 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mSize
 : <a class="el" href="class_c_picture.html#aee86e4f99c694299146c505a4a954723">CPicture</a>
 </li>
+<li>mSources
+: <a class="el" href="class_c_card_reader.html#a420db97584a5040a18edaf345a26e02f">CCardReader</a>
+</li>
 <li>mSourceVoice
 : <a class="el" href="class_c_wav_channel.html#a6c168a4578ce3c16d4ab682dbfbd2f57">CWavChannel</a>
+</li>
+<li>mSpeed
+: <a class="el" href="class_c_tubing_point.html#a25bff59527dda8d934afdf1fafbd8874">CTubingPoint</a>
 </li>
 <li>mStandin
 : <a class="el" href="class_c_machine.html#a41428ce5d86c1e71d2cccbebd20a199b">CMachine</a>
@@ -417,7 +440,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Apr 10 2021 13:16:19 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 10 2021 17:13:16 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

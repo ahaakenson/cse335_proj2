@@ -13,6 +13,8 @@ var _card_reader_8cpp =
     [ "CardRow0Y", "_card_reader_8cpp.html#a57903bb44e7df1327b34c46f31ca5235", null ],
     [ "CardRowHeight", "_card_reader_8cpp.html#a3e6afe2b829dd3b7afc76b9fc57067d7", null ],
     [ "CardWidth", "_card_reader_8cpp.html#a6ce141dc348c0ca1a73242da6a71cbee", null ],
+    [ "MaxColumns", "_card_reader_8cpp.html#a3dc4249a9a20f5eb1ac8098214a3cb54", null ],
+    [ "NumSources", "_card_reader_8cpp.html#a1c8dee19aa4c546c2b64b722e1144dee", null ],
     [ "OutputOffsetX", "_card_reader_8cpp.html#a8523b55083848bb4cc18fe33fa31e3e3", null ],
     [ "OutputOffsetY", "_card_reader_8cpp.html#ab35ee054696f418619b084ce242db1aa", null ],
     [ "OutputSpacingX", "_card_reader_8cpp.html#a823c38e2c416981a198ba285b0cb3330", null ]

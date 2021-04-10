@@ -1,11 +1,15 @@
 var searchData=
 [
-  ['rectangle_331',['Rectangle',['../class_c_polygon.html#af6538de6e9c10f6268dfce9a05745117',1,'CPolygon::Rectangle(int x, int y, int wid=0, int hit=0)'],['../class_c_polygon.html#a983466102ec2e47dfeb5148428d00566',1,'CPolygon::Rectangle(double x, double y, double wid=0, double hit=0)'],['../class_c_shape.html#abf5241aba8e355d1c9dce6dd34882c46',1,'CShape::Rectangle()']]],
-  ['registerwindowclass_332',['RegisterWindowClass',['../class_c_machine_demo_view.html#aa4d5fcd86ec1298a164a780e34729931',1,'CMachineDemoView']]],
-  ['removeobserver_333',['RemoveObserver',['../class_c_picture.html#a548ad72979b2a11c2669d9896f32bf92',1,'CPicture']]],
-  ['rotatedbitmap_2ecpp_334',['RotatedBitmap.cpp',['../_rotated_bitmap_8cpp.html',1,'']]],
-  ['rotatedbitmap_2eh_335',['RotatedBitmap.h',['../_rotated_bitmap_8h.html',1,'']]],
-  ['rotatepoint_336',['RotatePoint',['../class_c_drawable.html#aabf32ebc32a2dbe928bc9fa38bd82535',1,'CDrawable']]],
-  ['rotationscaling_337',['RotationScaling',['../_view_edit_8cpp.html#a5aad50df163545659b29dc0f88c8a2d4',1,'ViewEdit.cpp']]],
-  ['rtod_338',['RtoD',['../_image_drawable_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;ImageDrawable.cpp'],['../_rotated_bitmap_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;RotatedBitmap.cpp']]]
+  ['picture_2ecpp_345',['Picture.cpp',['../_picture_8cpp.html',1,'']]],
+  ['picture_2eh_346',['Picture.h',['../_picture_8h.html',1,'']]],
+  ['picturefactory_2ecpp_347',['PictureFactory.cpp',['../_picture_factory_8cpp.html',1,'']]],
+  ['picturefactory_2eh_348',['PictureFactory.h',['../_picture_factory_8h.html',1,'']]],
+  ['pictureobserver_2ecpp_349',['PictureObserver.cpp',['../_picture_observer_8cpp.html',1,'']]],
+  ['pictureobserver_2eh_350',['PictureObserver.h',['../_picture_observer_8h.html',1,'']]],
+  ['place_351',['Place',['../class_c_drawable.html#ac154be14313b739471d3a1529a2b31b5',1,'CDrawable']]],
+  ['play_352',['Play',['../class_c_wav_channel.html#a7c0e92c17fde5b3d321f650fbb91330e',1,'CWavChannel']]],
+  ['polydrawable_2ecpp_353',['PolyDrawable.cpp',['../_poly_drawable_8cpp.html',1,'']]],
+  ['polydrawable_2eh_354',['PolyDrawable.h',['../_poly_drawable_8h.html',1,'']]],
+  ['polygon_2ecpp_355',['Polygon.cpp',['../_polygon_8cpp.html',1,'']]],
+  ['polygon_2eh_356',['Polygon.h',['../_polygon_8h.html',1,'']]]
 ];
