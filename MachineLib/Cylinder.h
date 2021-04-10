@@ -10,6 +10,7 @@
 #pragma once
 #include "Component.h"
 #include "Polygon.h"
+#include "AirSinkDestination.h"
 #include <memory>
 
 class CAirSink;
@@ -17,13 +18,13 @@ class CAirSink;
  /**
   * Class that represents a cylinder to hit instruments.
   */
-class CCylinder : public CComponent
+class CCylinder : public CComponent, public CAirSinkDestination
 {
 public:
 	CCylinder();
 	void Draw(Gdiplus::Graphics* graphics, long machineX, long machineY) override;
 	void SetRotation(double rotation);
-	void SetPressure(int pressure);
+	virtual void SetPressure(int pressure) override;
 	/**
 	 * Gets associated air sink
 	 * \return air sink

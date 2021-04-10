@@ -109,6 +109,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AirSink.cpp" />
+    <ClCompile Include="AirSinkDestination.cpp" />
     <ClCompile Include="AirSource.cpp" />
     <ClCompile Include="CardReader.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AirSink.h" />
+    <ClInclude Include="AirSinkDestination.h" />
     <ClInclude Include="AirSource.h" />
     <ClInclude Include="CardReader.h" />
     <ClInclude Include="Component.h" />

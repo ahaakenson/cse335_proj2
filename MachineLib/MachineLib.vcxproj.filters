@@ -64,6 +64,9 @@
     <ClCompile Include="AirSource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AirSinkDestination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MachineLib.h" />
@@ -131,6 +134,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AirSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AirSinkDestination.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

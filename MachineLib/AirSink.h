@@ -9,7 +9,7 @@
 #pragma once
 #include "TubingPoint.h"
 
-class CCylinder;
+class CAirSinkDestination;
 
  /**
   * Class that represents an air sink
@@ -17,7 +17,7 @@ class CCylinder;
 class CAirSink : public CTubingPoint
 {
 public:
-    CAirSink(CCylinder* component);
+    CAirSink(CAirSinkDestination* component);
     /// Copy constructor (disabled)
     CAirSink(const CAirSink&) = delete;
 
@@ -27,6 +27,6 @@ public:
 	void SetPressure(int pressure);
 
 private:
-    CCylinder* mCylinder = nullptr;
+    CAirSinkDestination* mComponent = nullptr;
 };
 

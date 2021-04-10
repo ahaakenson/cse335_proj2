@@ -13,9 +13,9 @@
  * Constructor
  * \param component component which this air sink will be associated with
  */
-CAirSink::CAirSink(CCylinder* component)
+CAirSink::CAirSink(CAirSinkDestination* component)
 {
-	mCylinder = component;
+	mComponent = component;
 }
 
  /**
@@ -24,8 +24,5 @@ CAirSink::CAirSink(CCylinder* component)
   */
 void CAirSink::SetPressure(int pressure)
 {
-	if (mCylinder != nullptr)
-	{
-		mCylinder->SetPressure(pressure);
-	}
+	mComponent->SetPressure(pressure);
 }
