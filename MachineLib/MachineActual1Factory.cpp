@@ -180,16 +180,17 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     post->Rectangle(-post->GetImageWidth() / 2, 0);
     post->SetPosition(ClampingPostCenter, 0);
     machine->AddComponent(post);
+    */
 
     ////
     //// Temporary connection from card reader to cylinders
     ////
-    //for (int i = 0; i < 5; i++)
-    //{
-    //    reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
-    //}
+    for (int i = 0; i < 5; i++)
+    {
+        reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
+    }
 
-
+    /*
     //
     // We do the tubing last so it is on top
     //

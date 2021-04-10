@@ -5,6 +5,7 @@ var class_c_machine_actual =
     [ "ComputeTime", "class_c_machine_actual.html#a7c770d22ea3cde3694f73e6a4e097332", null ],
     [ "DrawMachineActual", "class_c_machine_actual.html#a2dc56133b7aeba56da4dd342f0b05b87", null ],
     [ "SetInterpreter", "class_c_machine_actual.html#a3ab1c00b166abab4b8bfd295b16f27e7", null ],
+    [ "SetMachineActualFrame", "class_c_machine_actual.html#a790cc038072f1d101b37dbb21ed9deb7", null ],
     [ "SetMachineActualLocation", "class_c_machine_actual.html#abbe7fdd4e940d551d0af945aa16c5bda", null ],
     [ "mComponents", "class_c_machine_actual.html#a232d45778fce02e7c793b7bf3934ac3b", null ],
     [ "mCurrFrame", "class_c_machine_actual.html#ab9a5081ebaa7a719e3c7be832f779784", null ],

@@ -108,6 +108,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AirSink.cpp" />
+    <ClCompile Include="AirSource.cpp" />
     <ClCompile Include="CardReader.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Cylinder.cpp" />
@@ -116,6 +118,7 @@
     <ClCompile Include="MachineActual2Factory.cpp" />
     <ClCompile Include="MachineInterpreter.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="TubingPoint.cpp" />
     <ClCompile Include="WavChannel.cpp" />
     <ClCompile Include="WAVFileReader.cpp" />
     <ClCompile Include="WavPlayer.cpp" />
@@ -131,6 +134,8 @@
     <ClCompile Include="MachineStandin.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AirSink.h" />
+    <ClInclude Include="AirSource.h" />
     <ClInclude Include="CardReader.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Cylinder.h" />
@@ -139,6 +144,7 @@
     <ClInclude Include="MachineActual2Factory.h" />
     <ClInclude Include="MachineInterpreter.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="TubingPoint.h" />
     <ClInclude Include="WavChannel.h" />
     <ClInclude Include="WAVFileReader.h" />
     <ClInclude Include="WavPlayer.h" />

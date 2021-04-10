@@ -6,6 +6,10 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "Component.h", "_component_8h.html", [
       [ "CComponent", "class_c_component.html", "class_c_component" ]
     ] ],
+    [ "Cylinder.cpp", "_cylinder_8cpp.html", "_cylinder_8cpp" ],
+    [ "Cylinder.h", "_cylinder_8h.html", [
+      [ "CCylinder", "class_c_cylinder.html", "class_c_cylinder" ]
+    ] ],
     [ "Machine.cpp", "_machine_8cpp.html", null ],
     [ "Machine.h", "_machine_8h.html", [
       [ "CMachine", "class_c_machine.html", "class_c_machine" ]
@@ -50,6 +54,10 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "Shape.cpp", "_shape_8cpp.html", null ],
     [ "Shape.h", "_shape_8h.html", [
       [ "CShape", "class_c_shape.html", "class_c_shape" ]
+    ] ],
+    [ "TubingPoint.cpp", "_tubing_point_8cpp.html", null ],
+    [ "TubingPoint.h", "_tubing_point_8h.html", [
+      [ "CTubingPoint", "class_c_tubing_point.html", null ]
     ] ],
     [ "WavChannel.cpp", "_wav_channel_8cpp.html", null ],
     [ "WavChannel.h", "_wav_channel_8h.html", [

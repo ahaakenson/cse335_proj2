@@ -6,7 +6,9 @@
 
 #include "pch.h"
 #include "CardReader.h"
+#include "AirSource.h"
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -73,6 +75,12 @@ const int OutputOffsetX = -35;
 /// X spacing for the outputs
 const double OutputSpacingX = 10.7;
 
+/// Number of air sources connecting to the card reader
+const int NumSources = 10;
+
+/// Number of columns on the punch card
+const int MaxColumns = 80;
+
 /**
  * Constructor
  */
@@ -86,6 +94,14 @@ CCardReader::CCardReader()
 
     mCard.Rectangle(CardOffsetX, CardOffsetY, CardLength, CardWidth);
     mCard.SetRotation(-0.25);
+
+    // Make and connect all 10 air sources
+    for (int i = 0; i < NumSources; i++)
+    {
+        auto source = make_shared<CAirSource>();
+        source->SetComponent(this);
+        mSources.push_back(source);
+    }
 }
 
 
@@ -126,6 +142,29 @@ void CCardReader::UpdateColumn(double time)
     double beat = time * mBeatsPerMinute / SecondsPerMinute;
     double remainder = fmod(beat, 1);
     mColumn = (int)beat;
+
+    // Still in a valid column of punch card
+    if (mColumn <= MaxColumns)
+    {
+        // Determine what is punched in this row
+        for (int row = 0; row < NumSources; row++)
+        {
+            bool punched = IsPunched(mColumn, row);
+            if (punched)
+            {
+                int x = 99;
+            }
+            mSources[row]->SetPressure(punched);
+        }
+    }
+    // Not in valid column of punch card, set all pressures to 0
+    else
+    {
+        for (auto& source : mSources)
+        {
+            source->SetPressure(0);
+        }
+    }
 }
 
 /**

@@ -10,6 +10,9 @@
 #pragma once
 #include "Component.h"
 #include "Polygon.h"
+#include <memory>
+
+class CAirSink;
 
  /**
   * Class that represents a cylinder to hit instruments.
@@ -20,6 +23,12 @@ public:
 	CCylinder();
 	void Draw(Gdiplus::Graphics* graphics, long machineX, long machineY) override;
 	void SetRotation(double rotation);
+	void SetPressure(int pressure);
+	/**
+	 * Gets associated air sink
+	 * \return air sink
+	 */
+	CAirSink* GetSink() { return mAirSink.get(); }
 
 private:
 	/// Polygon for cylinder mount
@@ -37,5 +46,6 @@ private:
 
 	/// Whether cylinder is vertical
 	bool mVertical = true;
+	std::shared_ptr<CAirSink> mAirSink;
 };
 

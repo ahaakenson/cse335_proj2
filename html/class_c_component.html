@@ -97,12 +97,12 @@ $(document).ready(function(){initNavTree('class_c_component.html','');});
 
 <p><code>#include &lt;<a class="el" href="_component_8h_source.html">Component.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_c_card_reader.html">CCardReader</a>, and <a class="el" href="class_c_shape.html">CShape</a>.</p>
+<p>Inherited by <a class="el" href="class_c_card_reader.html">CCardReader</a>, <a class="el" href="class_c_cylinder.html">CCylinder</a>, and <a class="el" href="class_c_shape.html">CShape</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab96696d508711f62b9ec143868c326f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ab96696d508711f62b9ec143868c326f5">SetTime</a> (double time)</td></tr>
-<tr class="separator:ab96696d508711f62b9ec143868c326f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae295853fcf30e7708c9939e3240e17d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#aae295853fcf30e7708c9939e3240e17d">SetTime</a> (double time)</td></tr>
+<tr class="separator:aae295853fcf30e7708c9939e3240e17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad720c6945cd10e8eb0af7add3388f9fb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ad720c6945cd10e8eb0af7add3388f9fb">Draw</a> (Gdiplus::Graphics *graphics, long machineX, long machineY)=0</td></tr>
 <tr class="separator:ad720c6945cd10e8eb0af7add3388f9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f514bc25d4e2f6332d056b630698ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a> (<a class="el" href="class_c_machine_actual.html">CMachineActual</a> *machine)</td></tr>
@@ -184,7 +184,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_c_shape.html#aafe41487eda65a039268123c66253ef3">CShape</a>, and <a class="el" href="class_c_card_reader.html#ab70b5ffe45dd7dc3dc1feef0748f3505">CCardReader</a>.</p>
+<p>Implemented in <a class="el" href="class_c_shape.html#aafe41487eda65a039268123c66253ef3">CShape</a>, <a class="el" href="class_c_card_reader.html#ab70b5ffe45dd7dc3dc1feef0748f3505">CCardReader</a>, and <a class="el" href="class_c_cylinder.html#aa59a35923f6cd057c2daa9b4151dbe5e">CCylinder</a>.</p>
 
 </div>
 </div>
@@ -307,8 +307,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 </div>
 </div>
-<a id="ab96696d508711f62b9ec143868c326f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab96696d508711f62b9ec143868c326f5">&#9670;&nbsp;</a></span>SetTime()</h2>
+<a id="aae295853fcf30e7708c9939e3240e17d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae295853fcf30e7708c9939e3240e17d">&#9670;&nbsp;</a></span>SetTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +317,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void CComponent::SetTime </td>
+          <td class="memname">virtual void CComponent::SetTime </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>time</em></td><td>)</td>
@@ -326,7 +326,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -336,6 +336,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="class_c_card_reader.html#ae0205fce74221acfa65e480d32a19a45">CCardReader</a>.</p>
 
 </div>
 </div>
@@ -349,7 +351,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_component.html">CComponent</a></li>
-    <li class="footer">Generated on Thu Apr 8 2021 21:44:20 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 10 2021 13:16:18 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

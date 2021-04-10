@@ -6,6 +6,10 @@
 
 #include "pch.h"
 #include "Cylinder.h"
+#include "AirSink.h"
+#include <memory>
+
+using namespace std;
 
  /// Cylinder base image
 const std::wstring CylinderBaseImage = L"images/cylinder-base.png";
@@ -39,12 +43,14 @@ CCylinder::CCylinder()
 
     mRam.SetImage(CylinderRamImage);
     mRam.Rectangle(-mCylinder.GetImageWidth() / 2, 0);
+
+    mAirSink = make_shared<CAirSink>(this);
 }
 
 
 /**
  * Draws the cylinder in graphics context
- * param graphics graphics context
+ * \param graphics graphics context
  * \param machineX x coordinate of machine
  * \param machineY y coordinate of machine
  */
@@ -64,10 +70,23 @@ void CCylinder::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
     mCylinder.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY()));
 }
 
+/**
+ * Sets rotation of the cylinder
+ * \param rotation Rotation of the cylinder between 0-1
+ */
 void CCylinder::SetRotation(double rotation)
 {
     mMount.SetRotation(rotation);
     mRam.SetRotation(rotation);
     mCylinder.SetRotation(rotation);
     mRotation = rotation;
+}
+
+/**
+ * Sets pressure of cylinder and moves ram
+ * \param pressure pressure from air source
+ */
+void CCylinder::SetPressure(int pressure)
+{
+    mRamPosition = pressure;
 }

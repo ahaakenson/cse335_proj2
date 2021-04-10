@@ -104,16 +104,18 @@ $(document).ready(function(){initNavTree('_machine_interpreter_8h_source.html','
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_c_machine_interpreter.html#ac8002678b7a28b39b7e2df717a752bd6">DrawMachine</a>(Gdiplus::Graphics* graphics) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_c_machine_interpreter.html#a81471c2c4e24de24830a9bd608920148">SetLocation</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_c_machine_interpreter.html#acd56d1aea27fffc8a8b8ba33d22843df">SetMachineNumber</a>(<span class="keywordtype">int</span> machineNumber) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">   27</a></span>&#160;    std::shared_ptr&lt;CMachineActual&gt; <a class="code" href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">mMachineActual</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_c_machine_interpreter.html#ac4bb319cd55457d6538055b92cce0c29">SetMachineFrame</a>(<span class="keywordtype">int</span> frame) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">   28</a></span>&#160;    std::shared_ptr&lt;CMachineActual&gt; <a class="code" href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">mMachineActual</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_c_machine_interpreter_html"><div class="ttname"><a href="class_c_machine_interpreter.html">CMachineInterpreter</a></div><div class="ttdef"><b>Definition:</b> MachineInterpreter.h:18</div></div>
+<div class="ttc" id="aclass_c_machine_interpreter_html_ac4bb319cd55457d6538055b92cce0c29"><div class="ttname"><a href="class_c_machine_interpreter.html#ac4bb319cd55457d6538055b92cce0c29">CMachineInterpreter::SetMachineFrame</a></div><div class="ttdeci">virtual void SetMachineFrame(int frame) override</div><div class="ttdef"><b>Definition:</b> MachineInterpreter.cpp:77</div></div>
 <div class="ttc" id="aclass_c_machine_html"><div class="ttname"><a href="class_c_machine.html">CMachine</a></div><div class="ttdef"><b>Definition:</b> Machine.h:30</div></div>
-<div class="ttc" id="aclass_c_machine_interpreter_html_af9a26f497fca0edcb615725dcaa6453e"><div class="ttname"><a href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">CMachineInterpreter::mMachineActual</a></div><div class="ttdeci">std::shared_ptr&lt; CMachineActual &gt; mMachineActual</div><div class="ttdoc">Actual machine with components.</div><div class="ttdef"><b>Definition:</b> MachineInterpreter.h:27</div></div>
+<div class="ttc" id="aclass_c_machine_interpreter_html_af9a26f497fca0edcb615725dcaa6453e"><div class="ttname"><a href="class_c_machine_interpreter.html#af9a26f497fca0edcb615725dcaa6453e">CMachineInterpreter::mMachineActual</a></div><div class="ttdeci">std::shared_ptr&lt; CMachineActual &gt; mMachineActual</div><div class="ttdoc">Actual machine with components.</div><div class="ttdef"><b>Definition:</b> MachineInterpreter.h:28</div></div>
 <div class="ttc" id="aclass_c_machine_interpreter_html_a81471c2c4e24de24830a9bd608920148"><div class="ttname"><a href="class_c_machine_interpreter.html#a81471c2c4e24de24830a9bd608920148">CMachineInterpreter::SetLocation</a></div><div class="ttdeci">virtual void SetLocation(int x, int y) override</div><div class="ttdef"><b>Definition:</b> MachineInterpreter.cpp:36</div></div>
 <div class="ttc" id="a_machine_8h_html"><div class="ttname"><a href="_machine_8h.html">Machine.h</a></div></div>
 <div class="ttc" id="a_machine_actual_8h_html"><div class="ttname"><a href="_machine_actual_8h.html">MachineActual.h</a></div></div>
@@ -124,7 +126,7 @@ $(document).ready(function(){initNavTree('_machine_interpreter_8h_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41f419bcf8176071d39c277ee76622df.html">MachineLib</a></li><li class="navelem"><a class="el" href="_machine_interpreter_8h.html">MachineInterpreter.h</a></li>
-    <li class="footer">Generated on Thu Apr 8 2021 21:44:20 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 10 2021 13:16:18 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

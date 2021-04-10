@@ -97,9 +97,11 @@ $(document).ready(function(){initNavTree('class_c_card_reader.html','');});
   <tr><td class="entry"><a class="el" href="class_c_card_reader.html#ab70b5ffe45dd7dc3dc1feef0748f3505">Draw</a>(Gdiplus::Graphics *graphics, long machineX, long machineY) override</td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#afac92de4f4945f4bda8fe02273833b07">GetX</a>()</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_component.html#a95fdf01013bd2c57f151611db03c1b08">GetY</a>()</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#a30d4b064af8c17ff2d65dce312a3026f">mBack</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_card_reader.html#addddb42d0b6d27da3ac450bd547f31ae">mBeatsPerMinute</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#afb75f4c1ac9b1e06b8fa2058af520e8f">mCard</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#ab44a34b04eb29b6872c022b3c3efec63">IsPunched</a>(int column, int row)</td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_card_reader.html#a30d4b064af8c17ff2d65dce312a3026f">mBack</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#addddb42d0b6d27da3ac450bd547f31ae">mBeatsPerMinute</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_card_reader.html#afb75f4c1ac9b1e06b8fa2058af520e8f">mCard</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#ab4b2e81c72cb91f2f121976c82362526">mColumn</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_card_reader.html#af1e0288890b65fd38d41b7c34e366e1c">mFront</a></td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a994d06b30eccf8809afda34c0e2d3e90">mMachineActual</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_component.html#a61347cfdb11dfcd83c6247d0c313767c">mTime</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -108,13 +110,14 @@ $(document).ready(function(){initNavTree('class_c_card_reader.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#a9ff1b050675510b6c717b62ff80603be">SetCard</a>(std::wstring filename)</td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a>(CMachineActual *machine)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a>(long x, long y)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_component.html#ab96696d508711f62b9ec143868c326f5">SetTime</a>(double time)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_card_reader.html#ae0205fce74221acfa65e480d32a19a45">SetTime</a>(double time) override</td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_card_reader.html#a7486d6570d09e2ac348df4a04182049f">UpdateColumn</a>(double time)</td><td class="entry"><a class="el" href="class_c_card_reader.html">CCardReader</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 8 2021 21:44:20 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 10 2021 13:16:18 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

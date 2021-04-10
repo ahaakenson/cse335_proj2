@@ -109,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a81471c2c4e24de24830a9bd608920148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd56d1aea27fffc8a8b8ba33d22843df"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_interpreter.html#acd56d1aea27fffc8a8b8ba33d22843df">SetMachineNumber</a> (int machineNumber) override</td></tr>
 <tr class="separator:acd56d1aea27fffc8a8b8ba33d22843df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bb319cd55457d6538055b92cce0c29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_interpreter.html#ac4bb319cd55457d6538055b92cce0c29">SetMachineFrame</a> (int frame) override</td></tr>
+<tr class="separator:ac4bb319cd55457d6538055b92cce0c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_machine"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_machine')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_machine.html">CMachine</a></td></tr>
 <tr class="memitem:a16473f530bf1afd33f15641377bf975e inherit pub_methods_class_c_machine"><td class="memItemLeft" align="right" valign="top"><a id="a16473f530bf1afd33f15641377bf975e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine.html#a16473f530bf1afd33f15641377bf975e">CMachine</a> ()</td></tr>
@@ -126,8 +128,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine.html#a97e1bb0de8d505ef5b37e6d8526831e0">operator=</a> (const <a class="el" href="class_c_machine.html">CMachine</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a97e1bb0de8d505ef5b37e6d8526831e0 inherit pub_methods_class_c_machine"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator/disabled. <br /></td></tr>
 <tr class="separator:a97e1bb0de8d505ef5b37e6d8526831e0 inherit pub_methods_class_c_machine"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f70d265dffe2570ca2ed5af0e2d67b4 inherit pub_methods_class_c_machine"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine.html#a8f70d265dffe2570ca2ed5af0e2d67b4">SetMachineFrame</a> (int frame)</td></tr>
-<tr class="separator:a8f70d265dffe2570ca2ed5af0e2d67b4 inherit pub_methods_class_c_machine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420c9581f40c8198c8e471c1b577321c inherit pub_methods_class_c_machine"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine.html#a420c9581f40c8198c8e471c1b577321c">GetMachineNumber</a> ()</td></tr>
 <tr class="separator:a420c9581f40c8198c8e471c1b577321c inherit pub_methods_class_c_machine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -239,6 +239,40 @@ std::shared_ptr&lt; <a class="el" href="class_c_machine_actual.html">CMachineAct
 
 </div>
 </div>
+<a id="ac4bb319cd55457d6538055b92cce0c29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4bb319cd55457d6538055b92cce0c29">&#9670;&nbsp;</a></span>SetMachineFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMachineInterpreter::SetMachineFrame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>frame</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Setter for current frame </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>current frame </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_c_machine.html#a8f70d265dffe2570ca2ed5af0e2d67b4">CMachine</a>.</p>
+
+</div>
+</div>
 <a id="acd56d1aea27fffc8a8b8ba33d22843df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd56d1aea27fffc8a8b8ba33d22843df">&#9670;&nbsp;</a></span>SetMachineNumber()</h2>
 
@@ -283,7 +317,7 @@ std::shared_ptr&lt; <a class="el" href="class_c_machine_actual.html">CMachineAct
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_machine_interpreter.html">CMachineInterpreter</a></li>
-    <li class="footer">Generated on Thu Apr 8 2021 21:44:20 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 10 2021 13:16:19 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

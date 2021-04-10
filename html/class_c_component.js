@@ -5,7 +5,7 @@ var class_c_component =
     [ "GetY", "class_c_component.html#a95fdf01013bd2c57f151611db03c1b08", null ],
     [ "SetMachine", "class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab", null ],
     [ "SetPosition", "class_c_component.html#adf2188e836918d5b407a13cf578f08b4", null ],
-    [ "SetTime", "class_c_component.html#ab96696d508711f62b9ec143868c326f5", null ],
+    [ "SetTime", "class_c_component.html#aae295853fcf30e7708c9939e3240e17d", null ],
     [ "mMachineActual", "class_c_component.html#a994d06b30eccf8809afda34c0e2d3e90", null ],
     [ "mTime", "class_c_component.html#a61347cfdb11dfcd83c6247d0c313767c", null ],
     [ "mXPos", "class_c_component.html#a08677451192c0f65723db2ceeaf68f92", null ],
