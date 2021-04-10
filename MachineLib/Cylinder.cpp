@@ -7,6 +7,7 @@
 #include "pch.h"
 #include "Cylinder.h"
 #include "AirSink.h"
+#include "MotionSource.h"
 #include <memory>
 
 using namespace std;
@@ -45,6 +46,7 @@ CCylinder::CCylinder()
     mRam.Rectangle(-mCylinder.GetImageWidth() / 2, 0);
 
     mAirSink = make_shared<CAirSink>(this);
+    mMotionSource = make_shared<CMotionSource>(this);
 }
 
 
@@ -89,4 +91,10 @@ void CCylinder::SetRotation(double rotation)
 void CCylinder::SetPressure(int pressure)
 {
     mRamPosition = pressure;
+
+    // Max pressure, strike the motion sink
+    if (pressure == 1.0)
+    {
+        mMotionSource->DislodgeRam();
+    }
 }

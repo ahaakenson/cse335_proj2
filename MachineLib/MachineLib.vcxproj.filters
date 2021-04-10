@@ -67,6 +67,12 @@
     <ClCompile Include="AirSinkDestination.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MotionSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MotionSink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MachineLib.h" />
@@ -137,6 +143,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AirSinkDestination.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MotionSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MotionSink.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

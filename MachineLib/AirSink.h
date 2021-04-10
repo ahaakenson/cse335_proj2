@@ -18,6 +18,8 @@ class CAirSink : public CTubingPoint
 {
 public:
     CAirSink(CAirSinkDestination* component);
+    /// Default constructor (disabled)
+    CAirSink() = delete;
     /// Copy constructor (disabled)
     CAirSink(const CAirSink&) = delete;
 

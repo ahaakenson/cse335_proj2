@@ -14,6 +14,7 @@
 #include <memory>
 
 class CAirSink;
+class CMotionSource;
 
  /**
   * Class that represents a cylinder to hit instruments.
@@ -38,6 +39,7 @@ private:
 	CPolygon mRam;
 	/// Polygon for cylinder
 	CPolygon mCylinder;
+
 	/// How extended ram currently is
 	double mRamPosition = 0.0;
 	/// Rotation of cylinder
@@ -47,6 +49,9 @@ private:
 
 	/// Whether cylinder is vertical
 	bool mVertical = true;
+	/// Associated air sink
 	std::shared_ptr<CAirSink> mAirSink;
+	/// Associated motion source
+	std::shared_ptr<CMotionSource> mMotionSource;
 };
 

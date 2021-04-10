@@ -149,11 +149,8 @@ void CCardReader::UpdateColumn(double time)
         // Determine what is punched in this row
         for (int row = 0; row < NumSources; row++)
         {
-            bool punched = IsPunched(mColumn, row);
-            if (punched)
-            {
-                int x = 99;
-            }
+            // Add 1 to column since active columns are number 1-80
+            bool punched = IsPunched(mColumn + 1, row);
             mSources[row]->SetPressure(punched);
         }
     }
