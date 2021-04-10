@@ -6,8 +6,11 @@
 
 #include "pch.h"
 #include "MachineActual.h"
+#include "WavPlayer.h"
+#include <memory>
 
 using namespace Gdiplus;
+using namespace std;
 
 /// Frame rate for the machine.
 const double FrameRate = 30.0;
@@ -17,6 +20,7 @@ const double FrameRate = 30.0;
  */
 CMachineActual::CMachineActual()
 {
+	mWavPlayer = make_shared<CWavPlayer>();
 }
 
 /** 

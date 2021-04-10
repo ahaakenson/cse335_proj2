@@ -10,6 +10,7 @@
 #include "Component.h"
 #include <vector>
 #include <memory>
+#include "WavPlayer.h"
 
 class CMachineInterpreter;
 
@@ -32,6 +33,12 @@ public:
 	double ComputeTime(int frame);
 	void AddComponent(std::shared_ptr<CComponent> component);
 
+	/**
+	 * Gets WAV player
+	 * \return WAV player
+	 */
+	CWavPlayer* GetWavPlayer() { return mWavPlayer.get(); }
+
 private:
 	/// X coordinate of machine
 	int mXPos = 0;
@@ -41,9 +48,13 @@ private:
 	int mCurrFrame = 0;
 	/// Current time
 	double mTime = 0;
+
 	/// Components in this machine
 	std::vector<std::shared_ptr<CComponent> > mComponents;
 	/// Interpreter which this machine is a part of
 	CMachineInterpreter* mInterpreter = nullptr;
+
+	/// WAV player for playing sounds
+	std::shared_ptr<CWavPlayer> mWavPlayer;
 };
 

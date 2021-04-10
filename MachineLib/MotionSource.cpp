@@ -6,6 +6,7 @@
 
 #include "pch.h"
 #include "MotionSource.h"
+#include "MotionSink.h"
 #include "Cylinder.h"
 
 
@@ -34,6 +35,6 @@ void CMotionSource::DislodgeRam()
 {
 	if (mMotionSink != nullptr)
 	{
-		// TODO: Have motion sink do something
+		mMotionSink->MakeSound();
 	}
 }
