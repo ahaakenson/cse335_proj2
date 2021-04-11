@@ -20,7 +20,7 @@ CAirSource::CAirSource()
  * Sets air source pressure.
  * \param pressure current pressure
  */
-void CAirSource::SetPressure(int pressure)
+void CAirSource::SetPressure(double pressure)
 {
 	// Pass along pressure if connected to a sink
 	if (mAirSink != nullptr)

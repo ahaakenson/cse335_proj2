@@ -26,7 +26,7 @@ public:
     /// Assignment operator (disabled)
     void operator=(const CAirSink&) = delete;
 
-	void SetPressure(int pressure);
+	void SetPressure(double pressure);
 
 private:
     /// Component to which this belongs

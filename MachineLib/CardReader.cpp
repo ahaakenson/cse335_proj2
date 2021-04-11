@@ -81,6 +81,9 @@ const int NumSources = 10;
 /// Number of columns on the punch card
 const int MaxColumns = 80;
 
+/// Number of seconds in a minute
+const double SecondsPerMinute = 60;
+
 /**
  * Constructor
  */
@@ -138,7 +141,6 @@ void CCardReader::SetTime(double time)
  */
 void CCardReader::UpdateColumn(double time)
 {
-    const double SecondsPerMinute = 60;
     double beat = time * mBeatsPerMinute / SecondsPerMinute;
     double remainder = fmod(beat, 1);
     mColumn = (int)beat;
@@ -151,7 +153,17 @@ void CCardReader::UpdateColumn(double time)
         {
             // Add 1 to column since active columns are number 1-80
             bool punched = IsPunched(mColumn + 1, row);
-            mSources[row]->SetPressure(punched);
+
+            // In first half of beat, have cylinders extend
+            if (punched)
+            {
+                mSources[row]->SetPressure(1.0 - remainder);
+            }
+            // Either not punched or in second half of beat, cylinders retract
+            else
+            {
+                mSources[row]->SetPressure(0.0);
+            }
         }
     }
     // Not in valid column of punch card, set all pressures to 0

@@ -7,7 +7,7 @@
 #include "pch.h"
 #include "MotionSink.h"
 #include "WavChannel.h"
-
+#include "MotionSinkDestination.h"
 
 /**
  * Sets WAV channel
@@ -18,6 +18,11 @@ void CMotionSink::SetChannel(CWavChannel* channel)
 	mWavChannel = channel;
 }
 
+void CMotionSink::SetDestination(CMotionSinkDestination* destination)
+{
+	mDestination = destination;
+}
+
 /**
  * Plays a sound if it has a channel
  */
@@ -26,5 +31,9 @@ void CMotionSink::MakeSound()
 	if (mWavChannel != nullptr)
 	{
 		mWavChannel->Play();
+	}
+	if (mDestination != nullptr)
+	{
+		mDestination->ReceiveMotion();
 	}
 }

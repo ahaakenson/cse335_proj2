@@ -8,6 +8,7 @@
 #include "Cylinder.h"
 #include "AirSink.h"
 #include "MotionSource.h"
+#include "MotionSink.h"
 #include <memory>
 
 using namespace std;
@@ -88,7 +89,7 @@ void CCylinder::SetRotation(double rotation)
  * Sets pressure of cylinder and moves ram
  * \param pressure pressure from air source
  */
-void CCylinder::SetPressure(int pressure)
+void CCylinder::SetPressure(double pressure)
 {
     mRamPosition = pressure;
 
@@ -97,4 +98,13 @@ void CCylinder::SetPressure(int pressure)
     {
         mMotionSource->DislodgeRam();
     }
+}
+
+/**
+ * Associates connected motion source with new motion sink
+ * \param sink motion sink
+ */
+void CCylinder::SetMotionSink(CMotionSink* sink)
+{
+    mMotionSource->SetSink(sink);
 }

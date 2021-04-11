@@ -15,6 +15,7 @@
 
 class CAirSink;
 class CMotionSource;
+class CMotionSink;
 
  /**
   * Class that represents a cylinder to hit instruments.
@@ -25,12 +26,14 @@ public:
 	CCylinder();
 	void Draw(Gdiplus::Graphics* graphics, long machineX, long machineY) override;
 	void SetRotation(double rotation);
-	virtual void SetPressure(int pressure) override;
+	virtual void SetPressure(double pressure) override;
 	/**
 	 * Gets associated air sink
 	 * \return air sink
 	 */
 	CAirSink* GetSink() { return mAirSink.get(); }
+
+	void SetMotionSink(CMotionSink* sink);
 
 private:
 	/// Polygon for cylinder mount

@@ -22,7 +22,7 @@ CAirSink::CAirSink(CAirSinkDestination* component)
   * Sets air source pressure.
   * \param pressure current pressure
   */
-void CAirSink::SetPressure(int pressure)
+void CAirSink::SetPressure(double pressure)
 {
 	mComponent->SetPressure(pressure);
 }

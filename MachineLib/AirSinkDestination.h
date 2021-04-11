@@ -18,6 +18,6 @@ public:
 	 * Pure virtual function for setting pressure at destination
 	 * \param pressure pressure going to the air sink
 	 */
-	virtual void SetPressure(int pressure) = 0;
+	virtual void SetPressure(double pressure) = 0;
 };
 
