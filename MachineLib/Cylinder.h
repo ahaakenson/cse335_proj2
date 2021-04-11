@@ -35,6 +35,8 @@ public:
 
 	void SetMotionSink(CMotionSink* sink);
 
+	void SetMaxExtent(double extension) { mMaxExtension = extension; }
+
 private:
 	/// Polygon for cylinder mount
 	CPolygon mMount;

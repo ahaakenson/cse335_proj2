@@ -40,6 +40,13 @@ public:
 	int GetImageWidth() { return mPolygon.GetImageWidth(); }
 
 	/**
+	 * Get the height of any set image for this polygon. This may not be
+	 * the height we actually draw, but is the size of the polygon itself.
+	 * @return height in pixels
+	*/
+	int GetImageHeight() { return mPolygon.GetImageHeight(); }
+
+	/**
 	 * Setter for polygon color
 	 * \param color color for polygon
 	 */

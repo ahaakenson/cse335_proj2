@@ -11,6 +11,7 @@
 #include "CardReader.h"
 #include "Cylinder.h"
 #include "Chime.h"
+#include "Instrument.h"
 #include <memory>
 
 using namespace std;
@@ -117,11 +118,11 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         chimeX += CylinderAndChimesSpacing;
     }
 
-    /*
+    
     //
     // The cymbal
     //
-    auto cymbal = make_shared<CShape>();
+    auto cymbal = make_shared<CInstrument>();
     cymbal->SetImage(L"images/cymbal-all.png");
     cymbal->Rectangle(-cymbal->GetImageWidth() / 2, 0);
     cymbal->SetPosition(CymbalAndDrumCenter, 0);
@@ -129,6 +130,8 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
 
     auto channel = machine->GetWavPlayer()->CreateChannel(L"audio/cymbal.wav");
     cymbal->SetAudioChannel(channel);
+
+    
 
     // Cantilever to hold the cylinder
     auto cant = make_shared<CShape>();
@@ -143,12 +146,15 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     cymbalCylinder->SetMaxExtent(0.55);
     machine->AddComponent(cymbalCylinder);
 
-    cymbalCylinder->SetMotionSink(cymbal);
+    cymbalCylinder->SetMotionSink(cymbal->GetSink());
 
+    
+
+    
     //
     // The drum
     //
-    auto drum = make_shared<CShape>();
+    auto drum = make_shared<CInstrument>();
     drum->SetImage(L"images/drum.png");
     drum->Rectangle(-drum->GetImageWidth() / 2, 0);
     drum->SetPosition(CymbalAndDrumCenter, 0);
@@ -169,7 +175,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     drumCylinder->SetRotation(0.25);
     machine->AddComponent(drumCylinder);
 
-    drumCylinder->SetMotionSink(drum);
+    drumCylinder->SetMotionSink(drum->GetSink());
 
     //
     // Clamping post for the tubing
@@ -179,7 +185,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     post->Rectangle(-post->GetImageWidth() / 2, 0);
     post->SetPosition(ClampingPostCenter, 0);
     machine->AddComponent(post);
-    */
 
     ////
     //// Temporary connection from card reader to cylinders
@@ -188,6 +193,9 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     {
         reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
     }
+    reader->GetSource(9)->SetSink(cymbalCylinder->GetSink());
+    reader->GetSource(8)->SetSink(drumCylinder->GetSink());
+
 
     /*
     //
