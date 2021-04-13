@@ -29,6 +29,7 @@ public:
 	void SetCard(std::wstring filename) { mCard.SetImage(filename); }
 
 	void SetTime(double time) override;
+	void SetPosition(long x, long y) override;
 	void UpdateColumn(double time);
 	bool CCardReader::IsPunched(int column, int row);
 	

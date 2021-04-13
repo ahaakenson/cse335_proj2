@@ -36,7 +36,7 @@ public:
 	 */
 	void SetMachine(CMachineActual* machine) { mMachineActual = machine; }
 
-	void SetPosition(long x, long y);
+	virtual void SetPosition(long x, long y);
 
 	/**
 	 * Getter for x position of component

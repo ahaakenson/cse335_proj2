@@ -12,6 +12,7 @@
 #include "Cylinder.h"
 #include "Chime.h"
 #include "Instrument.h"
+#include "Tubing.h"
 #include <memory>
 
 using namespace std;
@@ -189,15 +190,15 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     ////
     //// Temporary connection from card reader to cylinders
     ////
-    for (int i = 0; i < 5; i++)
+    /*for (int i = 0; i < 5; i++)
     {
         reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
     }
     reader->GetSource(9)->SetSink(cymbalCylinder->GetSink());
     reader->GetSource(8)->SetSink(drumCylinder->GetSink());
+    */
 
-
-    /*
+    
     //
     // We do the tubing last so it is on top
     //
@@ -237,7 +238,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     clamps->Rectangle(-clamps->GetImageWidth() / 2, 0);
     clamps->SetPosition(ClampingPostCenter, 0);
     machine->AddComponent(clamps);
-    */
+    
 
     return machine;
 }

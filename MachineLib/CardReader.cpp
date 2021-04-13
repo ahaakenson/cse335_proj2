@@ -6,6 +6,7 @@
 
 #include "pch.h"
 #include "CardReader.h"
+#include "Component.h"
 #include "AirSource.h"
 #include <string>
 #include <vector>
@@ -187,4 +188,23 @@ bool CCardReader::IsPunched(int column, int row)
     auto luminance = mCard.AverageLuminance(CardColumn0X + (column - 1) * CardColumnWidth,
         CardRow0Y + CardRowHeight * row, CardPunchWidth, CardPunchHit);
     return luminance < CardPunchLuminance;
+}
+
+/**
+ * Set the position of the card reader in the machine. This
+ * must, in turn, set the positions for the sources.
+ * @param x X location of the card reader in the machine
+ * @param y Y location of the card reader in the machine
+*/
+void CCardReader::SetPosition(long x, long y)
+{
+    CComponent::SetPosition(x, y);
+
+    for (int row = 0; row < NumSources; row++)
+    {
+        mSources[row]->SetPosition(
+            (int)(x + OutputOffsetX + OutputSpacingX * row),
+            y + OutputOffsetY
+        );
+    }
 }

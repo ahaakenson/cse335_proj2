@@ -83,6 +83,9 @@ void CCylinder::SetRotation(double rotation)
     mRam.SetRotation(rotation);
     mCylinder.SetRotation(rotation);
     mRotation = rotation;
+
+    // Rotation causes connector to have new position
+    SetConnectorPosition();
 }
 
 /**
@@ -107,4 +110,25 @@ void CCylinder::SetPressure(double pressure)
 void CCylinder::SetMotionSink(CMotionSink* sink)
 {
     mMotionSource->SetSink(sink);
+}
+
+/**
+ * Sets position for cylinder and air sink
+ * \param x x coordinate
+ * \param y y coordinate
+ */
+void CCylinder::SetPosition(long x, long y)
+{
+    CComponent::SetPosition(x, y);
+    SetConnectorPosition();
+}
+
+/**
+ * Sets position of connector to tubing
+ */
+void CCylinder::SetConnectorPosition()
+{
+    double airX = GetX() + cos((ConnectorAngle + mRotation) * M_PI * 2) * ConnectorDistance;
+    double airY = GetY() + sin((ConnectorAngle + mRotation) * M_PI * 2) * ConnectorDistance;
+    mAirSink->SetPosition((long)airX, (long)airY);
 }

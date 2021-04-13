@@ -27,6 +27,8 @@ public:
 	void Draw(Gdiplus::Graphics* graphics, long machineX, long machineY) override;
 	void SetRotation(double rotation);
 	virtual void SetPressure(double pressure) override;
+	void SetPosition(long x, long y) override;
+	void SetConnectorPosition();
 	/**
 	 * Gets associated air sink
 	 * \return air sink

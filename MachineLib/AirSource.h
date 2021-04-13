@@ -28,6 +28,7 @@ public:
     void SetPressure(double pressure);
     void SetComponent(CComponent* component);
     void SetSink(CAirSink* airSink);
+    void SetPosition(long x, long y) override;
 private:
     /// The component which this belongs to
     CComponent* mComponent = nullptr;

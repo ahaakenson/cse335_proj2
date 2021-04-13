@@ -8,6 +8,8 @@
 #include "AirSource.h"
 #include "AirSink.h"
 
+using namespace Gdiplus;
+
 /**
  * Constructor
  */
@@ -45,4 +47,34 @@ void CAirSource::SetComponent(CComponent* component)
 void CAirSource::SetSink(CAirSink* airSink)
 {
 	mAirSink = airSink;
+
+	// Air source dictates position of connection
+	if (GetPositionOwner())
+	{
+		Point position = GetPosition();
+		mAirSink->SetPosition(position.X, position.Y);
+	}
+	// Air sink dictates position of connection
+	else
+	{
+		Point position = airSink->GetPosition();
+		SetPosition(position.X, position.Y);
+	}
+	
+}
+
+/**
+ * Sets position
+ * \param x x coordinate
+ * \param y y coordinate
+ */
+void CAirSource::SetPosition(long x, long y)
+{
+	CTubingPoint::SetPosition(x, y);
+
+	// Makes associated sink match position if it exists
+	if (mAirSink != nullptr)
+	{
+		mAirSink->SetPosition(x, y);
+	}
 }
