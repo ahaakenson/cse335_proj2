@@ -43,6 +43,7 @@ private:
 	CPolygon mChime;
 	/// Associated motion sink
 	std::shared_ptr<CMotionSink> mSink;
+	/// Rotation of the hammer
 	double mRotation;
 };
 

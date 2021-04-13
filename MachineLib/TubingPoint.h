@@ -22,6 +22,6 @@ private:
 	/// Rotation of the point
 	double mRotation = 0.0;
 	/// Speed of curvature
-	double mSpeed = 1.0;
+	double mSpeed = 100;
 };
 

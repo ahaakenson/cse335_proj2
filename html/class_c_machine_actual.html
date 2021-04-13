@@ -113,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7c770d22ea3cde3694f73e6a4e097332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2de9767241a68267c6fbfeea1f21c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_actual.html#ab2de9767241a68267c6fbfeea1f21c3a">AddComponent</a> (std::shared_ptr&lt; <a class="el" href="class_c_component.html">CComponent</a> &gt; component)</td></tr>
 <tr class="separator:ab2de9767241a68267c6fbfeea1f21c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9483a061259b5335af67e8b754cf4f3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_wav_player.html">CWavPlayer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_actual.html#a9483a061259b5335af67e8b754cf4f3e">GetWavPlayer</a> ()</td></tr>
+<tr class="separator:a9483a061259b5335af67e8b754cf4f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -140,6 +142,10 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_component.html">
 <a class="el" href="class_c_machine_interpreter.html">CMachineInterpreter</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_actual.html#a34fff7c9192b9bce6c5f9c3667b2ae02">mInterpreter</a> = nullptr</td></tr>
 <tr class="memdesc:a34fff7c9192b9bce6c5f9c3667b2ae02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpreter which this machine is a part of. <br /></td></tr>
 <tr class="separator:a34fff7c9192b9bce6c5f9c3667b2ae02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c14b4206c87c1a21c961adbcbe963fa"><td class="memItemLeft" align="right" valign="top"><a id="a2c14b4206c87c1a21c961adbcbe963fa"></a>
+std::shared_ptr&lt; <a class="el" href="class_c_wav_player.html">CWavPlayer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_machine_actual.html#a2c14b4206c87c1a21c961adbcbe963fa">mWavPlayer</a></td></tr>
+<tr class="memdesc:a2c14b4206c87c1a21c961adbcbe963fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">WAV player for playing sounds. <br /></td></tr>
+<tr class="separator:a2c14b4206c87c1a21c961adbcbe963fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents the machine. </p>
@@ -233,6 +239,32 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_component.html">
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9483a061259b5335af67e8b754cf4f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9483a061259b5335af67e8b754cf4f3e">&#9670;&nbsp;</a></span>GetWavPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_wav_player.html">CWavPlayer</a>* CMachineActual::GetWavPlayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets WAV player </p><dl class="section return"><dt>Returns</dt><dd>WAV player </dd></dl>
 
 </div>
 </div>
@@ -337,7 +369,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_component.html">
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_machine_actual.html">CMachineActual</a></li>
-    <li class="footer">Generated on Sat Apr 10 2021 17:13:16 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

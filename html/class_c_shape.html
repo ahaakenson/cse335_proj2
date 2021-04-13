@@ -98,6 +98,8 @@ $(document).ready(function(){initNavTree('class_c_shape.html','');});
 <p><code>#include &lt;<a class="el" href="_shape_8h_source.html">Shape.h</a>&gt;</code></p>
 
 <p>Inherits <a class="el" href="class_c_component.html">CComponent</a>.</p>
+
+<p>Inherited by <a class="el" href="class_c_instrument.html">CInstrument</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37c196ecc171ce88eda0d654e34ac442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5fe3586f354ef20ee545fb0de6efad9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shape.html#ac5fe3586f354ef20ee545fb0de6efad9">GetImageWidth</a> ()</td></tr>
 <tr class="separator:ac5fe3586f354ef20ee545fb0de6efad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae548feb735038c85ab4c1529f6fab49a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shape.html#ae548feb735038c85ab4c1529f6fab49a">GetImageHeight</a> ()</td></tr>
+<tr class="separator:ae548feb735038c85ab4c1529f6fab49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b364c057672c5598b0462c81ffebbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shape.html#a06b364c057672c5598b0462c81ffebbe">SetColor</a> (Gdiplus::Color color)</td></tr>
 <tr class="separator:a06b364c057672c5598b0462c81ffebbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafe41487eda65a039268123c66253ef3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_shape.html#aafe41487eda65a039268123c66253ef3">Draw</a> (Gdiplus::Graphics *graphics, long machineX, long machineY) override</td></tr>
@@ -182,6 +186,32 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_c_component.html#ad720c6945cd10e8eb0af7add3388f9fb">CComponent</a>.</p>
+
+</div>
+</div>
+<a id="ae548feb735038c85ab4c1529f6fab49a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae548feb735038c85ab4c1529f6fab49a">&#9670;&nbsp;</a></span>GetImageHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CShape::GetImageHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the height of any set image for this polygon. This may not be the height we actually draw, but is the size of the polygon itself. </p><dl class="section return"><dt>Returns</dt><dd>height in pixels </dd></dl>
 
 </div>
 </div>
@@ -342,7 +372,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_shape.html">CShape</a></li>
-    <li class="footer">Generated on Sat Apr 10 2021 17:13:16 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

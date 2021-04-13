@@ -24,6 +24,7 @@ public:
 private:
 	/// Associated WAV channel to play sound
 	CWavChannel* mWavChannel = nullptr;
+	/// Associated component/destination
 	CMotionSinkDestination* mDestination = nullptr;
 };
 

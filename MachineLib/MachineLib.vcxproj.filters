@@ -82,6 +82,9 @@
     <ClCompile Include="Chime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Tubing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MachineLib.h" />
@@ -167,6 +170,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Chime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tubing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

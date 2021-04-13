@@ -15,8 +15,12 @@ var hierarchy =
     ] ],
     [ "CComponent", "class_c_component.html", [
       [ "CCardReader", "class_c_card_reader.html", null ],
+      [ "CChime", "class_c_chime.html", null ],
       [ "CCylinder", "class_c_cylinder.html", null ],
-      [ "CShape", "class_c_shape.html", null ]
+      [ "CShape", "class_c_shape.html", [
+        [ "CInstrument", "class_c_instrument.html", null ]
+      ] ],
+      [ "CTubing", "class_c_tubing.html", null ]
     ] ],
     [ "CDialog", null, [
       [ "CTimelineDlg", "class_c_timeline_dlg.html", null ]
@@ -42,6 +46,10 @@ var hierarchy =
     ] ],
     [ "CMachineStandin", "class_c_machine_standin.html", null ],
     [ "CMotionSink", "class_c_motion_sink.html", null ],
+    [ "CMotionSinkDestination", "class_c_motion_sink_destination.html", [
+      [ "CChime", "class_c_chime.html", null ],
+      [ "CInstrument", "class_c_instrument.html", null ]
+    ] ],
     [ "CMotionSource", "class_c_motion_source.html", null ],
     [ "CPicture", "class_c_picture.html", null ],
     [ "CPictureFactory", "class_c_picture_factory.html", null ],
@@ -71,10 +79,10 @@ var hierarchy =
     [ "CWnd", null, [
       [ "CMachineDemoView", "class_c_machine_demo_view.html", null ]
     ] ],
-    [ "CAnimChannel::Keyframe", "class_c_anim_channel_1_1_keyframe.html", [
-      [ "CAnimChannelPoint::KeyframePoint", "class_c_anim_channel_point_1_1_keyframe_point.html", null ]
-    ] ],
     [ "Keyframe", null, [
       [ "CAnimChannelAngle::KeyframeAngle", "class_c_anim_channel_angle_1_1_keyframe_angle.html", null ]
+    ] ],
+    [ "CAnimChannel::Keyframe", "class_c_anim_channel_1_1_keyframe.html", [
+      [ "CAnimChannelPoint::KeyframePoint", "class_c_anim_channel_point_1_1_keyframe_point.html", null ]
     ] ]
 ];

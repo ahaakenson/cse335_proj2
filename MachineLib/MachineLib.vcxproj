@@ -124,6 +124,7 @@
     <ClCompile Include="MotionSinkDestination.cpp" />
     <ClCompile Include="MotionSource.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="Tubing.cpp" />
     <ClCompile Include="TubingPoint.cpp" />
     <ClCompile Include="WavChannel.cpp" />
     <ClCompile Include="WAVFileReader.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="MotionSinkDestination.h" />
     <ClInclude Include="MotionSource.h" />
     <ClInclude Include="Shape.h" />
+    <ClInclude Include="Tubing.h" />
     <ClInclude Include="TubingPoint.h" />
     <ClInclude Include="WavChannel.h" />
     <ClInclude Include="WAVFileReader.h" />

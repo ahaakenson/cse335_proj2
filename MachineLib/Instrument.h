@@ -31,6 +31,7 @@ public:
 
 
 private:
+	/// Associated motion sink
 	std::shared_ptr<CMotionSink> mSink;
 };
 

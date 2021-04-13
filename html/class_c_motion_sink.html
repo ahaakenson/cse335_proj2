@@ -86,16 +86,109 @@ $(document).ready(function(){initNavTree('class_c_motion_sink.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="class_c_motion_sink-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CMotionSink Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_motion_sink_8h_source.html">MotionSink.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af91f1cc4ed030d0d1314954aee9fe062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_motion_sink.html#af91f1cc4ed030d0d1314954aee9fe062">SetDestination</a> (<a class="el" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a> *destination)</td></tr>
+<tr class="separator:af91f1cc4ed030d0d1314954aee9fe062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f8a4bc167fac628f4b4426cc036b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_motion_sink.html#aa6f8a4bc167fac628f4b4426cc036b8e">SetChannel</a> (<a class="el" href="class_c_wav_channel.html">CWavChannel</a> *channel)</td></tr>
+<tr class="separator:aa6f8a4bc167fac628f4b4426cc036b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeca0a4e3962cf09e53f1aec460860b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_motion_sink.html#adeca0a4e3962cf09e53f1aec460860b6">MakeSound</a> ()</td></tr>
+<tr class="separator:adeca0a4e3962cf09e53f1aec460860b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a87d6c5d446d2d8fd2d3dd0fad5bde712"><td class="memItemLeft" align="right" valign="top"><a id="a87d6c5d446d2d8fd2d3dd0fad5bde712"></a>
+<a class="el" href="class_c_wav_channel.html">CWavChannel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_motion_sink.html#a87d6c5d446d2d8fd2d3dd0fad5bde712">mWavChannel</a> = nullptr</td></tr>
+<tr class="memdesc:a87d6c5d446d2d8fd2d3dd0fad5bde712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated WAV channel to play sound. <br /></td></tr>
+<tr class="separator:a87d6c5d446d2d8fd2d3dd0fad5bde712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc4c1bdf01531eee897a07b347f4c4e"><td class="memItemLeft" align="right" valign="top"><a id="a5cc4c1bdf01531eee897a07b347f4c4e"></a>
+<a class="el" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_motion_sink.html#a5cc4c1bdf01531eee897a07b347f4c4e">mDestination</a> = nullptr</td></tr>
+<tr class="memdesc:a5cc4c1bdf01531eee897a07b347f4c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated component/destination. <br /></td></tr>
+<tr class="separator:a5cc4c1bdf01531eee897a07b347f4c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents a motion sink </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adeca0a4e3962cf09e53f1aec460860b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeca0a4e3962cf09e53f1aec460860b6">&#9670;&nbsp;</a></span>MakeSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMotionSink::MakeSound </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Plays a sound if it has a channel </p>
+
+</div>
+</div>
+<a id="aa6f8a4bc167fac628f4b4426cc036b8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f8a4bc167fac628f4b4426cc036b8e">&#9670;&nbsp;</a></span>SetChannel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMotionSink::SetChannel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_wav_channel.html">CWavChannel</a> *&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets WAV channel </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>new channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af91f1cc4ed030d0d1314954aee9fe062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91f1cc4ed030d0d1314954aee9fe062">&#9670;&nbsp;</a></span>SetDestination()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMotionSink::SetDestination </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a> *&#160;</td>
+          <td class="paramname"><em>destination</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets associated component pointer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>new component </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>MachineLib/<a class="el" href="_motion_sink_8h_source.html">MotionSink.h</a></li>
+<li>MachineLib/<a class="el" href="_motion_sink_8cpp.html">MotionSink.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -103,7 +196,7 @@ $(document).ready(function(){initNavTree('class_c_motion_sink.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_motion_sink.html">CMotionSink</a></li>
-    <li class="footer">Generated on Sat Apr 10 2021 17:13:16 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

@@ -28,6 +28,10 @@ void CInstrument::ReceiveMotion()
 
 }
 
+/**
+ * Sets associated Wav channel with motion sink
+ * \param channel Wav channel
+ */
 void CInstrument::SetAudioChannel(std::shared_ptr<CWavChannel> channel)
 {
 	mSink->SetChannel(channel.get());

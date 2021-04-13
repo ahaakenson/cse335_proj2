@@ -93,18 +93,36 @@ $(document).ready(function(){initNavTree('_motion_sink_8h_source.html','');});
 <a href="_motion_sink_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_c_motion_sink.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_motion_sink.html">CMotionSink</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_wav_channel.html">CWavChannel</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_c_motion_sink.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_motion_sink.html">CMotionSink</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_motion_sink.html#af91f1cc4ed030d0d1314954aee9fe062">SetDestination</a>(<a class="code" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a>* destination);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_motion_sink.html#aa6f8a4bc167fac628f4b4426cc036b8e">SetChannel</a>(<a class="code" href="class_c_wav_channel.html">CWavChannel</a>* channel);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_motion_sink.html#adeca0a4e3962cf09e53f1aec460860b6">MakeSound</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_c_motion_sink.html#a87d6c5d446d2d8fd2d3dd0fad5bde712">   26</a></span>&#160;               <a class="code" href="class_c_wav_channel.html">CWavChannel</a>* <a class="code" href="class_c_motion_sink.html#a87d6c5d446d2d8fd2d3dd0fad5bde712">mWavChannel</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_c_motion_sink.html#a5cc4c1bdf01531eee897a07b347f4c4e">   28</a></span>&#160;               <a class="code" href="class_c_motion_sink_destination.html">CMotionSinkDestination</a>* <a class="code" href="class_c_motion_sink.html#a5cc4c1bdf01531eee897a07b347f4c4e">mDestination</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_c_motion_sink_html"><div class="ttname"><a href="class_c_motion_sink.html">CMotionSink</a></div><div class="ttdef"><b>Definition:</b> MotionSink.h:14</div></div>
+<div class="ttc" id="aclass_c_wav_channel_html"><div class="ttname"><a href="class_c_wav_channel.html">CWavChannel</a></div><div class="ttdef"><b>Definition:</b> WavChannel.h:21</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html_aa6f8a4bc167fac628f4b4426cc036b8e"><div class="ttname"><a href="class_c_motion_sink.html#aa6f8a4bc167fac628f4b4426cc036b8e">CMotionSink::SetChannel</a></div><div class="ttdeci">void SetChannel(CWavChannel *channel)</div><div class="ttdef"><b>Definition:</b> MotionSink.cpp:16</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html_af91f1cc4ed030d0d1314954aee9fe062"><div class="ttname"><a href="class_c_motion_sink.html#af91f1cc4ed030d0d1314954aee9fe062">CMotionSink::SetDestination</a></div><div class="ttdeci">void SetDestination(CMotionSinkDestination *destination)</div><div class="ttdef"><b>Definition:</b> MotionSink.cpp:25</div></div>
+<div class="ttc" id="aclass_c_motion_sink_destination_html"><div class="ttname"><a href="class_c_motion_sink_destination.html">CMotionSinkDestination</a></div><div class="ttdef"><b>Definition:</b> MotionSinkDestination.h:17</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html_a87d6c5d446d2d8fd2d3dd0fad5bde712"><div class="ttname"><a href="class_c_motion_sink.html#a87d6c5d446d2d8fd2d3dd0fad5bde712">CMotionSink::mWavChannel</a></div><div class="ttdeci">CWavChannel * mWavChannel</div><div class="ttdoc">Associated WAV channel to play sound.</div><div class="ttdef"><b>Definition:</b> MotionSink.h:26</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html"><div class="ttname"><a href="class_c_motion_sink.html">CMotionSink</a></div><div class="ttdef"><b>Definition:</b> MotionSink.h:17</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html_a5cc4c1bdf01531eee897a07b347f4c4e"><div class="ttname"><a href="class_c_motion_sink.html#a5cc4c1bdf01531eee897a07b347f4c4e">CMotionSink::mDestination</a></div><div class="ttdeci">CMotionSinkDestination * mDestination</div><div class="ttdoc">Associated component/destination.</div><div class="ttdef"><b>Definition:</b> MotionSink.h:28</div></div>
+<div class="ttc" id="aclass_c_motion_sink_html_adeca0a4e3962cf09e53f1aec460860b6"><div class="ttname"><a href="class_c_motion_sink.html#adeca0a4e3962cf09e53f1aec460860b6">CMotionSink::MakeSound</a></div><div class="ttdeci">void MakeSound()</div><div class="ttdef"><b>Definition:</b> MotionSink.cpp:33</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41f419bcf8176071d39c277ee76622df.html">MachineLib</a></li><li class="navelem"><a class="el" href="_motion_sink_8h.html">MotionSink.h</a></li>
-    <li class="footer">Generated on Sat Apr 10 2021 17:13:16 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 14:40:06 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

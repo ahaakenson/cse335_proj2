@@ -35,6 +35,10 @@ public:
 
 	void SetMotionSink(CMotionSink* sink);
 
+	/**
+	 * Sets maximum extension for the ram
+	 * \param extension new maximum ram extension from 0-1
+	 */
 	void SetMaxExtent(double extension) { mMaxExtension = extension; }
 
 private:

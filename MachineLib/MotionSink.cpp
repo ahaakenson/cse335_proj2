@@ -18,6 +18,10 @@ void CMotionSink::SetChannel(CWavChannel* channel)
 	mWavChannel = channel;
 }
 
+/**
+ * Sets associated component pointer
+ * \param destination new component
+ */
 void CMotionSink::SetDestination(CMotionSinkDestination* destination)
 {
 	mDestination = destination;
