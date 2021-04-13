@@ -58,7 +58,7 @@ void CTubing::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 
 		p2.X = p1.X - int(sin(startClamp->GetRotation() * M_PI * 2) * startClamp->GetSpeed());
 		p2.Y = p1.Y + int(cos(startClamp->GetRotation() * M_PI * 2) * startClamp->GetSpeed());
-
+		
 		p3.X = p4.X - int(-1 * sin(endClamp->GetRotation() * M_PI * 2) * endClamp->GetSpeed());
 		p3.Y = p4.Y + int(-1 * cos(endClamp->GetRotation() * M_PI * 2) * endClamp->GetSpeed());
 

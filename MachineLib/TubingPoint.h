@@ -31,6 +31,12 @@ public:
 	void SetPositionOwner(bool owner) { mPositionOwner = owner; }
 
 	/**
+	 * Sets rotation
+	 * \param rotation new rotation
+	 */
+	void SetRotation(double rotation) { mRotation = rotation; }
+
+	/**
 	 * Gets position owner boolean
 	 * \return position owner boolean
 	 */
