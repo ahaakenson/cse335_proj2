@@ -144,7 +144,7 @@ void CCardReader::UpdateColumn(double time)
 {
     double beat = time * mBeatsPerMinute / SecondsPerMinute;
     double remainder = fmod(beat, 1);
-    mColumn = (int)beat;
+    mColumn = (int)beat - 1;
 
     // Still in a valid column of punch card
     if (mColumn <= MaxColumns)
