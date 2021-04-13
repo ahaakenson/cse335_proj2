@@ -66,7 +66,7 @@ private:
 	/// Rotation of the point
 	double mRotation = 0.0;
 	/// Speed of curvature
-	long mSpeed = 100;
+	long mSpeed = 50;
 	/// Whether this point dictates the position of associated source/sink
 	/// Tubing sources/sinks will never be position owners- they follow other components
 	bool mPositionOwner = true;

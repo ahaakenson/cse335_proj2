@@ -46,14 +46,12 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     // constructor is the machine number.
     auto machine = make_shared<CMachineActual>();
 
-    
     // The base, just a flat to sit things on
     auto base = make_shared<CShape>();
     base->Rectangle(-BaseWidth / 2, BaseHeight, BaseWidth, BaseHeight);
     base->SetColor(Color::DarkGray);
     machine->AddComponent(base);
 
-    
     //
     // The framework that holds the cylinders and chimes
     //
@@ -63,7 +61,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     framework->SetPosition(FrameworkCenter, 0);
     machine->AddComponent(framework);
 
-    
     //
     // The card reader
     //
@@ -72,7 +69,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     reader->SetPosition(CardReaderCenter, 0);
     machine->AddComponent(reader);
 
-    
     //
     // Cylinders and chimes
     //
@@ -83,7 +79,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         L"audio/chimeG3.wav",
         L"audio/chimeA3.wav" };
 
-    // Vector to collect the cylinders so we can
+    // Vector to collect the cylinders so we can 
     // run tubing to them later.
     std::vector<std::shared_ptr<CCylinder>> cylinders;
 
@@ -99,6 +95,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         auto chime = make_shared<CChime>(ChimeLength[i]);
         chime->SetPosition(chimeX, ChimeTop);
         machine->AddComponent(chime);
+
         //
         // The cylinder that hits the chime
         //
@@ -119,7 +116,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         chimeX += CylinderAndChimesSpacing;
     }
 
-    
     //
     // The cymbal
     //
@@ -131,8 +127,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
 
     auto channel = machine->GetWavPlayer()->CreateChannel(L"audio/cymbal.wav");
     cymbal->SetAudioChannel(channel);
-
-    
 
     // Cantilever to hold the cylinder
     auto cant = make_shared<CShape>();
@@ -149,9 +143,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
 
     cymbalCylinder->SetMotionSink(cymbal->GetSink());
 
-    
-
-    
     //
     // The drum
     //
@@ -190,15 +181,12 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     ////
     //// Temporary connection from card reader to cylinders
     ////
-    /*for (int i = 0; i < 5; i++)
-    {
-        reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
-    }
-    reader->GetSource(9)->SetSink(cymbalCylinder->GetSink());
-    reader->GetSource(8)->SetSink(drumCylinder->GetSink());
-    */
+    //for (int i = 0; i < 5; i++)
+    //{
+    //    reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
+    //}
 
-    
+
     //
     // We do the tubing last so it is on top
     //
@@ -211,6 +199,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
         machine->AddComponent(tubing);
 
         tubing->AddClamp(ClampingPostCenter, -10 - 10 * i, 0.75, 50);
+        tubing->GetSource()->SetRotation(0.5);
 
     }
 
@@ -228,6 +217,7 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     reader->GetSource(8)->SetSpeed(10);
     reader->GetSource(8)->SetSink(tubing->GetSink());
     tubing->GetSource()->SetSink(drumCylinder->GetSink());
+    tubing->GetSource()->SetRotation(0.75);
     machine->AddComponent(tubing);
 
     tubing->AddClamp(ClampingPostCenter, -10 - 10 * 5, 0.75, 50);
@@ -238,7 +228,6 @@ shared_ptr<CMachineActual> CMachineActual1Factory::CreateMachine()
     clamps->Rectangle(-clamps->GetImageWidth() / 2, 0);
     clamps->SetPosition(ClampingPostCenter, 0);
     machine->AddComponent(clamps);
-    
 
     return machine;
 }
