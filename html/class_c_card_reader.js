@@ -5,6 +5,7 @@ var class_c_card_reader =
     [ "GetSource", "class_c_card_reader.html#a724d6304457f29d439bb5da48c0e9c4e", null ],
     [ "IsPunched", "class_c_card_reader.html#ab44a34b04eb29b6872c022b3c3efec63", null ],
     [ "SetCard", "class_c_card_reader.html#a9ff1b050675510b6c717b62ff80603be", null ],
+    [ "SetPosition", "class_c_card_reader.html#a6763ccce1ce3ecf3b8a701e46d5664b6", null ],
     [ "SetTime", "class_c_card_reader.html#ae0205fce74221acfa65e480d32a19a45", null ],
     [ "UpdateColumn", "class_c_card_reader.html#a7486d6570d09e2ac348df4a04182049f", null ],
     [ "mBack", "class_c_card_reader.html#a30d4b064af8c17ff2d65dce312a3026f", null ],

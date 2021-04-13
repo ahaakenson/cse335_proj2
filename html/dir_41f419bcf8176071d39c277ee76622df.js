@@ -87,9 +87,9 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "Shape.h", "_shape_8h.html", [
       [ "CShape", "class_c_shape.html", "class_c_shape" ]
     ] ],
-    [ "Tubing.cpp", "_tubing_8cpp.html", null ],
+    [ "Tubing.cpp", "_tubing_8cpp.html", "_tubing_8cpp" ],
     [ "Tubing.h", "_tubing_8h.html", [
-      [ "CTubing", "class_c_tubing.html", null ]
+      [ "CTubing", "class_c_tubing.html", "class_c_tubing" ]
     ] ],
     [ "TubingPoint.cpp", "_tubing_point_8cpp.html", null ],
     [ "TubingPoint.h", "_tubing_point_8h.html", [

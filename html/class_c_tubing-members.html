@@ -93,22 +93,30 @@ $(document).ready(function(){initNavTree('class_c_tubing.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_c_tubing.html">CTubing</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#ad720c6945cd10e8eb0af7add3388f9fb">Draw</a>(Gdiplus::Graphics *graphics, long machineX, long machineY)=0</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_tubing.html#a61281b6151e7dba0ec8872bfa22f250f">AddClamp</a>(long x, long y, double rotation, long speed)</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_tubing.html#a61df27856cfec7e7f2e5418e8593a657">CTubing</a>()</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_tubing.html#a8e2430dc1d088b79c24351cb3925bb9f">Draw</a>(Gdiplus::Graphics *graphics, long machineX, long machineY) override</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_tubing.html#addb0d9ea71236043aca40a0498f682cd">GetSink</a>()</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_tubing.html#a00aaaa9188bca2f64f5fe7f754e52112">GetSource</a>()</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_component.html#afac92de4f4945f4bda8fe02273833b07">GetX</a>()</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a95fdf01013bd2c57f151611db03c1b08">GetY</a>()</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_component.html#a994d06b30eccf8809afda34c0e2d3e90">mMachineActual</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a61347cfdb11dfcd83c6247d0c313767c">mTime</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_component.html#a08677451192c0f65723db2ceeaf68f92">mXPos</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a2575fe00e8345020023958e673a832c7">mYPos</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a>(CMachineActual *machine)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a>(long x, long y)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_tubing.html#abbbbc9187e8ca6dfb0b514f7bd2a9293">mClamps</a></td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a994d06b30eccf8809afda34c0e2d3e90">mMachineActual</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">mSink</a></td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">mSource</a></td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_component.html#a61347cfdb11dfcd83c6247d0c313767c">mTime</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#a08677451192c0f65723db2ceeaf68f92">mXPos</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_component.html#a2575fe00e8345020023958e673a832c7">mYPos</a></td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a>(CMachineActual *machine)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a>(long x, long y)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_tubing.html#a6f2434616fd3c89f2aade80380e31164">SetPressure</a>(double pressure) override</td><td class="entry"><a class="el" href="class_c_tubing.html">CTubing</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_component.html#aae295853fcf30e7708c9939e3240e17d">SetTime</a>(double time)</td><td class="entry"><a class="el" href="class_c_component.html">CComponent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 18:22:56 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

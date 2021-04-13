@@ -15,6 +15,7 @@
 using namespace Gdiplus;
 using namespace std;
 
+/// Width of the pen drawing tubes
 const REAL PenWidth = 3;
 
 /**

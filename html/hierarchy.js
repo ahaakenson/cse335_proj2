@@ -7,7 +7,8 @@ var hierarchy =
       [ "CSpartyFactory", "class_c_sparty_factory.html", null ]
     ] ],
     [ "CAirSinkDestination", "class_c_air_sink_destination.html", [
-      [ "CCylinder", "class_c_cylinder.html", null ]
+      [ "CCylinder", "class_c_cylinder.html", null ],
+      [ "CTubing", "class_c_tubing.html", null ]
     ] ],
     [ "CAnimChannel", "class_c_anim_channel.html", [
       [ "CAnimChannelAngle", "class_c_anim_channel_angle.html", null ],

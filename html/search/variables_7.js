@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rotationscaling_1048',['RotationScaling',['../_view_edit_8cpp.html#a5aad50df163545659b29dc0f88c8a2d4',1,'ViewEdit.cpp']]],
-  ['rtod_1049',['RtoD',['../_image_drawable_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;ImageDrawable.cpp'],['../_rotated_bitmap_8cpp.html#ade10fdf328965f595a01ff78f9f8dcc0',1,'RtoD():&#160;RotatedBitmap.cpp']]]
+  ['penwidth_1069',['PenWidth',['../_tubing_8cpp.html#ada0fd3965467118732b0fcdfc8fed30b',1,'Tubing.cpp']]]
 ];

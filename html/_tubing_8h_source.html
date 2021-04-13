@@ -93,21 +93,58 @@ $(document).ready(function(){initNavTree('_tubing_8h_source.html','');});
 <a href="_tubing_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_c_tubing.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_tubing.html">CTubing</a> : <span class="keyword">public</span> <a class="code" href="class_c_component.html">CComponent</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_air_sink_destination_8h.html">AirSinkDestination.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_air_source.html">CAirSource</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_air_sink.html">CAirSink</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_tubing_point.html">CTubingPoint</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_c_tubing.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_tubing.html">CTubing</a> : <span class="keyword">public</span> <a class="code" href="class_c_component.html">CComponent</a>, <span class="keyword">public</span> <a class="code" href="class_c_air_sink_destination.html">CAirSinkDestination</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;               <a class="code" href="class_c_tubing.html#a61df27856cfec7e7f2e5418e8593a657">CTubing</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_tubing.html#a8e2430dc1d088b79c24351cb3925bb9f">Draw</a>(Gdiplus::Graphics* graphics, <span class="keywordtype">long</span> machineX, <span class="keywordtype">long</span> machineY) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_tubing.html#a61281b6151e7dba0ec8872bfa22f250f">AddClamp</a>(<span class="keywordtype">long</span> x, <span class="keywordtype">long</span> y, <span class="keywordtype">double</span> rotation, <span class="keywordtype">long</span> speed);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;               </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_c_tubing.html#a00aaaa9188bca2f64f5fe7f754e52112">   33</a></span>&#160;               <a class="code" href="class_c_air_source.html">CAirSource</a>* <a class="code" href="class_c_tubing.html#a00aaaa9188bca2f64f5fe7f754e52112">GetSource</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">mSource</a>.get(); }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_c_tubing.html#addb0d9ea71236043aca40a0498f682cd">   39</a></span>&#160;               <a class="code" href="class_c_air_sink.html">CAirSink</a>* <a class="code" href="class_c_tubing.html#addb0d9ea71236043aca40a0498f682cd">GetSink</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">mSink</a>.get(); }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_tubing.html#a6f2434616fd3c89f2aade80380e31164">SetPressure</a>(<span class="keywordtype">double</span> pressure) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">   45</a></span>&#160;               std::shared_ptr&lt;CAirSource&gt; <a class="code" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">mSource</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">   47</a></span>&#160;               std::shared_ptr&lt;CAirSink&gt; <a class="code" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">mSink</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_c_tubing.html#abbbbc9187e8ca6dfb0b514f7bd2a9293">   49</a></span>&#160;               std::vector&lt;std::shared_ptr&lt;CTubingPoint&gt;&gt; <a class="code" href="class_c_tubing.html#abbbbc9187e8ca6dfb0b514f7bd2a9293">mClamps</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_c_air_source_html"><div class="ttname"><a href="class_c_air_source.html">CAirSource</a></div><div class="ttdef"><b>Definition:</b> AirSource.h:18</div></div>
+<div class="ttc" id="aclass_c_tubing_html_a8e2430dc1d088b79c24351cb3925bb9f"><div class="ttname"><a href="class_c_tubing.html#a8e2430dc1d088b79c24351cb3925bb9f">CTubing::Draw</a></div><div class="ttdeci">void Draw(Gdiplus::Graphics *graphics, long machineX, long machineY) override</div><div class="ttdef"><b>Definition:</b> Tubing.cpp:44</div></div>
+<div class="ttc" id="aclass_c_tubing_html_a00aaaa9188bca2f64f5fe7f754e52112"><div class="ttname"><a href="class_c_tubing.html#a00aaaa9188bca2f64f5fe7f754e52112">CTubing::GetSource</a></div><div class="ttdeci">CAirSource * GetSource()</div><div class="ttdef"><b>Definition:</b> Tubing.h:33</div></div>
+<div class="ttc" id="aclass_c_tubing_html_a61281b6151e7dba0ec8872bfa22f250f"><div class="ttname"><a href="class_c_tubing.html#a61281b6151e7dba0ec8872bfa22f250f">CTubing::AddClamp</a></div><div class="ttdeci">void AddClamp(long x, long y, double rotation, long speed)</div><div class="ttdef"><b>Definition:</b> Tubing.cpp:84</div></div>
 <div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
-<div class="ttc" id="aclass_c_tubing_html"><div class="ttname"><a href="class_c_tubing.html">CTubing</a></div><div class="ttdef"><b>Definition:</b> Tubing.h:15</div></div>
+<div class="ttc" id="aclass_c_tubing_html"><div class="ttname"><a href="class_c_tubing.html">CTubing</a></div><div class="ttdef"><b>Definition:</b> Tubing.h:22</div></div>
+<div class="ttc" id="aclass_c_tubing_html_ab9c98a9beacb4d0614698daafe62b5db"><div class="ttname"><a href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">CTubing::mSource</a></div><div class="ttdeci">std::shared_ptr&lt; CAirSource &gt; mSource</div><div class="ttdoc">Air source on the sending end of the tube.</div><div class="ttdef"><b>Definition:</b> Tubing.h:45</div></div>
+<div class="ttc" id="aclass_c_air_sink_html"><div class="ttname"><a href="class_c_air_sink.html">CAirSink</a></div><div class="ttdef"><b>Definition:</b> AirSink.h:17</div></div>
+<div class="ttc" id="aclass_c_tubing_html_abbbbc9187e8ca6dfb0b514f7bd2a9293"><div class="ttname"><a href="class_c_tubing.html#abbbbc9187e8ca6dfb0b514f7bd2a9293">CTubing::mClamps</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; CTubingPoint &gt; &gt; mClamps</div><div class="ttdoc">Vector of all clamps on the tube.</div><div class="ttdef"><b>Definition:</b> Tubing.h:49</div></div>
+<div class="ttc" id="aclass_c_air_sink_destination_html"><div class="ttname"><a href="class_c_air_sink_destination.html">CAirSinkDestination</a></div><div class="ttdef"><b>Definition:</b> AirSinkDestination.h:14</div></div>
 <div class="ttc" id="aclass_c_component_html"><div class="ttname"><a href="class_c_component.html">CComponent</a></div><div class="ttdef"><b>Definition:</b> Component.h:16</div></div>
+<div class="ttc" id="aclass_c_tubing_html_a989aa5e265d4cf05a6f3eeac1c79a740"><div class="ttname"><a href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">CTubing::mSink</a></div><div class="ttdeci">std::shared_ptr&lt; CAirSink &gt; mSink</div><div class="ttdoc">Air sink on the receiving end of the tube.</div><div class="ttdef"><b>Definition:</b> Tubing.h:47</div></div>
+<div class="ttc" id="aclass_c_tubing_html_a61df27856cfec7e7f2e5418e8593a657"><div class="ttname"><a href="class_c_tubing.html#a61df27856cfec7e7f2e5418e8593a657">CTubing::CTubing</a></div><div class="ttdeci">CTubing()</div><div class="ttdef"><b>Definition:</b> Tubing.cpp:24</div></div>
+<div class="ttc" id="aclass_c_tubing_html_addb0d9ea71236043aca40a0498f682cd"><div class="ttname"><a href="class_c_tubing.html#addb0d9ea71236043aca40a0498f682cd">CTubing::GetSink</a></div><div class="ttdeci">CAirSink * GetSink()</div><div class="ttdef"><b>Definition:</b> Tubing.h:39</div></div>
+<div class="ttc" id="a_air_sink_destination_8h_html"><div class="ttname"><a href="_air_sink_destination_8h.html">AirSinkDestination.h</a></div></div>
+<div class="ttc" id="aclass_c_tubing_html_a6f2434616fd3c89f2aade80380e31164"><div class="ttname"><a href="class_c_tubing.html#a6f2434616fd3c89f2aade80380e31164">CTubing::SetPressure</a></div><div class="ttdeci">void SetPressure(double pressure) override</div><div class="ttdef"><b>Definition:</b> Tubing.cpp:96</div></div>
+<div class="ttc" id="aclass_c_tubing_point_html"><div class="ttname"><a href="class_c_tubing_point.html">CTubingPoint</a></div><div class="ttdef"><b>Definition:</b> TubingPoint.h:14</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41f419bcf8176071d39c277ee76622df.html">MachineLib</a></li><li class="navelem"><a class="el" href="_tubing_8h.html">Tubing.h</a></li>
-    <li class="footer">Generated on Tue Apr 13 2021 14:40:06 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 18:22:55 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

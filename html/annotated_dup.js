@@ -42,7 +42,7 @@ var annotated_dup =
     [ "CSpartyFactory", "class_c_sparty_factory.html", "class_c_sparty_factory" ],
     [ "CTimeline", "class_c_timeline.html", "class_c_timeline" ],
     [ "CTimelineDlg", "class_c_timeline_dlg.html", "class_c_timeline_dlg" ],
-    [ "CTubing", "class_c_tubing.html", null ],
+    [ "CTubing", "class_c_tubing.html", "class_c_tubing" ],
     [ "CTubingPoint", "class_c_tubing_point.html", "class_c_tubing_point" ],
     [ "CViewEdit", "class_c_view_edit.html", "class_c_view_edit" ],
     [ "CViewTimeline", "class_c_view_timeline.html", "class_c_view_timeline" ],

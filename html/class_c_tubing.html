@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('class_c_tubing.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_c_tubing-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CTubing Class Reference</div>  </div>
@@ -95,28 +97,261 @@ $(document).ready(function(){initNavTree('class_c_tubing.html','');});
 
 <p><code>#include &lt;<a class="el" href="_tubing_8h_source.html">Tubing.h</a>&gt;</code></p>
 
-<p>Inherits <a class="el" href="class_c_component.html">CComponent</a>.</p>
+<p>Inherits <a class="el" href="class_c_component.html">CComponent</a>, and <a class="el" href="class_c_air_sink_destination.html">CAirSinkDestination</a>.</p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a61df27856cfec7e7f2e5418e8593a657"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a61df27856cfec7e7f2e5418e8593a657">CTubing</a> ()</td></tr>
+<tr class="separator:a61df27856cfec7e7f2e5418e8593a657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e2430dc1d088b79c24351cb3925bb9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a8e2430dc1d088b79c24351cb3925bb9f">Draw</a> (Gdiplus::Graphics *graphics, long machineX, long machineY) override</td></tr>
+<tr class="separator:a8e2430dc1d088b79c24351cb3925bb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61281b6151e7dba0ec8872bfa22f250f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a61281b6151e7dba0ec8872bfa22f250f">AddClamp</a> (long x, long y, double rotation, long speed)</td></tr>
+<tr class="separator:a61281b6151e7dba0ec8872bfa22f250f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00aaaa9188bca2f64f5fe7f754e52112"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_air_source.html">CAirSource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a00aaaa9188bca2f64f5fe7f754e52112">GetSource</a> ()</td></tr>
+<tr class="separator:a00aaaa9188bca2f64f5fe7f754e52112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb0d9ea71236043aca40a0498f682cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_air_sink.html">CAirSink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#addb0d9ea71236043aca40a0498f682cd">GetSink</a> ()</td></tr>
+<tr class="separator:addb0d9ea71236043aca40a0498f682cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2434616fd3c89f2aade80380e31164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a6f2434616fd3c89f2aade80380e31164">SetPressure</a> (double pressure) override</td></tr>
+<tr class="separator:a6f2434616fd3c89f2aade80380e31164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_component.html">CComponent</a></td></tr>
 <tr class="memitem:aae295853fcf30e7708c9939e3240e17d inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#aae295853fcf30e7708c9939e3240e17d">SetTime</a> (double time)</td></tr>
 <tr class="separator:aae295853fcf30e7708c9939e3240e17d inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad720c6945cd10e8eb0af7add3388f9fb inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ad720c6945cd10e8eb0af7add3388f9fb">Draw</a> (Gdiplus::Graphics *graphics, long machineX, long machineY)=0</td></tr>
-<tr class="separator:ad720c6945cd10e8eb0af7add3388f9fb inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f514bc25d4e2f6332d056b630698ab inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a> (<a class="el" href="class_c_machine_actual.html">CMachineActual</a> *machine)</td></tr>
 <tr class="separator:ae9f514bc25d4e2f6332d056b630698ab inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2188e836918d5b407a13cf578f08b4 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a> (long x, long y)</td></tr>
+<tr class="memitem:adf2188e836918d5b407a13cf578f08b4 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a> (long x, long y)</td></tr>
 <tr class="separator:adf2188e836918d5b407a13cf578f08b4 inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afac92de4f4945f4bda8fe02273833b07 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#afac92de4f4945f4bda8fe02273833b07">GetX</a> ()</td></tr>
 <tr class="separator:afac92de4f4945f4bda8fe02273833b07 inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fdf01013bd2c57f151611db03c1b08 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#a95fdf01013bd2c57f151611db03c1b08">GetY</a> ()</td></tr>
 <tr class="separator:a95fdf01013bd2c57f151611db03c1b08 inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab9c98a9beacb4d0614698daafe62b5db"><td class="memItemLeft" align="right" valign="top"><a id="ab9c98a9beacb4d0614698daafe62b5db"></a>
+std::shared_ptr&lt; <a class="el" href="class_c_air_source.html">CAirSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">mSource</a></td></tr>
+<tr class="memdesc:ab9c98a9beacb4d0614698daafe62b5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Air source on the sending end of the tube. <br /></td></tr>
+<tr class="separator:ab9c98a9beacb4d0614698daafe62b5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989aa5e265d4cf05a6f3eeac1c79a740"><td class="memItemLeft" align="right" valign="top"><a id="a989aa5e265d4cf05a6f3eeac1c79a740"></a>
+std::shared_ptr&lt; <a class="el" href="class_c_air_sink.html">CAirSink</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">mSink</a></td></tr>
+<tr class="memdesc:a989aa5e265d4cf05a6f3eeac1c79a740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Air sink on the receiving end of the tube. <br /></td></tr>
+<tr class="separator:a989aa5e265d4cf05a6f3eeac1c79a740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbbc9187e8ca6dfb0b514f7bd2a9293"><td class="memItemLeft" align="right" valign="top"><a id="abbbbc9187e8ca6dfb0b514f7bd2a9293"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_tubing_point.html">CTubingPoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing.html#abbbbc9187e8ca6dfb0b514f7bd2a9293">mClamps</a></td></tr>
+<tr class="memdesc:abbbbc9187e8ca6dfb0b514f7bd2a9293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of all clamps on the tube. <br /></td></tr>
+<tr class="separator:abbbbc9187e8ca6dfb0b514f7bd2a9293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that describes the tubing. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a61df27856cfec7e7f2e5418e8593a657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61df27856cfec7e7f2e5418e8593a657">&#9670;&nbsp;</a></span>CTubing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTubing::CTubing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a61281b6151e7dba0ec8872bfa22f250f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61281b6151e7dba0ec8872bfa22f250f">&#9670;&nbsp;</a></span>AddClamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTubing::AddClamp </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Adds a clamp to the tube between the ends </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>y coordinate </td></tr>
+    <tr><td class="paramname">rotation</td><td>rotation of the clamp </td></tr>
+    <tr><td class="paramname">speed</td><td>speed of the clamp </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e2430dc1d088b79c24351cb3925bb9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e2430dc1d088b79c24351cb3925bb9f">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTubing::Draw </td>
+          <td>(</td>
+          <td class="paramtype">Gdiplus::Graphics *&#160;</td>
+          <td class="paramname"><em>graphics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>machineX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>machineY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Draws the tubing in the graphics context </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graphics</td><td>graphics context </td></tr>
+    <tr><td class="paramname">machineX</td><td>x coordinate of the machine </td></tr>
+    <tr><td class="paramname">machineY</td><td>y coordinate of the machine </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_c_component.html#ad720c6945cd10e8eb0af7add3388f9fb">CComponent</a>.</p>
+
+</div>
+</div>
+<a id="addb0d9ea71236043aca40a0498f682cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb0d9ea71236043aca40a0498f682cd">&#9670;&nbsp;</a></span>GetSink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_air_sink.html">CAirSink</a>* CTubing::GetSink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets air sink at receiving end of tube </p><dl class="section return"><dt>Returns</dt><dd>air sink </dd></dl>
+
+</div>
+</div>
+<a id="a00aaaa9188bca2f64f5fe7f754e52112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00aaaa9188bca2f64f5fe7f754e52112">&#9670;&nbsp;</a></span>GetSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_air_source.html">CAirSource</a>* CTubing::GetSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets air source at the sending end of tube </p><dl class="section return"><dt>Returns</dt><dd>air source </dd></dl>
+
+</div>
+</div>
+<a id="a6f2434616fd3c89f2aade80380e31164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2434616fd3c89f2aade80380e31164">&#9670;&nbsp;</a></span>SetPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTubing::SetPressure </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pressure</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Receives pressure and passes it along to air source </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pressure</td><td>incoming pressure from 0-1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_c_air_sink_destination.html#a022de4e76aa135e3c957f29724b66b5f">CAirSinkDestination</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>MachineLib/<a class="el" href="_tubing_8h_source.html">Tubing.h</a></li>
+<li>MachineLib/<a class="el" href="_tubing_8cpp.html">Tubing.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -124,7 +359,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_tubing.html">CTubing</a></li>
-    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 18:22:56 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

@@ -109,6 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a29d0554d1860ac8c7f1139667c8d71cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ede5dfe00fdeeaef253c93ce7d4729a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a3ede5dfe00fdeeaef253c93ce7d4729a">SetPressure</a> (double pressure) override</td></tr>
 <tr class="separator:a3ede5dfe00fdeeaef253c93ce7d4729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2165487c63ea413df57101fe80c9ee29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a2165487c63ea413df57101fe80c9ee29">SetPosition</a> (long x, long y) override</td></tr>
+<tr class="separator:a2165487c63ea413df57101fe80c9ee29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080d7bd96d29c0a706191c89216f7d98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a080d7bd96d29c0a706191c89216f7d98">SetConnectorPosition</a> ()</td></tr>
+<tr class="separator:a080d7bd96d29c0a706191c89216f7d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ef52065ad8395c7438f30c978affe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_air_sink.html">CAirSink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a56ef52065ad8395c7438f30c978affe5">GetSink</a> ()</td></tr>
 <tr class="separator:a56ef52065ad8395c7438f30c978affe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77bf7673f12a6f9414da68a7ffef0fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a77bf7673f12a6f9414da68a7ffef0fbf">SetMotionSink</a> (<a class="el" href="class_c_motion_sink.html">CMotionSink</a> *sink)</td></tr>
@@ -120,8 +124,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae295853fcf30e7708c9939e3240e17d inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f514bc25d4e2f6332d056b630698ab inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#ae9f514bc25d4e2f6332d056b630698ab">SetMachine</a> (<a class="el" href="class_c_machine_actual.html">CMachineActual</a> *machine)</td></tr>
 <tr class="separator:ae9f514bc25d4e2f6332d056b630698ab inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2188e836918d5b407a13cf578f08b4 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">SetPosition</a> (long x, long y)</td></tr>
-<tr class="separator:adf2188e836918d5b407a13cf578f08b4 inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afac92de4f4945f4bda8fe02273833b07 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#afac92de4f4945f4bda8fe02273833b07">GetX</a> ()</td></tr>
 <tr class="separator:afac92de4f4945f4bda8fe02273833b07 inherit pub_methods_class_c_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95fdf01013bd2c57f151611db03c1b08 inherit pub_methods_class_c_component"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_component.html#a95fdf01013bd2c57f151611db03c1b08">GetY</a> ()</td></tr>
@@ -266,6 +268,24 @@ std::shared_ptr&lt; <a class="el" href="class_c_motion_source.html">CMotionSourc
 
 </div>
 </div>
+<a id="a080d7bd96d29c0a706191c89216f7d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080d7bd96d29c0a706191c89216f7d98">&#9670;&nbsp;</a></span>SetConnectorPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCylinder::SetConnectorPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets position of connector to tubing </p>
+
+</div>
+</div>
 <a id="a8dd70dd9ba3ad3d6b9440f55f9b763b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8dd70dd9ba3ad3d6b9440f55f9b763b8">&#9670;&nbsp;</a></span>SetMaxExtent()</h2>
 
@@ -319,6 +339,51 @@ std::shared_ptr&lt; <a class="el" href="class_c_motion_source.html">CMotionSourc
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2165487c63ea413df57101fe80c9ee29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2165487c63ea413df57101fe80c9ee29">&#9670;&nbsp;</a></span>SetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CCylinder::SetPosition </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets position for cylinder and air sink </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>y coordinate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_c_component.html#adf2188e836918d5b407a13cf578f08b4">CComponent</a>.</p>
 
 </div>
 </div>
@@ -390,7 +455,7 @@ std::shared_ptr&lt; <a class="el" href="class_c_motion_source.html">CMotionSourc
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_cylinder.html">CCylinder</a></li>
-    <li class="footer">Generated on Tue Apr 13 2021 14:40:07 for CSE 335 Project by
+    <li class="footer">Generated on Tue Apr 13 2021 18:22:55 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
