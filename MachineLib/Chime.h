@@ -32,6 +32,8 @@ public:
 
 	void SetAudioChannel(std::shared_ptr<CWavChannel> channel) override;
 
+	void CalculateHammerRotation();
+
 private:
 	/// chime mount
 	CPolygon mMount;

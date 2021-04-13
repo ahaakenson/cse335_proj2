@@ -32,7 +32,6 @@ void CMachineActual::DrawMachineActual(Graphics* graphics)
 
 	for (auto& component : mComponents)
 	{
-		// TODO: FIX THESE PARAMETERS
 		component->Draw(graphics, mXPos, mYPos);
 	}
 }

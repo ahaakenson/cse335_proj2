@@ -41,6 +41,10 @@ const double HammerPivotY = 10;
 /// Amount to rotate hammer away from chime in unit rotations
 const double HammerRotation = 0.08;
 
+/// Amount to rotate hammer between frames if it's not in resting position
+const double HammerRotationDelta = 0.01;
+
+/// Offset of chime hammer in Y direction
 const int HammerOffsetY = 65;
 
 /**
@@ -70,7 +74,8 @@ CChime::CChime(int length)
  */
 void CChime::ReceiveMotion()
 {
-    mHammer.SetRotation(0);
+    mRotation = 0;
+    mHammer.SetRotation(mRotation);
 }
 
 /**
@@ -85,7 +90,7 @@ void CChime::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
     mHammer.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY() + HammerOffsetY));
     mChime.DrawPolygon(graphics, double(machineX + GetX()) + ChimeOffsetX, double(machineY + GetY()) + ChimeOffsetY);
     
-    mHammer.SetRotation(HammerRotation);
+    CalculateHammerRotation();
 }
 
 /**
@@ -95,4 +100,21 @@ void CChime::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 void CChime::SetAudioChannel(std::shared_ptr<CWavChannel> channel)
 {
     mSink->SetChannel(channel.get());
+}
+
+/**
+ * Animates hammer between hits if it is not in resting position by incrementing rotation
+ */
+void CChime::CalculateHammerRotation()
+{
+    // Slightly rotate hammer towards resting position
+    mRotation = mRotation + HammerRotationDelta;
+
+    // Resting position reached, can't rotate anymore
+    if (mRotation >= HammerRotation)
+    {
+        mRotation = HammerRotation;
+    }
+
+    mHammer.SetRotation(mRotation);
 }
