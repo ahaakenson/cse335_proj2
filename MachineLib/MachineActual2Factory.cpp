@@ -7,10 +7,17 @@
 #include "pch.h"
 #include "MachineActual2Factory.h"
 #include "MachineActual.h"
+#include "Shape.h"
+#include "CardReader.h"
+#include "Cylinder.h"
+#include "Chime.h"
+#include "Instrument.h"
+#include "Tubing.h"
+#include "Gauge.h"
 #include <memory>
 
 using namespace std;
-
+using namespace Gdiplus;
 
 /**
  * Creates a MachineActual object.
@@ -39,7 +46,6 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     // constructor is the machine number.
     auto machine = make_shared<CMachineActual>();
 
-    /*
     // The base, just a flat to sit things on
     auto base = make_shared<CShape>();
     base->Rectangle(-BaseWidth / 2, BaseHeight, BaseWidth, BaseHeight);
@@ -73,7 +79,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
         L"audio/chimeG3.wav",
         L"audio/chimeA3.wav" };
 
-    // Vector to collect the cylinders so we can
+    // Vector to collect the cylinders so we can 
     // run tubing to them later.
     std::vector<std::shared_ptr<CCylinder>> cylinders;
 
@@ -99,7 +105,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
         cylinders.push_back(cylinder);
 
         // Connect the motion
-        cylinder->SetMotionSink(chime);
+        cylinder->SetMotionSink(chime->GetSink());
 
         // Add sound to the chime
         auto channel = machine->GetWavPlayer()->CreateChannel(sounds[i]);
@@ -113,7 +119,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     //
     // The cymbal
     //
-    auto cymbal = make_shared<CShape>();
+    auto cymbal = make_shared<CInstrument>();
     cymbal->SetImage(L"images/cymbal-all.png");
     cymbal->Rectangle(-cymbal->GetImageWidth() / 2, 0);
     cymbal->SetPosition(CymbalAndDrumCenter, 0);
@@ -135,12 +141,12 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     cymbalCylinder->SetMaxExtent(0.55);
     machine->AddComponent(cymbalCylinder);
 
-    cymbalCylinder->SetMotionSink(cymbal);
+    cymbalCylinder->SetMotionSink(cymbal->GetSink());
 
     //
     // The drum
     //
-    auto drum = make_shared<CShape>();
+    auto drum = make_shared<CInstrument>();
     drum->SetImage(L"images/drum.png");
     drum->Rectangle(-drum->GetImageWidth() / 2, 0);
     drum->SetPosition(CymbalAndDrumCenter, 0);
@@ -161,7 +167,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     drumCylinder->SetRotation(0.25);
     machine->AddComponent(drumCylinder);
 
-    drumCylinder->SetMotionSink(drum);
+    drumCylinder->SetMotionSink(drum->GetSink());
 
     //
     // Clamping post for the tubing
@@ -180,6 +186,12 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     //    reader->GetSource(i)->SetSink(cylinders[4 - i]->GetSink());
     //}
 
+    //
+    // A gauge
+    //
+    auto gauge = make_shared<CGauge>();
+    gauge->SetPosition(0, -360);
+    machine->AddComponent(gauge);
 
     //
     // We do the tubing last so it is on top
@@ -193,6 +205,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
         machine->AddComponent(tubing);
 
         tubing->AddClamp(ClampingPostCenter, -10 - 10 * i, 0.75, 50);
+        tubing->GetSource()->SetRotation(0.5);
 
     }
 
@@ -210,6 +223,7 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     reader->GetSource(8)->SetSpeed(10);
     reader->GetSource(8)->SetSink(tubing->GetSink());
     tubing->GetSource()->SetSink(drumCylinder->GetSink());
+    tubing->GetSource()->SetRotation(0.75);
     machine->AddComponent(tubing);
 
     tubing->AddClamp(ClampingPostCenter, -10 - 10 * 5, 0.75, 50);
@@ -220,7 +234,6 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     clamps->Rectangle(-clamps->GetImageWidth() / 2, 0);
     clamps->SetPosition(ClampingPostCenter, 0);
     machine->AddComponent(clamps);
-    */
 
     return machine;
 }

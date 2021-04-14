@@ -115,6 +115,7 @@
     <ClCompile Include="Chime.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Cylinder.cpp" />
+    <ClCompile Include="Gauge.cpp" />
     <ClCompile Include="Instrument.cpp" />
     <ClCompile Include="MachineActual.cpp" />
     <ClCompile Include="MachineActual1Factory.cpp" />
@@ -148,6 +149,7 @@
     <ClInclude Include="Chime.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Cylinder.h" />
+    <ClInclude Include="Gauge.h" />
     <ClInclude Include="Instrument.h" />
     <ClInclude Include="MachineActual.h" />
     <ClInclude Include="MachineActual1Factory.h" />

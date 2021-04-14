@@ -8,7 +8,7 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "AirSinkDestination.h", "_air_sink_destination_8h.html", [
       [ "CAirSinkDestination", "class_c_air_sink_destination.html", "class_c_air_sink_destination" ]
     ] ],
-    [ "AirSource.cpp", "_air_source_8cpp.html", null ],
+    [ "AirSource.cpp", "_air_source_8cpp.html", "_air_source_8cpp" ],
     [ "AirSource.h", "_air_source_8h.html", [
       [ "CAirSource", "class_c_air_source.html", "class_c_air_source" ]
     ] ],
@@ -25,6 +25,10 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "Cylinder.cpp", "_cylinder_8cpp.html", "_cylinder_8cpp" ],
     [ "Cylinder.h", "_cylinder_8h.html", [
       [ "CCylinder", "class_c_cylinder.html", "class_c_cylinder" ]
+    ] ],
+    [ "Gauge.cpp", "_gauge_8cpp.html", null ],
+    [ "Gauge.h", "_gauge_8h.html", [
+      [ "CGauge", "class_c_gauge.html", null ]
     ] ],
     [ "Instrument.cpp", "_instrument_8cpp.html", null ],
     [ "Instrument.h", "_instrument_8h.html", [

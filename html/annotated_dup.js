@@ -14,6 +14,7 @@ var annotated_dup =
     [ "CComponent", "class_c_component.html", "class_c_component" ],
     [ "CCylinder", "class_c_cylinder.html", "class_c_cylinder" ],
     [ "CDrawable", "class_c_drawable.html", "class_c_drawable" ],
+    [ "CGauge", "class_c_gauge.html", null ],
     [ "CHaroldFactory", "class_c_harold_factory.html", "class_c_harold_factory" ],
     [ "CHeadTop", "class_c_head_top.html", "class_c_head_top" ],
     [ "CImageDrawable", "class_c_image_drawable.html", "class_c_image_drawable" ],

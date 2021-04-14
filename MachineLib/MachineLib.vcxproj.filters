@@ -85,6 +85,9 @@
     <ClCompile Include="Tubing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Gauge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MachineLib.h" />
@@ -173,6 +176,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tubing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gauge.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

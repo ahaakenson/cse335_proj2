@@ -8,6 +8,7 @@ var hierarchy =
     ] ],
     [ "CAirSinkDestination", "class_c_air_sink_destination.html", [
       [ "CCylinder", "class_c_cylinder.html", null ],
+      [ "CGauge", "class_c_gauge.html", null ],
       [ "CTubing", "class_c_tubing.html", null ]
     ] ],
     [ "CAnimChannel", "class_c_anim_channel.html", [
@@ -18,6 +19,7 @@ var hierarchy =
       [ "CCardReader", "class_c_card_reader.html", null ],
       [ "CChime", "class_c_chime.html", null ],
       [ "CCylinder", "class_c_cylinder.html", null ],
+      [ "CGauge", "class_c_gauge.html", null ],
       [ "CShape", "class_c_shape.html", [
         [ "CInstrument", "class_c_instrument.html", null ]
       ] ],

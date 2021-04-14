@@ -109,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8326e47f381b686aabbe5cd99e14a045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe53d665eac133063b45d9a0ed551c74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#abe53d665eac133063b45d9a0ed551c74">SetSpeed</a> (long speed)</td></tr>
 <tr class="separator:abe53d665eac133063b45d9a0ed551c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21fee7fd0c192d0b3bd84f8028bf39f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#aa21fee7fd0c192d0b3bd84f8028bf39f">SetCurrentSpeed</a> (long speed)</td></tr>
+<tr class="separator:aa21fee7fd0c192d0b3bd84f8028bf39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2f5797c94126c9f20baf8d087dbe46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a1a2f5797c94126c9f20baf8d087dbe46">SetPositionOwner</a> (bool owner)</td></tr>
 <tr class="separator:a1a2f5797c94126c9f20baf8d087dbe46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57720a1a21d58c256843e76e5232565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#aa57720a1a21d58c256843e76e5232565">SetRotation</a> (double rotation)</td></tr>
@@ -117,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a47596aaee7216fd274bf509ccd53cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bddf5a6e74533e77cd9ff4686048897"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a1bddf5a6e74533e77cd9ff4686048897">GetSpeed</a> ()</td></tr>
 <tr class="separator:a1bddf5a6e74533e77cd9ff4686048897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b38f3ce5101c1d6dbd0bdababbc4f0"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a74b38f3ce5101c1d6dbd0bdababbc4f0">GetCurrentSpeed</a> ()</td></tr>
+<tr class="separator:a74b38f3ce5101c1d6dbd0bdababbc4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad42a1e1de0ea3ecec6e5f97599bbd78d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#ad42a1e1de0ea3ecec6e5f97599bbd78d">GetRotation</a> ()</td></tr>
 <tr class="separator:ad42a1e1de0ea3ecec6e5f97599bbd78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37eb7d1487a10bd339efb08b4ec9ec24"><td class="memItemLeft" align="right" valign="top">Gdiplus::Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a37eb7d1487a10bd339efb08b4ec9ec24">GetPosition</a> ()</td></tr>
@@ -134,8 +138,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="separator:a5c5c5acc94b149a818b95f1737766a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29eea42b94fb936c9e98edca4e428878"><td class="memItemLeft" align="right" valign="top"><a id="a29eea42b94fb936c9e98edca4e428878"></a>
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a29eea42b94fb936c9e98edca4e428878">mSpeed</a> = 50</td></tr>
-<tr class="memdesc:a29eea42b94fb936c9e98edca4e428878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed of curvature. <br /></td></tr>
+<tr class="memdesc:a29eea42b94fb936c9e98edca4e428878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed of curvature at rest. <br /></td></tr>
 <tr class="separator:a29eea42b94fb936c9e98edca4e428878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000c404f4e154a73e77d7c49308851c0"><td class="memItemLeft" align="right" valign="top"><a id="a000c404f4e154a73e77d7c49308851c0"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#a000c404f4e154a73e77d7c49308851c0">mCurrentSpeed</a> = 50</td></tr>
+<tr class="memdesc:a000c404f4e154a73e77d7c49308851c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speed of curvature with pressure. <br /></td></tr>
+<tr class="separator:a000c404f4e154a73e77d7c49308851c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6ee591a6d5cabd200124fdec97b31a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_tubing_point.html#ab6ee591a6d5cabd200124fdec97b31a1">mPositionOwner</a> = true</td></tr>
 <tr class="separator:ab6ee591a6d5cabd200124fdec97b31a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -210,6 +218,32 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a74b38f3ce5101c1d6dbd0bdababbc4f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b38f3ce5101c1d6dbd0bdababbc4f0">&#9670;&nbsp;</a></span>GetCurrentSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long CTubingPoint::GetCurrentSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets speed without any pressure </p><dl class="section return"><dt>Returns</dt><dd>resting speed </dd></dl>
+
+</div>
+</div>
 <a id="a37eb7d1487a10bd339efb08b4ec9ec24"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37eb7d1487a10bd339efb08b4ec9ec24">&#9670;&nbsp;</a></span>GetPosition()</h2>
 
@@ -311,6 +345,38 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 <p>Gets point speed </p><dl class="section return"><dt>Returns</dt><dd>speed </dd></dl>
+
+</div>
+</div>
+<a id="aa21fee7fd0c192d0b3bd84f8028bf39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21fee7fd0c192d0b3bd84f8028bf39f">&#9670;&nbsp;</a></span>SetCurrentSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CTubingPoint::SetCurrentSpeed </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets current speed of point </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>new current speed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -428,9 +494,6 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void CTubingPoint::SetSpeed </td>
@@ -440,11 +503,6 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p>Sets speed </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -489,7 +547,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_tubing_point.html">CTubingPoint</a></li>
-    <li class="footer">Generated on Tue Apr 13 2021 18:22:56 for CSE 335 Project by
+    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
