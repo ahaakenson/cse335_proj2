@@ -18,11 +18,12 @@ public:
 	CTubingPoint();
 	virtual void SetPosition(long x, long y);
 
+	void SetSpeed(long speed);
 	/**
-	 * Sets speed
-	 * \param speed new speed
+	 * Sets current speed of point
+	 * \param speed new current speed
 	 */
-	void SetSpeed(long speed) { mSpeed = speed; }
+	void SetCurrentSpeed(long speed) { mCurrentSpeed = speed; }
 
 	/**
 	 * Sets position owner
@@ -49,6 +50,12 @@ public:
 	long GetSpeed() { return mSpeed; }
 
 	/**
+	 * Gets speed without any pressure
+	 * \return resting speed
+	 */
+	long GetCurrentSpeed() { return mCurrentSpeed; }
+
+	/**
 	 * Gets point rotation
 	 * \return rotation
 	 */
@@ -65,8 +72,10 @@ private:
 	Gdiplus::Point mPosition = Gdiplus::Point(0, 0);
 	/// Rotation of the point
 	double mRotation = 0.0;
-	/// Speed of curvature
+	/// Speed of curvature at rest
 	long mSpeed = 50;
+	/// Speed of curvature with pressure
+	long mCurrentSpeed = 50;
 	/// Whether this point dictates the position of associated source/sink
 	/// Tubing sources/sinks will never be position owners- they follow other components
 	bool mPositionOwner = true;

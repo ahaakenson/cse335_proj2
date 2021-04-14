@@ -10,6 +10,9 @@
 
 using namespace Gdiplus;
 
+/// How much the tubing stiffens when pressure passes through it in pixels
+const double TubingStiffness = 5;
+
 /**
  * Constructor
  */
@@ -24,10 +27,14 @@ CAirSource::CAirSource()
  */
 void CAirSource::SetPressure(double pressure)
 {
+	// Calculate new speed based on tubing stiffness
+	long speed = GetSpeed() + TubingStiffness * pressure;
+	SetCurrentSpeed(speed);
 	// Pass along pressure if connected to a sink
 	if (mAirSink != nullptr)
 	{
 		mAirSink->SetPressure(pressure);
+		mAirSink->SetCurrentSpeed(speed);
 	}
 }
 

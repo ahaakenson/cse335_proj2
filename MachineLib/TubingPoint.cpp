@@ -39,3 +39,12 @@ void CTubingPoint::SetPosition(long x, long y)
 {
 	mPosition = Point(x, y);
 }
+
+/**
+ * Sets speed
+ * \param speed new speed
+ */
+void CTubingPoint::SetSpeed(long speed)
+{
+	mSpeed = speed;
+}
