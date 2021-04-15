@@ -64,5 +64,7 @@ private:
 	std::shared_ptr<CAirSink> mAirSink;
 	/// Associated motion source
 	std::shared_ptr<CMotionSource> mMotionSource;
+
+	bool mNotePlayedThisBeat = false;
 };
 
