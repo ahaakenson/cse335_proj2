@@ -12,6 +12,8 @@
 #include <memory>
 #include <string>
 
+class CTimeline;
+
  /**
   * Class that adapts Machine class to Canadian Experience
   */
@@ -27,8 +29,10 @@ public:
 	 * \return false (machine cannot be clicked)
 	 */
 	bool HitTest(Gdiplus::Point pos) override { return false; }
+	void SetTimeline(CTimeline* timeline) override;
 
 private:
 	std::shared_ptr<CMachine> mMachine;
+	CTimeline* mTimeline = nullptr;
 };
 

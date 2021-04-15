@@ -49,7 +49,7 @@ std::shared_ptr<CPicture> CPictureFactory::Create()
     auto machineActor = make_shared<CActor>(L"Machine Actor 1");
     auto machine = make_shared<CMachineAdapter>(L"Machine 1");
     machineActor->AddDrawable(machine);
-    machine->Place(Point(200, 500), 0);
+    machine->Place(Point(200, 400), 0);
     picture->AddActor(machineActor);
 
     // Create and add Harold
