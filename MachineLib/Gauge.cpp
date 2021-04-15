@@ -6,8 +6,13 @@
 
 #include "pch.h"
 #include "Gauge.h"
+#include "AirSink.h"
+#include "AirSource.h"
 #include <string>
+#include <memory>
 
+using namespace std;
+using namespace Gdiplus;
 
  /// Filename for the gauge image
 const std::wstring GaugeImageFile = L"images/gauge.png";
@@ -27,11 +32,14 @@ const int CenterY = -36;
 /// How long the needle should be drawn
 const int NeedleLength = 10;
 
+/// Width of needle pen in pixels
+const int NeedleWidth = 2;
+
 /// Minimum rotation angle for the gauge needle in radians
-const double MinAngle = 130.0 / 180.0 * M_PI;
+const double MinAngle = 40.0 / 180.0 * M_PI;
 
 /// Maximum rotation angle for the gauge needle in radians
-const double MaxRotation = 275.0 / 180.0 * M_PI;
+const double MaxRotation = 320.0 / 180.0 * M_PI;
 
 
 /**
@@ -39,8 +47,13 @@ const double MaxRotation = 275.0 / 180.0 * M_PI;
  */
 CGauge::CGauge()
 {
+	// Set up the polygon to draw the gauge image
 	mGauge.SetImage(GaugeImageFile);
-	mGauge.Rectangle(mGauge.GetImageWidth() / 2, 0);
+	mGauge.Rectangle(-mGauge.GetImageWidth() / 2, 0);
+
+	// Set up air source and sink
+	mSink = make_shared<CAirSink>(this);
+	mSource = make_shared<CAirSource>();
 }
 
 /**
@@ -52,7 +65,20 @@ CGauge::CGauge()
 void CGauge::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 {
 	mGauge.DrawPolygon(graphics, machineX + GetX(), machineY + GetY());
-	// TODO: Draw needle
+	
+	double theta = MaxRotation - (MaxRotation - MinAngle) * mRotation; // rotation of needle in radians
+	// Needle length in x direction
+	double xOffset = sin(theta) * NeedleLength;
+	// Needle length in y direction
+	double yOffset = cos(theta) * NeedleLength;
+
+	// Center of the gauge
+	Point needleOrigin = Point(GetX() + machineX + CenterX, GetY() + machineY + CenterY);
+	// End of the needle
+	Point needleEnd = Point(GetX() + machineX + CenterX + xOffset, GetY() + machineY + CenterY + yOffset);
+
+	Pen pen(Color::Red, NeedleWidth);
+	graphics->DrawLine(&pen, needleOrigin, needleEnd);
 }
 
 /**
@@ -60,5 +86,19 @@ void CGauge::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
  */
 void CGauge::SetPressure(double pressure)
 {
-	// TODO: pass along pressure
+	mRotation = pressure;
+	mSource->SetPressure(pressure);
+}
+
+/**
+ * Sets position of gauge and its source and sink
+ * \param x x coordinate
+ * \param y y coordinate
+ */
+void CGauge::SetPosition(long x, long y)
+{
+	CComponent::SetPosition(x, y);
+
+	mSink->SetPosition(x - OffsetInputX, y + OffsetInputY);
+	mSource->SetPosition(x + OffsetInputX, y + OffsetInputY);
 }

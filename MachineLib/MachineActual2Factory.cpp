@@ -14,6 +14,8 @@
 #include "Instrument.h"
 #include "Tubing.h"
 #include "Gauge.h"
+#include "AirSink.h"
+#include "AirSource.h"
 #include <memory>
 
 using namespace std;
@@ -187,13 +189,6 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
     //}
 
     //
-    // A gauge
-    //
-    auto gauge = make_shared<CGauge>();
-    gauge->SetPosition(0, -360);
-    machine->AddComponent(gauge);
-
-    //
     // We do the tubing last so it is on top
     //
     for (int i = 0; i < 5; i++)
@@ -209,15 +204,32 @@ shared_ptr<CMachineActual> CMachineActual2Factory::CreateMachine()
 
     }
 
+    //
+    // A gauge
+    //
+    auto gauge = make_shared<CGauge>();
+    gauge->SetPosition(0, -360);
+    machine->AddComponent(gauge);
+
+    // card reader to gauge
     auto tubing = make_shared<CTubing>();
     reader->GetSource(9)->SetSink(tubing->GetSink());
     reader->GetSource(9)->SetSpeed(25);
     reader->GetSource(9)->SetSpeed(50);
-    tubing->GetSource()->SetSink(cymbalCylinder->GetSink());
+    tubing->GetSource()->SetSink(gauge->GetSink());
     machine->AddComponent(tubing);
 
     tubing->AddClamp(-162, -90, 0.5, 50);
-    tubing->AddClamp(-162, -360, 0.5, 100);
+    tubing->GetSource()->SetRotation(0.75);
+    tubing->AddClamp(-162, -360, 0.5, 50);
+
+    // gauge to cymbal
+    tubing = make_shared<CTubing>();
+    gauge->GetSource()->SetSink(tubing->GetSink());
+    tubing->GetSource()->SetSink(cymbalCylinder->GetSink());
+    machine->AddComponent(tubing);
+
+    tubing->GetSink()->SetRotation(0.75);
 
     tubing = make_shared<CTubing>();
     reader->GetSource(8)->SetSpeed(10);
