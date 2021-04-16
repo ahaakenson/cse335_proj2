@@ -90,6 +90,7 @@ public:
 
     void ShowMachineDialogue(int machine);
     void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root);
+    void LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root);
 
 private:
     /// The actor name

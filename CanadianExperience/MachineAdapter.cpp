@@ -66,9 +66,26 @@ void CMachineAdapter::ShowMachineDialogue()
 	}
 }
 
+/**
+ * Saves machine to xml
+ * \param root xml root node
+ * \param machineNum position of machine in drawable vector
+ */
 void CMachineAdapter::SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum)
 {
 	wstring attribute = L"machine" + to_wstring(machineNum) + L"num";
 	// Set machine number as machine(insert machinenumber in actor)num attribute
 	root->SetAttribute(attribute, mMachine->GetMachineNumber());
+}
+
+/**
+ * Loads machine to xml
+ * \param root xml root node
+ * \param machineNum position of machine in drawable vector
+ */
+void CMachineAdapter::LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum)
+{
+	wstring attribute = L"machine" + to_wstring(machineNum) + L"num";
+	// Get the machine number from the xml file and set the machine to it
+	mMachine->SetMachineNumber(root->GetAttributeIntValue(attribute, 0));
 }

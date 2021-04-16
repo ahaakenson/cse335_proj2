@@ -174,3 +174,15 @@ void CActor::SaveMachines(shared_ptr<CXmlNode> root)
         mDrawablesInOrder[i]->SaveMachines(root, i);
     }
 }
+
+/**
+ * Loads machine info from xml node
+ * \param root xml root
+ */
+void CActor::LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root)
+{
+    for (unsigned int i = 0; i < mDrawablesInOrder.size(); i++)
+    {
+        mDrawablesInOrder[i]->LoadMachines(root, i);
+    }
+}

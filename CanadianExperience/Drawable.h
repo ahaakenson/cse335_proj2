@@ -83,8 +83,16 @@ public:
     /**
      * Saves machine to xml node
      * \param root xml root node
+     * \param machineNum position of machine in drawable vector
      */
     virtual void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) {}
+
+    /**
+     * Loads machine to xml
+     * \param root xml root node
+     * \param machineNum position of machine in drawable vector
+     */
+    virtual void LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) {}
 
     /** Iterator that iterates over the children of this drawable */
     class ChildIter

@@ -155,6 +155,12 @@ void CPicture::Load(const std::wstring &filename)
         // Load the animation from the XML
         mTimeline.Load(root);
 
+        // Load the machines
+        for (auto& actor : mActors)
+        {
+            actor->LoadMachines(root);
+        }
+
         //
         // It is possible to load attributes from the root node here
         //

@@ -39,6 +39,7 @@ public:
 	void ShowMachineDialogue() override;
 	void SetStartFrame(int startFrame) { mStartFrame = startFrame; }
 	void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) override;
+	void LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) override;
 
 private:
 	/// Associated machine
