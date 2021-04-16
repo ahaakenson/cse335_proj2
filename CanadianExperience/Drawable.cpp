@@ -137,3 +137,4 @@ Gdiplus::Point CDrawable::RotatePoint(Gdiplus::Point point, double angle)
     return Gdiplus::Point(int(cosA * point.X + sinA * point.Y),
         int(-sinA * point.X + cosA * point.Y));
 }
+

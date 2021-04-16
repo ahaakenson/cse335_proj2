@@ -10,7 +10,7 @@
 
 #include "Drawable.h"
 #include "AnimChannelPoint.h"
-
+#include "XmlNode.h"
 #include <string>
 #include <memory>
 #include <vector>
@@ -89,6 +89,7 @@ public:
     CAnimChannelPoint *GetPositionChannel() { return &mChannel; }
 
     void ShowMachineDialogue(int machine);
+    void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root);
 
 private:
     /// The actor name

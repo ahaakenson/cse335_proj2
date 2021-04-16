@@ -65,3 +65,10 @@ void CMachineAdapter::ShowMachineDialogue()
 	{
 	}
 }
+
+void CMachineAdapter::SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum)
+{
+	wstring attribute = L"machine" + to_wstring(machineNum) + L"num";
+	// Set machine number as machine(insert machinenumber in actor)num attribute
+	root->SetAttribute(attribute, mMachine->GetMachineNumber());
+}

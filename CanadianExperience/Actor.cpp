@@ -7,11 +7,13 @@
 #include "pch.h"
 #include "Actor.h"
 #include "Picture.h"
+#include "XmlNode.h"
 
 #include <sstream>
 
 using namespace Gdiplus;
 using namespace std;
+using namespace xmlnode;
 
 /** Constructor
 * \param name The actor name */
@@ -158,5 +160,17 @@ void CActor::ShowMachineDialogue(int machine)
     if (mDrawablesInOrder.size() > (unsigned int)machine)
     {
         mDrawablesInOrder[machine]->ShowMachineDialogue();
+    }
+}
+
+/**
+ * Saves machine info to xml node
+ * \param root xml root
+ */
+void CActor::SaveMachines(shared_ptr<CXmlNode> root)
+{
+    for (unsigned int i = 0; i < mDrawablesInOrder.size(); i++)
+    {
+        mDrawablesInOrder[i]->SaveMachines(root, i);
     }
 }

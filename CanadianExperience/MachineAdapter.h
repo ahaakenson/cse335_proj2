@@ -9,6 +9,7 @@
 #pragma once
 #include "Drawable.h"
 #include "Machine.h"
+#include "XmlNode.h"
 #include <memory>
 #include <string>
 
@@ -37,6 +38,7 @@ public:
 	void SetMachineNumber(int machine) { mMachine->SetMachineNumber(machine); }
 	void ShowMachineDialogue() override;
 	void SetStartFrame(int startFrame) { mStartFrame = startFrame; }
+	void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) override;
 
 private:
 	/// Associated machine

@@ -117,6 +117,12 @@ void CPicture::Save(const std::wstring &filename)
     // Save the timeline animation into the XML
     mTimeline.Save(root);
 
+    // Save the machines
+    for (auto& actor : mActors)
+    {
+        actor->SaveMachines(root);
+    }
+
     //
     // It is possible to add attributes to the root node here
     //

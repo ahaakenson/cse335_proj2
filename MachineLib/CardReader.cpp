@@ -85,6 +85,9 @@ const int MaxColumns = 80;
 /// Number of seconds in a minute
 const double SecondsPerMinute = 60;
 
+/// Minimum column number
+const int MinColumn = -1;
+
 /**
  * Constructor
  */
@@ -145,6 +148,18 @@ void CCardReader::UpdateColumn(double time)
     double beat = time * mBeatsPerMinute / SecondsPerMinute;
     double remainder = fmod(beat, 1);
     mColumn = (int)beat - 1;
+
+    // Way before first frame, set card to starting position
+    if (mColumn < MinColumn)
+    {
+        mColumn = MinColumn;
+    }
+
+    // Way past last frame, set card to one past last column
+    else if (mColumn > MaxColumns + 1)
+    {
+        mColumn = MaxColumns + 1;
+    }
 
     // Still in a valid column of punch card
     if (mColumn <= MaxColumns && mColumn > -1)

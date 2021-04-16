@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 
+#include "XmlNode.h"
 #include "AnimChannelAngle.h"
 
 class CActor;
@@ -78,6 +79,12 @@ public:
     /** Get the drawable parent
      * \returns Parent pointer */
     CDrawable *GetParent() { return mParent; }
+
+    /**
+     * Saves machine to xml node
+     * \param root xml root node
+     */
+    virtual void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) {}
 
     /** Iterator that iterates over the children of this drawable */
     class ChildIter
