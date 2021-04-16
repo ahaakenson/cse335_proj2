@@ -88,6 +88,8 @@ public:
     * \returns Pointer to animation channel */
     CAnimChannelPoint *GetPositionChannel() { return &mChannel; }
 
+    void ShowMachineDialogue(int machine);
+
 private:
     /// The actor name
     std::wstring mName;

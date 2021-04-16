@@ -164,3 +164,15 @@ void CPicture::Load(const std::wstring &filename)
 
 }
 
+/**
+ * Brings up dialogue box for machine input
+ * \param machine machine to change
+ */
+void CPicture::ShowMachineDialogue(int machine)
+{
+    for (auto& actor : mActors)
+    {
+        actor->ShowMachineDialogue(machine);
+    }
+}
+

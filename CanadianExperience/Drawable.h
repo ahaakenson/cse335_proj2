@@ -130,6 +130,12 @@ public:
      * \returns Pointer to animation channel */
     CAnimChannelAngle *GetAngleChannel() { return &mChannel; }
 
+    /**
+     * Brings up dialogue box for machine input
+     * \param machine machine to change
+     */
+    virtual void ShowMachineDialogue() {}
+
 protected:
     CDrawable(const std::wstring &name);
     Gdiplus::Point RotatePoint(Gdiplus::Point point, double angle);

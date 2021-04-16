@@ -274,7 +274,8 @@ void CMainFrame::OnEditTimelineproperties()
  */
 void CMainFrame::OnEditMachine1()
 {
-    // TODO: Add your command handler code here
+    mPicture->ShowMachineDialogue(0);
+    mPicture->UpdateObservers();
 }
 
 /**
@@ -282,5 +283,6 @@ void CMainFrame::OnEditMachine1()
  */
 void CMainFrame::OnEditMachine2()
 {
-    // TODO: Add your command handler code here
+    mPicture->ShowMachineDialogue(1);
+    mPicture->UpdateObservers();
 }

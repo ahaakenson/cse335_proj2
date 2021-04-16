@@ -35,9 +35,15 @@ public:
 	 * \param machine machine number
 	 */
 	void SetMachineNumber(int machine) { mMachine->SetMachineNumber(machine); }
+	void ShowMachineDialogue() override;
+	void SetStartFrame(int startFrame) { mStartFrame = startFrame; }
 
 private:
+	/// Associated machine
 	std::shared_ptr<CMachine> mMachine;
+	/// Timeline which controls machine
 	CTimeline* mTimeline = nullptr;
+	///  Which frame to start playing at
+	int mStartFrame = 0;
 };
 

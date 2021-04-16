@@ -48,6 +48,8 @@ public:
     void Save(const std::wstring &filename);
     void Load(const std::wstring &filename);
 
+    void ShowMachineDialogue(int machine);
+
     /** Iterator that iterates over the actors in a picture */
     class ActorIter
     {

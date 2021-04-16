@@ -9,6 +9,7 @@
 #include "MachineAdapter.h"
 #include "MachineFactory.h"
 #include "Timeline.h"
+#include "MachineDlg.h"
 #include <memory>
 #include <string>
 
@@ -34,7 +35,8 @@ void CMachineAdapter::Draw(Gdiplus::Graphics* graphics)
 
 	// Convert time to frames in 30fps to maintain the song speed
 	double time = (double)mTimeline->GetCurrentFrame() / (double)mTimeline->GetFrameRate();
-	int frame = int(time * 30.0); 
+	int frame = int(time * 30.0);
+	frame = frame - mStartFrame; // Offset current frame by start frame
 	mMachine->SetMachineFrame(frame);
 
 	auto save = graphics->Save();
@@ -53,4 +55,13 @@ void CMachineAdapter::SetTimeline(CTimeline* timeline)
 	CDrawable::SetTimeline(timeline);
 
 	mTimeline = timeline;
+}
+
+
+void CMachineAdapter::ShowMachineDialogue()
+{
+	CMachineDlg dlg(mMachine);
+	if (dlg.DoModal() == IDOK)
+	{
+	}
 }

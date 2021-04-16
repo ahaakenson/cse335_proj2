@@ -147,7 +147,7 @@ void CCardReader::UpdateColumn(double time)
     mColumn = (int)beat - 1;
 
     // Still in a valid column of punch card
-    if (mColumn <= MaxColumns)
+    if (mColumn <= MaxColumns && mColumn > -1)
     {
         // Determine what is punched in this row
         for (int row = 0; row < NumSources; row++)

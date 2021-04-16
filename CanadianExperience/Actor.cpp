@@ -148,3 +148,15 @@ void CActor::GetKeyframe()
         drawable->GetKeyframe();
     }
 }
+
+/**
+ * Brings up dialogue box for machine input
+ * \param machine machine to change
+ */
+void CActor::ShowMachineDialogue(int machine)
+{
+    if (mDrawablesInOrder.size() > (unsigned int)machine)
+    {
+        mDrawablesInOrder[machine]->ShowMachineDialogue();
+    }
+}
