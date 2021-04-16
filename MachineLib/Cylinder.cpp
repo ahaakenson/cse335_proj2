@@ -35,10 +35,7 @@ const double ConnectorDistance = 24.5;
 // Consts below were added because Canadian Experience doesn't render every frame
 
 /// Pressure below which cylinder considers a beat to have passed
-const double LowerPressureThreshold = 0.3;
-
-/// Pressure above which cylinder considers full pressure
-const double UpperPressureThreshold = 0.8;
+const double PressureThreshold = 0.5;
 
 /**
  * Constructor
@@ -105,13 +102,13 @@ void CCylinder::SetPressure(double pressure)
     mRamPosition = pressure;
 
     // Max pressure, strike the motion sink
-    if (pressure >= UpperPressureThreshold && ! mNotePlayedThisBeat)
+    if (pressure >= PressureThreshold && ! mNotePlayedThisBeat)
     {
         mMotionSource->DislodgeRam();
         mNotePlayedThisBeat = true;
     }
     // Enough pressure decrease to consider a new beat, can play note again
-    else if (pressure <= LowerPressureThreshold)
+    else if (pressure < PressureThreshold)
     {
         mNotePlayedThisBeat = false;
     }

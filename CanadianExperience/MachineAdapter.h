@@ -30,6 +30,11 @@ public:
 	 */
 	bool HitTest(Gdiplus::Point pos) override { return false; }
 	void SetTimeline(CTimeline* timeline) override;
+	/**
+	 * Sets machine number in machine
+	 * \param machine machine number
+	 */
+	void SetMachineNumber(int machine) { mMachine->SetMachineNumber(machine); }
 
 private:
 	std::shared_ptr<CMachine> mMachine;

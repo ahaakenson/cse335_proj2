@@ -119,6 +119,9 @@ BEGIN
         MENUITEM "&Delete Keyframe",            ID_EDIT_DELETEKEYFRAME
         MENUITEM SEPARATOR
         MENUITEM "&Timeline Properties...",     ID_EDIT_TIMELINEPROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Machine 1",                   ID_EDIT_MACHINE1
+        MENUITEM "Machine 2",                   ID_EDIT_MACHINE2
     END
     POPUP "&View"
     BEGIN
