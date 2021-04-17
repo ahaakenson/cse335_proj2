@@ -157,6 +157,6 @@ void CChime::IncrementFramesSinceNote()
     // Exceeded 2 seconds of rocking
     if (mFramesSinceNote > RockingTime * FramesPerSecond)
     {
-        mFramesSinceNote = RockingTime * FramesPerSecond;
+        mFramesSinceNote = int(RockingTime * FramesPerSecond);
     }
 }

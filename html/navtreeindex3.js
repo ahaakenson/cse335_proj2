@@ -1,5 +1,11 @@
 var NAVTREEINDEX3 =
 {
+"class_c_polygon.html#aa70028bef318fcf8d0698693b24dca51":[0,0,38,14],
+"class_c_polygon.html#ac316f77c5c5a4141927d3dcb41f1dcbb":[0,0,38,16],
+"class_c_polygon.html#aed4c89e2c0b15f8d25b0749d647be8e8":[0,0,38,5],
+"class_c_polygon.html#af6538de6e9c10f6268dfce9a05745117":[0,0,38,12],
+"class_c_rotated_bitmap.html":[0,0,39],
+"class_c_rotated_bitmap.html#a1b5a702ec27d535b4a16bf912aba7fa4":[0,0,39,4],
 "class_c_rotated_bitmap.html#a1c1e4efb36d0d3512a3ffd355817d409":[0,0,39,8],
 "class_c_rotated_bitmap.html#a1d8ebcd9419be8f843424bbf358bf97b":[0,0,39,2],
 "class_c_rotated_bitmap.html#a335b9038c2df31f3517486d2e36d1928":[0,0,39,3],
