@@ -94,28 +94,56 @@ $(document).ready(function(){initNavTree('_gauge_8h_source.html','');});
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_air_sink_destination_8h.html">AirSinkDestination.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_c_gauge.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_gauge.html">CGauge</a> : <span class="keyword">public</span> <a class="code" href="class_c_component.html">CComponent</a>, <span class="keyword">public</span> <a class="code" href="class_c_air_sink_destination.html">CAirSinkDestination</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_polygon_8h.html">Polygon.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_air_sink.html">CAirSink</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_c_air_source.html">CAirSource</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_c_gauge.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_gauge.html">CGauge</a> : <span class="keyword">public</span> <a class="code" href="class_c_component.html">CComponent</a>, <span class="keyword">public</span> <a class="code" href="class_c_air_sink_destination.html">CAirSinkDestination</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;               <a class="code" href="class_c_gauge.html#ac0513d34880232cd81b8164d6aebffaa">CGauge</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_gauge.html#a12adcafbf0786c0ecd3b7e8aebbea08e">Draw</a>(Gdiplus::Graphics* graphics, <span class="keywordtype">long</span> machineX, <span class="keywordtype">long</span> machineY) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_gauge.html#a27fd2e45aa5a17efad122b5c9f1c76a7">SetPressure</a>(<span class="keywordtype">double</span> pressure) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;               <span class="keywordtype">void</span> <a class="code" href="class_c_gauge.html#a146d1445fdc9dec98840917fc732ae59">SetPosition</a>(<span class="keywordtype">long</span> x, <span class="keywordtype">long</span> y) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_c_gauge.html#adf36d86c7f6b3b20aa7ace815fd5383f">   33</a></span>&#160;               <a class="code" href="class_c_air_sink.html">CAirSink</a>* <a class="code" href="class_c_gauge.html#adf36d86c7f6b3b20aa7ace815fd5383f">GetSink</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_gauge.html#aa8745a2ea275d0e38a500d7fc5cf0334">mSink</a>.get(); }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_c_gauge.html#a151de930200d55090dc13dfcde44dcd0">   39</a></span>&#160;               <a class="code" href="class_c_air_source.html">CAirSource</a>* <a class="code" href="class_c_gauge.html#a151de930200d55090dc13dfcde44dcd0">GetSource</a>() { <span class="keywordflow">return</span> <a class="code" href="class_c_gauge.html#a6ca9d8c250817b01765b2da75cdf520c">mSource</a>.get(); }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_c_gauge.html#a81166ce906fba1377080dd62aeae5372">   42</a></span>&#160;               <a class="code" href="class_c_polygon.html">CPolygon</a> <a class="code" href="class_c_gauge.html#a81166ce906fba1377080dd62aeae5372">mGauge</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_c_gauge.html#aa8745a2ea275d0e38a500d7fc5cf0334">   44</a></span>&#160;               std::shared_ptr&lt;CAirSink&gt; <a class="code" href="class_c_gauge.html#aa8745a2ea275d0e38a500d7fc5cf0334">mSink</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_c_gauge.html#a6ca9d8c250817b01765b2da75cdf520c">   46</a></span>&#160;               std::shared_ptr&lt;CAirSource&gt; <a class="code" href="class_c_gauge.html#a6ca9d8c250817b01765b2da75cdf520c">mSource</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_c_gauge.html#a669d2a5164c7fd86422313f341f41fe3">   48</a></span>&#160;               <span class="keywordtype">double</span> <a class="code" href="class_c_gauge.html#a669d2a5164c7fd86422313f341f41fe3">mRotation</a> = 0.0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_c_gauge_html_a6ca9d8c250817b01765b2da75cdf520c"><div class="ttname"><a href="class_c_gauge.html#a6ca9d8c250817b01765b2da75cdf520c">CGauge::mSource</a></div><div class="ttdeci">std::shared_ptr&lt; CAirSource &gt; mSource</div><div class="ttdoc">Associated air source.</div><div class="ttdef"><b>Definition:</b> Gauge.h:46</div></div>
+<div class="ttc" id="aclass_c_gauge_html_a146d1445fdc9dec98840917fc732ae59"><div class="ttname"><a href="class_c_gauge.html#a146d1445fdc9dec98840917fc732ae59">CGauge::SetPosition</a></div><div class="ttdeci">void SetPosition(long x, long y) override</div><div class="ttdef"><b>Definition:</b> Gauge.cpp:99</div></div>
+<div class="ttc" id="aclass_c_air_source_html"><div class="ttname"><a href="class_c_air_source.html">CAirSource</a></div><div class="ttdef"><b>Definition:</b> AirSource.h:18</div></div>
+<div class="ttc" id="aclass_c_gauge_html_a12adcafbf0786c0ecd3b7e8aebbea08e"><div class="ttname"><a href="class_c_gauge.html#a12adcafbf0786c0ecd3b7e8aebbea08e">CGauge::Draw</a></div><div class="ttdeci">void Draw(Gdiplus::Graphics *graphics, long machineX, long machineY) override</div><div class="ttdef"><b>Definition:</b> Gauge.cpp:65</div></div>
+<div class="ttc" id="aclass_c_gauge_html_a27fd2e45aa5a17efad122b5c9f1c76a7"><div class="ttname"><a href="class_c_gauge.html#a27fd2e45aa5a17efad122b5c9f1c76a7">CGauge::SetPressure</a></div><div class="ttdeci">void SetPressure(double pressure) override</div><div class="ttdef"><b>Definition:</b> Gauge.cpp:88</div></div>
 <div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
-<div class="ttc" id="aclass_c_gauge_html"><div class="ttname"><a href="class_c_gauge.html">CGauge</a></div><div class="ttdef"><b>Definition:</b> Gauge.h:16</div></div>
+<div class="ttc" id="aclass_c_gauge_html_aa8745a2ea275d0e38a500d7fc5cf0334"><div class="ttname"><a href="class_c_gauge.html#aa8745a2ea275d0e38a500d7fc5cf0334">CGauge::mSink</a></div><div class="ttdeci">std::shared_ptr&lt; CAirSink &gt; mSink</div><div class="ttdoc">Associated air sink.</div><div class="ttdef"><b>Definition:</b> Gauge.h:44</div></div>
+<div class="ttc" id="aclass_c_gauge_html_a669d2a5164c7fd86422313f341f41fe3"><div class="ttname"><a href="class_c_gauge.html#a669d2a5164c7fd86422313f341f41fe3">CGauge::mRotation</a></div><div class="ttdeci">double mRotation</div><div class="ttdoc">Current needle rotation.</div><div class="ttdef"><b>Definition:</b> Gauge.h:48</div></div>
+<div class="ttc" id="aclass_c_gauge_html"><div class="ttname"><a href="class_c_gauge.html">CGauge</a></div><div class="ttdef"><b>Definition:</b> Gauge.h:21</div></div>
+<div class="ttc" id="aclass_c_air_sink_html"><div class="ttname"><a href="class_c_air_sink.html">CAirSink</a></div><div class="ttdef"><b>Definition:</b> AirSink.h:17</div></div>
 <div class="ttc" id="aclass_c_air_sink_destination_html"><div class="ttname"><a href="class_c_air_sink_destination.html">CAirSinkDestination</a></div><div class="ttdef"><b>Definition:</b> AirSinkDestination.h:14</div></div>
 <div class="ttc" id="aclass_c_component_html"><div class="ttname"><a href="class_c_component.html">CComponent</a></div><div class="ttdef"><b>Definition:</b> Component.h:16</div></div>
+<div class="ttc" id="a_polygon_8h_html"><div class="ttname"><a href="_polygon_8h.html">Polygon.h</a></div></div>
+<div class="ttc" id="aclass_c_gauge_html_a81166ce906fba1377080dd62aeae5372"><div class="ttname"><a href="class_c_gauge.html#a81166ce906fba1377080dd62aeae5372">CGauge::mGauge</a></div><div class="ttdeci">CPolygon mGauge</div><div class="ttdoc">Image of the gauge.</div><div class="ttdef"><b>Definition:</b> Gauge.h:42</div></div>
+<div class="ttc" id="aclass_c_gauge_html_a151de930200d55090dc13dfcde44dcd0"><div class="ttname"><a href="class_c_gauge.html#a151de930200d55090dc13dfcde44dcd0">CGauge::GetSource</a></div><div class="ttdeci">CAirSource * GetSource()</div><div class="ttdef"><b>Definition:</b> Gauge.h:39</div></div>
+<div class="ttc" id="aclass_c_polygon_html"><div class="ttname"><a href="class_c_polygon.html">CPolygon</a></div><div class="ttdef"><b>Definition:</b> Polygon.h:20</div></div>
 <div class="ttc" id="a_air_sink_destination_8h_html"><div class="ttname"><a href="_air_sink_destination_8h.html">AirSinkDestination.h</a></div></div>
+<div class="ttc" id="aclass_c_gauge_html_ac0513d34880232cd81b8164d6aebffaa"><div class="ttname"><a href="class_c_gauge.html#ac0513d34880232cd81b8164d6aebffaa">CGauge::CGauge</a></div><div class="ttdeci">CGauge()</div><div class="ttdef"><b>Definition:</b> Gauge.cpp:48</div></div>
+<div class="ttc" id="aclass_c_gauge_html_adf36d86c7f6b3b20aa7ace815fd5383f"><div class="ttname"><a href="class_c_gauge.html#adf36d86c7f6b3b20aa7ace815fd5383f">CGauge::GetSink</a></div><div class="ttdeci">CAirSink * GetSink()</div><div class="ttdef"><b>Definition:</b> Gauge.h:33</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41f419bcf8176071d39c277ee76622df.html">MachineLib</a></li><li class="navelem"><a class="el" href="_gauge_8h.html">Gauge.h</a></li>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:25 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

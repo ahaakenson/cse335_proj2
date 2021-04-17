@@ -18,6 +18,7 @@ var class_c_picture =
     [ "Save", "class_c_picture.html#a708394a032895dbb9590dc721782b591", null ],
     [ "SetAnimationTime", "class_c_picture.html#ad00510c4a90a9b84a80a3850cc6dcf3d", null ],
     [ "SetSize", "class_c_picture.html#a66b8de27d3435e19024307254e918e3a", null ],
+    [ "ShowMachineDialogue", "class_c_picture.html#a66bdcb9b834af39509a069623c2bdc73", null ],
     [ "UpdateObservers", "class_c_picture.html#a971ca9c9100725b7d1a900adcfe889d6", null ],
     [ "mActors", "class_c_picture.html#ae5c8fda7af8aebc8a454a79c29392a87", null ],
     [ "mObservers", "class_c_picture.html#ada7efdb7364cef0e6d9f69fec3c2eab0", null ],

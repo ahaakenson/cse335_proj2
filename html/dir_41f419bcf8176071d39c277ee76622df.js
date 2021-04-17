@@ -26,9 +26,9 @@ var dir_41f419bcf8176071d39c277ee76622df =
     [ "Cylinder.h", "_cylinder_8h.html", [
       [ "CCylinder", "class_c_cylinder.html", "class_c_cylinder" ]
     ] ],
-    [ "Gauge.cpp", "_gauge_8cpp.html", null ],
+    [ "Gauge.cpp", "_gauge_8cpp.html", "_gauge_8cpp" ],
     [ "Gauge.h", "_gauge_8h.html", [
-      [ "CGauge", "class_c_gauge.html", null ]
+      [ "CGauge", "class_c_gauge.html", "class_c_gauge" ]
     ] ],
     [ "Instrument.cpp", "_instrument_8cpp.html", null ],
     [ "Instrument.h", "_instrument_8h.html", [

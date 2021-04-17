@@ -14,8 +14,8 @@ var class_c_cylinder =
     [ "mMaxExtension", "class_c_cylinder.html#aef7cdf71c2a7a36b3b105b0c6dd86740", null ],
     [ "mMotionSource", "class_c_cylinder.html#a2c47ccb095dcf7e7a1ba67e2b765dbf6", null ],
     [ "mMount", "class_c_cylinder.html#a4d52771fdee688cbe164734f04da8ca3", null ],
+    [ "mNotePlayedThisBeat", "class_c_cylinder.html#a4ac195fcda7785a91674576fc429b7dc", null ],
     [ "mRam", "class_c_cylinder.html#ad50190c73ecd766d19644fcff0d3ec1e", null ],
     [ "mRamPosition", "class_c_cylinder.html#a7aa47e0172cd650bff393ed1c44a98df", null ],
-    [ "mRotation", "class_c_cylinder.html#abb587a5c8db0904b7ee2a984a01ea0a9", null ],
-    [ "mVertical", "class_c_cylinder.html#ad91125988aa976751e4396507ceb3504", null ]
+    [ "mRotation", "class_c_cylinder.html#abb587a5c8db0904b7ee2a984a01ea0a9", null ]
 ];

@@ -37,6 +37,11 @@ public:
 	 */
 	void SetMachineNumber(int machine) { mMachine->SetMachineNumber(machine); }
 	void ShowMachineDialogue() override;
+
+	/**
+	 * Sets frame when machine starts to play
+	 * \param startFrame starting frame
+	 */
 	void SetStartFrame(int startFrame) { mStartFrame = startFrame; }
 	void SaveMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) override;
 	void LoadMachines(std::shared_ptr<xmlnode::CXmlNode> root, int machineNum) override;

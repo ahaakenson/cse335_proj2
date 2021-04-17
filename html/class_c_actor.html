@@ -143,6 +143,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a55692c97f39798493d291a80164c81f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d72dc2a926055d3ba1baa46ae689f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_anim_channel_point.html">CAnimChannelPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_actor.html#a09d72dc2a926055d3ba1baa46ae689f9">GetPositionChannel</a> ()</td></tr>
 <tr class="separator:a09d72dc2a926055d3ba1baa46ae689f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ed6bea419234eb94efb0ebc9a87afc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_actor.html#a33ed6bea419234eb94efb0ebc9a87afc">ShowMachineDialogue</a> (int machine)</td></tr>
+<tr class="separator:a33ed6bea419234eb94efb0ebc9a87afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc39efc05954d8e17619b0dc5e5ae5f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_actor.html#acc39efc05954d8e17619b0dc5e5ae5f5">SaveMachines</a> (std::shared_ptr&lt; xmlnode::CXmlNode &gt; root)</td></tr>
+<tr class="separator:acc39efc05954d8e17619b0dc5e5ae5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1322ee307799ddeacf0ba8c706bcc3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_actor.html#aa1322ee307799ddeacf0ba8c706bcc3e">LoadMachines</a> (std::shared_ptr&lt; xmlnode::CXmlNode &gt; root)</td></tr>
+<tr class="separator:aa1322ee307799ddeacf0ba8c706bcc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -560,6 +566,30 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 
 </div>
 </div>
+<a id="aa1322ee307799ddeacf0ba8c706bcc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1322ee307799ddeacf0ba8c706bcc3e">&#9670;&nbsp;</a></span>LoadMachines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CActor::LoadMachines </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; xmlnode::CXmlNode &gt;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loads machine info from xml node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>xml root </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa947810cfb2f45129b501296bcad837c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa947810cfb2f45129b501296bcad837c">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -584,6 +614,30 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 </table>
 </div><div class="memdoc">
 <p>Assignment operator disabled </p>
+
+</div>
+</div>
+<a id="acc39efc05954d8e17619b0dc5e5ae5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc39efc05954d8e17619b0dc5e5ae5f5">&#9670;&nbsp;</a></span>SaveMachines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CActor::SaveMachines </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; xmlnode::CXmlNode &gt;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Saves machine info to xml node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>xml root </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -751,6 +805,30 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 
 </div>
 </div>
+<a id="a33ed6bea419234eb94efb0ebc9a87afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ed6bea419234eb94efb0ebc9a87afc">&#9670;&nbsp;</a></span>ShowMachineDialogue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CActor::ShowMachineDialogue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>machine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Brings up dialogue box for machine input </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">machine</td><td>machine to change </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>CanadianExperience/<a class="el" href="_actor_8h_source.html">Actor.h</a></li>
 <li>CanadianExperience/<a class="el" href="_actor_8cpp.html">Actor.cpp</a></li>
@@ -761,7 +839,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_actor.html">CActor</a></li>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:25 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

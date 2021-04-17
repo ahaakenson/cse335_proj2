@@ -28,7 +28,7 @@ CAirSource::CAirSource()
 void CAirSource::SetPressure(double pressure)
 {
 	// Calculate new speed based on tubing stiffness
-	long speed = GetSpeed() + TubingStiffness * pressure;
+	long speed = GetSpeed() + long(TubingStiffness * pressure);
 	SetCurrentSpeed(speed);
 	// Pass along pressure if connected to a sink
 	if (mAirSink != nullptr)

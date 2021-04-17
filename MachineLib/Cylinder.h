@@ -58,13 +58,11 @@ private:
 	/// Maximum extension compared to cylinder's max
 	double mMaxExtension = 1.0;
 
-	/// Whether cylinder is vertical
-	bool mVertical = true;
 	/// Associated air sink
 	std::shared_ptr<CAirSink> mAirSink;
 	/// Associated motion source
 	std::shared_ptr<CMotionSource> mMotionSource;
-
+	/// If cylinder has struck instrument yet this beat- to avoid spamming notes
 	bool mNotePlayedThisBeat = false;
 };
 

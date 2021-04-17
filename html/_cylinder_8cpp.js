@@ -5,5 +5,6 @@ var _cylinder_8cpp =
     [ "CylinderBaseImage", "_cylinder_8cpp.html#ab2d7899f0b01c8b576636ec69ef2cffc", null ],
     [ "CylinderBodyImage", "_cylinder_8cpp.html#a1cea1238fd375894277e656e2fdcfdc7", null ],
     [ "CylinderMaxExtent", "_cylinder_8cpp.html#aac274a57f3627c169dabc4eb65bdef65", null ],
-    [ "CylinderRamImage", "_cylinder_8cpp.html#a3bb486176480ea8c45c380c5cd69a60e", null ]
+    [ "CylinderRamImage", "_cylinder_8cpp.html#a3bb486176480ea8c45c380c5cd69a60e", null ],
+    [ "PressureThreshold", "_cylinder_8cpp.html#a9bb2d4b82d7601d3581f10f96b699e78", null ]
 ];

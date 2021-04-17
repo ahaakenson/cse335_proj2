@@ -147,7 +147,6 @@ public:
 
     /**
      * Brings up dialogue box for machine input
-     * \param machine machine to change
      */
     virtual void ShowMachineDialogue() {}
 

@@ -86,13 +86,59 @@ $(document).ready(function(){initNavTree('_gauge_8cpp.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Gauge.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;pch.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_gauge_8h_source.html">Gauge.h</a>&quot;</code><br />
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<code>#include &quot;<a class="el" href="_air_sink_8h_source.html">AirSink.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_air_source_8h_source.html">AirSource.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa827d3fafb2e844446e877fe8ecff627"><td class="memItemLeft" align="right" valign="top"><a id="aa827d3fafb2e844446e877fe8ecff627"></a>
+const std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#aa827d3fafb2e844446e877fe8ecff627">GaugeImageFile</a> = L&quot;images/gauge.png&quot;</td></tr>
+<tr class="memdesc:aa827d3fafb2e844446e877fe8ecff627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filename for the gauge image. <br /></td></tr>
+<tr class="separator:aa827d3fafb2e844446e877fe8ecff627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c9e9e9d5f9ce2a7cc90653a7e93a79"><td class="memItemLeft" align="right" valign="top"><a id="a44c9e9e9d5f9ce2a7cc90653a7e93a79"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a44c9e9e9d5f9ce2a7cc90653a7e93a79">OffsetInputY</a> = -6</td></tr>
+<tr class="memdesc:a44c9e9e9d5f9ce2a7cc90653a7e93a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">X Offset of the input from the bottom center of the gauge in pixels. <br /></td></tr>
+<tr class="separator:a44c9e9e9d5f9ce2a7cc90653a7e93a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee54f5f4c4df6c2a507506f52f7507d"><td class="memItemLeft" align="right" valign="top"><a id="a8ee54f5f4c4df6c2a507506f52f7507d"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a8ee54f5f4c4df6c2a507506f52f7507d">OffsetInputX</a> = 13</td></tr>
+<tr class="memdesc:a8ee54f5f4c4df6c2a507506f52f7507d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y Offset of the input from the bottom center of the gauge in pixels. <br /></td></tr>
+<tr class="separator:a8ee54f5f4c4df6c2a507506f52f7507d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa302e5e9e4249a1a54c9d2b646c02f"><td class="memItemLeft" align="right" valign="top"><a id="a2aa302e5e9e4249a1a54c9d2b646c02f"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a2aa302e5e9e4249a1a54c9d2b646c02f">CenterX</a> = 0</td></tr>
+<tr class="memdesc:a2aa302e5e9e4249a1a54c9d2b646c02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">X position of the center of the gauge in pixels. <br /></td></tr>
+<tr class="separator:a2aa302e5e9e4249a1a54c9d2b646c02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57187fd51ddb55fff107668166db1c49"><td class="memItemLeft" align="right" valign="top"><a id="a57187fd51ddb55fff107668166db1c49"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a57187fd51ddb55fff107668166db1c49">CenterY</a> = -36</td></tr>
+<tr class="memdesc:a57187fd51ddb55fff107668166db1c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y position of the center of the gauge in pixels. <br /></td></tr>
+<tr class="separator:a57187fd51ddb55fff107668166db1c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3568432bb919d7846f1498032a83c4"><td class="memItemLeft" align="right" valign="top"><a id="a7e3568432bb919d7846f1498032a83c4"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a7e3568432bb919d7846f1498032a83c4">NeedleLength</a> = 10</td></tr>
+<tr class="memdesc:a7e3568432bb919d7846f1498032a83c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">How long the needle should be drawn. <br /></td></tr>
+<tr class="separator:a7e3568432bb919d7846f1498032a83c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e787e099b04dcf94f1b8ee525de3914"><td class="memItemLeft" align="right" valign="top"><a id="a2e787e099b04dcf94f1b8ee525de3914"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a2e787e099b04dcf94f1b8ee525de3914">NeedleWidth</a> = 2</td></tr>
+<tr class="memdesc:a2e787e099b04dcf94f1b8ee525de3914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of needle pen in pixels. <br /></td></tr>
+<tr class="separator:a2e787e099b04dcf94f1b8ee525de3914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b3c53b4113d556136d7f13614c951d"><td class="memItemLeft" align="right" valign="top"><a id="a40b3c53b4113d556136d7f13614c951d"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#a40b3c53b4113d556136d7f13614c951d">MinAngle</a> = 40.0 / 180.0 * M_PI</td></tr>
+<tr class="memdesc:a40b3c53b4113d556136d7f13614c951d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum rotation angle for the gauge needle in radians. <br /></td></tr>
+<tr class="separator:a40b3c53b4113d556136d7f13614c951d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeedf78041548854afedcd4ff0be98094"><td class="memItemLeft" align="right" valign="top"><a id="aeedf78041548854afedcd4ff0be98094"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_gauge_8cpp.html#aeedf78041548854afedcd4ff0be98094">MaxRotation</a> = 320.0 / 180.0 * M_PI</td></tr>
+<tr class="memdesc:aeedf78041548854afedcd4ff0be98094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum rotation angle for the gauge needle in radians. <br /></td></tr>
+<tr class="separator:aeedf78041548854afedcd4ff0be98094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Andrew Haakenson </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
@@ -100,7 +146,7 @@ $(document).ready(function(){initNavTree('_gauge_8cpp.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_41f419bcf8176071d39c277ee76622df.html">MachineLib</a></li><li class="navelem"><a class="el" href="_gauge_8cpp.html">Gauge.cpp</a></li>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:25 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

@@ -42,6 +42,8 @@ var dir_8cf06296e63efa1ab1e7c5ebabfbb9f3 =
     [ "ImageDrawable.h", "_image_drawable_8h.html", [
       [ "CImageDrawable", "class_c_image_drawable.html", "class_c_image_drawable" ]
     ] ],
+    [ "MachineAdapter.cpp", "_machine_adapter_8cpp.html", null ],
+    [ "MachineAdapter.h", "_machine_adapter_8h_source.html", null ],
     [ "pch.h", "_canadian_experience_2pch_8h_source.html", null ],
     [ "Picture.cpp", "_picture_8cpp.html", null ],
     [ "Picture.h", "_picture_8h.html", [

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('class_c_drawable.html','');});
 
 <p><code>#include &lt;<a class="el" href="_drawable_8h_source.html">Drawable.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_c_image_drawable.html">CImageDrawable</a>, and <a class="el" href="class_c_poly_drawable.html">CPolyDrawable</a>.</p>
+<p>Inherited by <a class="el" href="class_c_image_drawable.html">CImageDrawable</a>, <a class="el" href="class_c_machine_adapter.html">CMachineAdapter</a>, and <a class="el" href="class_c_poly_drawable.html">CPolyDrawable</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -145,6 +145,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad53fc2430248f2ac022ab142024df983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f71959d8c597e34abb395b6dece5ad6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_drawable.html">CDrawable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a7f71959d8c597e34abb395b6dece5ad6">GetParent</a> ()</td></tr>
 <tr class="separator:a7f71959d8c597e34abb395b6dece5ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349e1b06380a6d202eb72db13098e5aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a349e1b06380a6d202eb72db13098e5aa">SaveMachines</a> (std::shared_ptr&lt; xmlnode::CXmlNode &gt; root, int machineNum)</td></tr>
+<tr class="separator:a349e1b06380a6d202eb72db13098e5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ef436093fe961b5a9f2358c5dc1a0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#ac3ef436093fe961b5a9f2358c5dc1a0b">LoadMachines</a> (std::shared_ptr&lt; xmlnode::CXmlNode &gt; root, int machineNum)</td></tr>
+<tr class="separator:ac3ef436093fe961b5a9f2358c5dc1a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a369d10744f4139f8d39da8806fb4be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_drawable_1_1_child_iter.html">ChildIter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a8a369d10744f4139f8d39da8806fb4be">begin</a> ()</td></tr>
 <tr class="separator:a8a369d10744f4139f8d39da8806fb4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44ad4b912b744487eb0bac2328e86336"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_drawable_1_1_child_iter.html">ChildIter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a44ad4b912b744487eb0bac2328e86336">end</a> ()</td></tr>
@@ -157,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad6d3c8e4c1ad3715c8aa56e2a83977d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14665f0fbbfa93bb349f7993a7af5de4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_anim_channel_angle.html">CAnimChannelAngle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a14665f0fbbfa93bb349f7993a7af5de4">GetAngleChannel</a> ()</td></tr>
 <tr class="separator:a14665f0fbbfa93bb349f7993a7af5de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d5e7081780ae814670344dab2c7109"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_drawable.html#a91d5e7081780ae814670344dab2c7109">ShowMachineDialogue</a> ()</td></tr>
+<tr class="separator:a91d5e7081780ae814670344dab2c7109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -403,7 +409,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_c_poly_drawable.html#a701f45c8fabdec3de96b3048aa3a0190">CPolyDrawable</a>, <a class="el" href="class_c_image_drawable.html#ada4d5d342230fbecb7169e4f3324ee52">CImageDrawable</a>, and <a class="el" href="class_c_head_top.html#aa77d9fa703079ee68a4e4e8e3c816932">CHeadTop</a>.</p>
+<p>Implemented in <a class="el" href="class_c_poly_drawable.html#a701f45c8fabdec3de96b3048aa3a0190">CPolyDrawable</a>, <a class="el" href="class_c_image_drawable.html#ada4d5d342230fbecb7169e4f3324ee52">CImageDrawable</a>, <a class="el" href="class_c_machine_adapter.html#a6355bbf5a5c8e2825b70fb1cdc040273">CMachineAdapter</a>, and <a class="el" href="class_c_head_top.html#aa77d9fa703079ee68a4e4e8e3c816932">CHeadTop</a>.</p>
 
 </div>
 </div>
@@ -622,7 +628,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if we clicked on it </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_c_poly_drawable.html#a4db3493e3bba3c4c51608a75d48f50e2">CPolyDrawable</a>, and <a class="el" href="class_c_image_drawable.html#a8aac5e64e309f1990e757f564dbcb8fd">CImageDrawable</a>.</p>
+<p>Reimplemented in <a class="el" href="class_c_poly_drawable.html#a4db3493e3bba3c4c51608a75d48f50e2">CPolyDrawable</a>, <a class="el" href="class_c_image_drawable.html#a8aac5e64e309f1990e757f564dbcb8fd">CImageDrawable</a>, and <a class="el" href="class_c_machine_adapter.html#ab1cd0d8aa00e38c5f9f7b7bb74002f39">CMachineAdapter</a>.</p>
 
 </div>
 </div>
@@ -651,6 +657,51 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 <p>Is this a movable drawable? </p><dl class="section return"><dt>Returns</dt><dd>true if movable </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_c_head_top.html#a853b7d9f248dc36519f1da6c4d53b18e">CHeadTop</a>.</p>
+
+</div>
+</div>
+<a id="ac3ef436093fe961b5a9f2358c5dc1a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ef436093fe961b5a9f2358c5dc1a0b">&#9670;&nbsp;</a></span>LoadMachines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CDrawable::LoadMachines </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; xmlnode::CXmlNode &gt;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>machineNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Loads machine to xml </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>xml root node </td></tr>
+    <tr><td class="paramname">machineNum</td><td>position of machine in drawable vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_c_machine_adapter.html#af024cee5b43527c8560dbafafeb99de9">CMachineAdapter</a>.</p>
 
 </div>
 </div>
@@ -782,6 +833,51 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Rotated point </dd></dl>
+
+</div>
+</div>
+<a id="a349e1b06380a6d202eb72db13098e5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349e1b06380a6d202eb72db13098e5aa">&#9670;&nbsp;</a></span>SaveMachines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CDrawable::SaveMachines </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; xmlnode::CXmlNode &gt;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>machineNum</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Saves machine to xml node </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>xml root node </td></tr>
+    <tr><td class="paramname">machineNum</td><td>position of machine in drawable vector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_c_machine_adapter.html#a57c104a84edafd7746cc86522c016a22">CMachineAdapter</a>.</p>
 
 </div>
 </div>
@@ -973,7 +1069,35 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_c_head_top.html#a379aaabd0a8d4a80751341bccc2faeda">CHeadTop</a>.</p>
+<p>Reimplemented in <a class="el" href="class_c_head_top.html#a379aaabd0a8d4a80751341bccc2faeda">CHeadTop</a>, and <a class="el" href="class_c_machine_adapter.html#a2cdb77428d07cd6a16c5323f729d6299">CMachineAdapter</a>.</p>
+
+</div>
+</div>
+<a id="a91d5e7081780ae814670344dab2c7109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d5e7081780ae814670344dab2c7109">&#9670;&nbsp;</a></span>ShowMachineDialogue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CDrawable::ShowMachineDialogue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Brings up dialogue box for machine input </p>
+
+<p>Reimplemented in <a class="el" href="class_c_machine_adapter.html#a3d15ed1820a7e9b3899b1539ab1b8fe2">CMachineAdapter</a>.</p>
 
 </div>
 </div>
@@ -987,7 +1111,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_c_drawable.html">C
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_drawable.html">CDrawable</a></li>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:25 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

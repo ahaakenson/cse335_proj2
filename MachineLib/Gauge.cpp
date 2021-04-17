@@ -75,7 +75,7 @@ void CGauge::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 	// Center of the gauge
 	Point needleOrigin = Point(GetX() + machineX + CenterX, GetY() + machineY + CenterY);
 	// End of the needle
-	Point needleEnd = Point(GetX() + machineX + CenterX + xOffset, GetY() + machineY + CenterY + yOffset);
+	Point needleEnd = Point(GetX() + machineX + CenterX + (int)xOffset, GetY() + machineY + CenterY + (int)yOffset);
 
 	Pen pen(Color::Red, NeedleWidth);
 	graphics->DrawLine(&pen, needleOrigin, needleEnd);
@@ -83,6 +83,7 @@ void CGauge::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 
 /**
  * Receives pressure and passes it along
+ * \param pressure incoming pressure
  */
 void CGauge::SetPressure(double pressure)
 {

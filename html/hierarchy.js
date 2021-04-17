@@ -35,6 +35,7 @@ var hierarchy =
       [ "CImageDrawable", "class_c_image_drawable.html", [
         [ "CHeadTop", "class_c_head_top.html", null ]
       ] ],
+      [ "CMachineAdapter", "class_c_machine_adapter.html", null ],
       [ "CPolyDrawable", "class_c_poly_drawable.html", null ]
     ] ],
     [ "CDrawable::ChildIter", "class_c_drawable_1_1_child_iter.html", null ],
@@ -82,10 +83,10 @@ var hierarchy =
     [ "CWnd", null, [
       [ "CMachineDemoView", "class_c_machine_demo_view.html", null ]
     ] ],
-    [ "Keyframe", null, [
-      [ "CAnimChannelAngle::KeyframeAngle", "class_c_anim_channel_angle_1_1_keyframe_angle.html", null ]
-    ] ],
     [ "CAnimChannel::Keyframe", "class_c_anim_channel_1_1_keyframe.html", [
       [ "CAnimChannelPoint::KeyframePoint", "class_c_anim_channel_point_1_1_keyframe_point.html", null ]
+    ] ],
+    [ "Keyframe", null, [
+      [ "CAnimChannelAngle::KeyframeAngle", "class_c_anim_channel_angle_1_1_keyframe_angle.html", null ]
     ] ]
 ];

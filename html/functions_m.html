@@ -209,6 +209,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>mFront
 : <a class="el" href="class_c_card_reader.html#af1e0288890b65fd38d41b7c34e366e1c">CCardReader</a>
 </li>
+<li>mGauge
+: <a class="el" href="class_c_gauge.html#a81166ce906fba1377080dd62aeae5372">CGauge</a>
+</li>
 <li>mHammer
 : <a class="el" href="class_c_chime.html#ad729159440afefaf885bbc6dbbd93d44">CChime</a>
 </li>
@@ -256,7 +259,8 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_c_rotated_bitmap.html#a99f6dbd45bf8cb36b1eaa101520789bf">CRotatedBitmap</a>
 </li>
 <li>mMachine
-: <a class="el" href="class_c_machine_demo_view.html#ae0bd2134295908add22b630414fff403">CMachineDemoView</a>
+: <a class="el" href="class_c_machine_adapter.html#a3fef38f72560a110f2f89b7edb4251a5">CMachineAdapter</a>
+, <a class="el" href="class_c_machine_demo_view.html#ae0bd2134295908add22b630414fff403">CMachineDemoView</a>
 , <a class="el" href="class_c_machine_dlg.html#a808881836a29bf1eec62c16a7ccd3b25">CMachineDlg</a>
 , <a class="el" href="class_c_machine_standin.html#a531269b7f3fb9ebe219f8fd6009fd5d9">CMachineStandin</a>
 </li>
@@ -294,6 +298,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_c_actor.html#a1ef58e61bf5b6af3cda55d67d0457c28">CActor</a>
 , <a class="el" href="class_c_anim_channel.html#af949548020a78ccd31abbc1341b97899">CAnimChannel</a>
 , <a class="el" href="class_c_drawable.html#abd9895fb15d44222fa1217ed4750c282">CDrawable</a>
+</li>
+<li>mNotePlayedThisBeat
+: <a class="el" href="class_c_cylinder.html#a4ac195fcda7785a91674576fc429b7dc">CCylinder</a>
 </li>
 <li>mNumFrames
 : <a class="el" href="class_c_timeline.html#adf7aa7ceae1c9662ebbe5c46753ed5a0">CTimeline</a>
@@ -373,6 +380,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_c_chime.html#ac30b2e91e9a3137af0660a8a9050cd66">CChime</a>
 , <a class="el" href="class_c_cylinder.html#abb587a5c8db0904b7ee2a984a01ea0a9">CCylinder</a>
 , <a class="el" href="class_c_drawable.html#ac9d931eb93a9f977af8575845a9ab55a">CDrawable</a>
+, <a class="el" href="class_c_gauge.html#a669d2a5164c7fd86422313f341f41fe3">CGauge</a>
 , <a class="el" href="class_c_polygon.html#a3a1bbe85e4268c4e38ba690103a7bf92">CPolygon</a>
 , <a class="el" href="class_c_tubing_point.html#a5c5c5acc94b149a818b95f1737766a5d">CTubingPoint</a>
 </li>
@@ -394,6 +402,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>mSink
 : <a class="el" href="class_c_chime.html#a326ff31e9823e2c5c4d120cf0453e8b7">CChime</a>
+, <a class="el" href="class_c_gauge.html#aa8745a2ea275d0e38a500d7fc5cf0334">CGauge</a>
 , <a class="el" href="class_c_instrument.html#ac013c7c629bf165d2daa69d9f5001794">CInstrument</a>
 , <a class="el" href="class_c_tubing.html#a989aa5e265d4cf05a6f3eeac1c79a740">CTubing</a>
 </li>
@@ -401,7 +410,8 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_c_picture.html#aee86e4f99c694299146c505a4a954723">CPicture</a>
 </li>
 <li>mSource
-: <a class="el" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">CTubing</a>
+: <a class="el" href="class_c_gauge.html#a6ca9d8c250817b01765b2da75cdf520c">CGauge</a>
+, <a class="el" href="class_c_tubing.html#ab9c98a9beacb4d0614698daafe62b5db">CTubing</a>
 </li>
 <li>mSources
 : <a class="el" href="class_c_card_reader.html#a420db97584a5040a18edaf345a26e02f">CCardReader</a>
@@ -417,6 +427,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>mStarted
 : <a class="el" href="class_c_wav_channel.html#ae02386dfba5935dbf97599a54d85278a">CWavChannel</a>
+</li>
+<li>mStartFrame
+: <a class="el" href="class_c_machine_adapter.html#a54ee7013ae5668164765607748821f25">CMachineAdapter</a>
 </li>
 <li>mStopButton
 : <a class="el" href="class_c_machine_demo_dlg.html#a926507cedd2014d64356bb1788e7a42f">CMachineDemoDlg</a>
@@ -436,14 +449,12 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>mTimeline
 : <a class="el" href="class_c_anim_channel.html#a2271bac89c64ac3f132774e205a7e03b">CAnimChannel</a>
+, <a class="el" href="class_c_machine_adapter.html#a41b672bbb1ed31c88bc4c89434b4c5fd">CMachineAdapter</a>
 , <a class="el" href="class_c_picture.html#a4f535e315bb72175c809cc36abfd9648">CPicture</a>
 , <a class="el" href="class_c_timeline_dlg.html#a1500e470fb4d1d8a750d6ed058f961f1">CTimelineDlg</a>
 </li>
 <li>mTimeSlider
 : <a class="el" href="class_c_machine_demo_dlg.html#aa103564ff7b2eb4369c207a09f5bc5f1">CMachineDemoDlg</a>
-</li>
-<li>mVertical
-: <a class="el" href="class_c_cylinder.html#ad91125988aa976751e4396507ceb3504">CCylinder</a>
 </li>
 <li>mWavChannel
 : <a class="el" href="class_c_motion_sink.html#a87d6c5d446d2d8fd2d3dd0fad5bde712">CMotionSink</a>
@@ -477,7 +488,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:26 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

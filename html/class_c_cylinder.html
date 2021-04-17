@@ -155,10 +155,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#aef7cdf71c2a7a36b3b105b0c6dd86740">mMaxExtension</a> = 1.0</td></tr>
 <tr class="memdesc:aef7cdf71c2a7a36b3b105b0c6dd86740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum extension compared to cylinder's max. <br /></td></tr>
 <tr class="separator:aef7cdf71c2a7a36b3b105b0c6dd86740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91125988aa976751e4396507ceb3504"><td class="memItemLeft" align="right" valign="top"><a id="ad91125988aa976751e4396507ceb3504"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#ad91125988aa976751e4396507ceb3504">mVertical</a> = true</td></tr>
-<tr class="memdesc:ad91125988aa976751e4396507ceb3504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether cylinder is vertical. <br /></td></tr>
-<tr class="separator:ad91125988aa976751e4396507ceb3504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea3928144f3663c432d4764818cffee"><td class="memItemLeft" align="right" valign="top"><a id="a1ea3928144f3663c432d4764818cffee"></a>
 std::shared_ptr&lt; <a class="el" href="class_c_air_sink.html">CAirSink</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a1ea3928144f3663c432d4764818cffee">mAirSink</a></td></tr>
 <tr class="memdesc:a1ea3928144f3663c432d4764818cffee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated air sink. <br /></td></tr>
@@ -167,6 +163,10 @@ std::shared_ptr&lt; <a class="el" href="class_c_air_sink.html">CAirSink</a> &gt;
 std::shared_ptr&lt; <a class="el" href="class_c_motion_source.html">CMotionSource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a2c47ccb095dcf7e7a1ba67e2b765dbf6">mMotionSource</a></td></tr>
 <tr class="memdesc:a2c47ccb095dcf7e7a1ba67e2b765dbf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associated motion source. <br /></td></tr>
 <tr class="separator:a2c47ccb095dcf7e7a1ba67e2b765dbf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac195fcda7785a91674576fc429b7dc"><td class="memItemLeft" align="right" valign="top"><a id="a4ac195fcda7785a91674576fc429b7dc"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_cylinder.html#a4ac195fcda7785a91674576fc429b7dc">mNotePlayedThisBeat</a> = false</td></tr>
+<tr class="memdesc:a4ac195fcda7785a91674576fc429b7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">If cylinder has struck instrument yet this beat- to avoid spamming notes. <br /></td></tr>
+<tr class="separator:a4ac195fcda7785a91674576fc429b7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class that represents a cylinder to hit instruments. </p>
@@ -455,7 +455,7 @@ std::shared_ptr&lt; <a class="el" href="class_c_motion_source.html">CMotionSourc
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_c_cylinder.html">CCylinder</a></li>
-    <li class="footer">Generated on Wed Apr 14 2021 17:10:52 for CSE 335 Project by
+    <li class="footer">Generated on Sat Apr 17 2021 13:18:25 for CSE 335 Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

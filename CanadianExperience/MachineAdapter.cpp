@@ -17,6 +17,7 @@ using namespace std;
 
 /**
  * Constructor
+ * \param name machine drawable name
  */
 CMachineAdapter::CMachineAdapter(wstring name) : CDrawable(name)
 {
@@ -50,6 +51,10 @@ void CMachineAdapter::Draw(Gdiplus::Graphics* graphics)
 	graphics->Restore(save);
 }
 
+/**
+ * Sets associated timeline
+ * \param timeline timeline which controls machine
+ */
 void CMachineAdapter::SetTimeline(CTimeline* timeline)
 {
 	CDrawable::SetTimeline(timeline);
@@ -57,7 +62,9 @@ void CMachineAdapter::SetTimeline(CTimeline* timeline)
 	mTimeline = timeline;
 }
 
-
+/**
+ * Shows dialogue box for changing machine number
+ */
 void CMachineAdapter::ShowMachineDialogue()
 {
 	CMachineDlg dlg(mMachine);
