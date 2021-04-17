@@ -47,6 +47,18 @@ const double HammerRotationDelta = 0.01;
 /// Offset of chime hammer in Y direction
 const int HammerOffsetY = 65;
 
+/// Duration for the rocking
+const double RockingTime = 2.0;
+
+/// Maximum rocking amount in radians
+const double RockAmount = 0.01;
+
+/// Frames per second machine is rendered at
+const double FramesPerSecond = 30.0;
+
+/// Makes the period of sin curve 15 frames or half a second
+const double SinPeriodModifier = 30 / M_PI;
+
 /**
  * Constructor
  * \param length length of chime
@@ -76,6 +88,7 @@ void CChime::ReceiveMotion()
 {
     mRotation = 0;
     mHammer.SetRotation(mRotation);
+    mFramesSinceNote = 0;
 }
 
 /**
@@ -88,9 +101,25 @@ void CChime::Draw(Gdiplus::Graphics* graphics, long machineX, long machineY)
 {
     mMount.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY()));
     mHammer.DrawPolygon(graphics, double(machineX + GetX()), double(machineY + GetY() + HammerOffsetY));
+
+    // Still rocking
+    if (mFramesSinceNote < 60)
+    {
+        // Magnitude linearly decreases to 0 after 2 seconds have passed
+        double rockMagnitude = (RockingTime - mFramesSinceNote / FramesPerSecond) / 2;
+        double rotation = rockMagnitude * RockAmount * sin(SinPeriodModifier * mFramesSinceNote / FramesPerSecond);
+        mChime.SetRotation(rotation);
+    }
+    // 2 seconds have passed, stop rocking
+    else
+    {
+        mChime.SetRotation(0);
+    }
+    
     mChime.DrawPolygon(graphics, double(machineX + GetX()) + ChimeOffsetX, double(machineY + GetY()) + ChimeOffsetY);
     
     CalculateHammerRotation();
+    IncrementFramesSinceNote();
 }
 
 /**
@@ -117,4 +146,17 @@ void CChime::CalculateHammerRotation()
     }
 
     mHammer.SetRotation(mRotation);
+}
+
+/**
+ * Increments frames since last note, caps it at 60 frames
+ */
+void CChime::IncrementFramesSinceNote()
+{
+    mFramesSinceNote = mFramesSinceNote + 1;
+    // Exceeded 2 seconds of rocking
+    if (mFramesSinceNote > RockingTime * FramesPerSecond)
+    {
+        mFramesSinceNote = RockingTime * FramesPerSecond;
+    }
 }

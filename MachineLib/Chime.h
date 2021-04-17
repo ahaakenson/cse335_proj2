@@ -33,6 +33,7 @@ public:
 	void SetAudioChannel(std::shared_ptr<CWavChannel> channel) override;
 
 	void CalculateHammerRotation();
+	void IncrementFramesSinceNote();
 
 private:
 	/// chime mount
@@ -45,5 +46,7 @@ private:
 	std::shared_ptr<CMotionSink> mSink;
 	/// Rotation of the hammer
 	double mRotation;
+	/// Frames since chime was struck
+	int mFramesSinceNote = 60;
 };
 
